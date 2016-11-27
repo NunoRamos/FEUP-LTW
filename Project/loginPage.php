@@ -27,9 +27,11 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])){
         <input type="password" name="password"><br>
         <input type="submit" value="login">
     </form>
-    <form action="index.php" method="post">
-        <input type="submit" value="Back to main Page">
-    </form>
+    <div>
+        <form action="index.php" method="post">
+            <input type="submit" value="Back to main Page">
+        </form>
+    </div>
 </div>
 </body>
 </html>
