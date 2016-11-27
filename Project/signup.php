@@ -54,5 +54,5 @@ if($username != null && $password != null){
     </form>
 </div>
 <?php
-include_once('footer.php');
+include_once('templates/footer.php');
 ?>

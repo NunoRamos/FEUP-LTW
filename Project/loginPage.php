@@ -20,7 +20,7 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])){
             </div>';
         }
     ?>
-    <form action="login.php" method="post">
+    <form action="actions/login.php" method="post">
         Username<br>
         <input type="text" name="username"><br>
         Password<br>

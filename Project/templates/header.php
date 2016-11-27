@@ -9,7 +9,7 @@ session_start();
         <?php
         if(isset($_SESSION['username']) && isset($_SESSION['password'])){
             echo '<p> Logado como '. $_SESSION['username'] . '</p><br>';
-            echo '<form action="logout.php">
+            echo '<form action="actions/logout.php">
                 <input type="submit" value="Logout"/>
                 </form>';
         }
