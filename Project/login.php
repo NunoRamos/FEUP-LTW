@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+$_SESSION['incorrectLogin_flag']=0;
 $username = $_POST["username"];
 $password = $_POST["password"];
 echo '<p>'. $username.'</p>';
@@ -15,11 +16,13 @@ if($number_of_rows != 0 && $result[0]["username"] == $username && $result[0]["pa
     echo '<header><p>Estas logado</p></header>';
     $_SESSION['username'] = $username;
     $_SESSION['password'] = $password;
+    $_SESSION['incorrectLogin_flag']=0;
+    header('Location: index.php');
 }
-else echo '<header><p>Login falhou</p></header>';
+else {
+    $_SESSION['incorrectLogin_flag']=1;
+    header('Location: loginPage.php');
+};//echo '<header><p>Login falhou</p></header>';
 
-echo '<p>'.$result[0]["password"].'</p><br>';
-echo '<p>'.$_SESSION['username'].'</p>';
-
-header('Location: index.php');
 ?>
+
