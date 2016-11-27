@@ -17,14 +17,11 @@ session_start();
             echo '<form action="loginPage.php">
                 <input type="submit" value="login">
                 </form>';
+            echo '<form action="signup.php">
+                <input type="submit" value="Create Account">
+                </form>';
         }
         ?>
-       <!-- <form action="login.php" method="post">
-            username:
-            <input type="text" name="username">
-            password:
-            <input type="password" name="password">
-            <input type="submit" value="login">-->
         <h4>The best restaurant website!!</h4>
     </head>
     <body>
