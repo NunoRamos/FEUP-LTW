@@ -1,5 +1,5 @@
 <?php
-include_once('../database/dbUtils.php');
+include_once('../../database/dbUtils.php');
 
 session_start();
 
@@ -18,7 +18,7 @@ if($username != null && $password != null){
         putUser($username,$password);
         $_SESSION['username']=$username;
         $_SESSION['password']=$password;
-        header('Location: ../index.php');
+        header('Location: ../mainPage.php');
         $_SESSION['invalid_user'] = 0;
     }
     else {

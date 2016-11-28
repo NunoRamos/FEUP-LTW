@@ -24,7 +24,7 @@
     </form>
 </div>
 <div>
-    <form action="index.php" method="post">
+    <form action="mainPage.php" method="post">
         <input type="submit" value="Back to main Page">
     </form>
 </div>
