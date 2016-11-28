@@ -18,7 +18,7 @@ if($number_of_rows != 0 && $result[0]["username"] == $username && $result[0]["pa
 }
 else {
     $_SESSION['incorrectLogin_flag']=1;
-    header('Location: ../loginPage.php');
+    header('Location: ../login.php');
 }
 
 
