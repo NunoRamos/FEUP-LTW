@@ -1,30 +1,3 @@
-<?php
-session_start();
-$invalid_user = 0;
-$username = $_POST["username"];
-$password = $_POST["password"];
-if($username != null && $password != null){
-    $db = new PDO('sqlite:database/database.db');
-
-    $stmt = $db->prepare("SELECT * FROM user WHERE username == '".$username."'");
-    $stmt->execute();
-    $result = $stmt->fetchAll();
-    $number_of_rows = sizeof($result);
-
-    if($number_of_rows == 0){
-        $stmt = $db->prepare("INSERT INTO user VALUES(?,?)");
-        $stmt->execute(array($username,$password));
-        $_SESSION['username']=$username;
-        $_SESSION['password']=$password;
-        header('Location: index.php');
-    }
-    else {
-        $username = null;
-        $password = null;
-        $invalid_user = 1;
-    }
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,13 +7,15 @@ if($username != null && $password != null){
 <body>
 <div>
     <?php
+    session_start();
+    $invalid_user = $_SESSION['invalid_user'];
         if($invalid_user){
             echo '<p>Invalid username</p>';
         }
     ?>
 </div>
 <div>
-    <form action="" method="post">
+    <form action="actions/signup.php" method="post">
         Username<br>
         <input type="text" name="username"><br>
         Password<br>
