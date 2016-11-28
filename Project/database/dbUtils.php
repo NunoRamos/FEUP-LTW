@@ -18,3 +18,14 @@ function putUser($username,$password){
     $stmt = $db->prepare("INSERT INTO user VALUES(?,?)");
     $stmt->execute(array($username,$password));
 }
+
+function getRestaurants($search){
+  global $db;
+
+  $stmt = $db->prepare("SELECT * FROM restaurant");
+  $stmt->execute();
+  $result = $stmt->fetchAll();
+
+  return $result;
+
+}
