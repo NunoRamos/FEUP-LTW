@@ -19,13 +19,24 @@ function putUser($username,$password){
     $stmt->execute(array($username,$password));
 }
 
-function getRestaurants($search){
+function getRestaurantsNames(){
   global $db;
 
-  $stmt = $db->prepare("SELECT * FROM restaurant");
+  $stmt = $db->prepare("SELECT name FROM restaurant");
   $stmt->execute();
   $result = $stmt->fetchAll();
 
   return $result;
+
+}
+
+function getRestaurantsTypes(){
+    global $db;
+
+    $stmt = $db->prepare("SELECT type FROM restaurant");
+    $stmt->execute();
+    $result = $stmt->fetchAll();
+
+    return $result;
 
 }
