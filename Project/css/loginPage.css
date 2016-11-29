@@ -1,11 +1,11 @@
 body {
   margin: 0 auto;
-    background-color: white;
-    text-align: center;
-    font-family: sans-serif;
+  background-color: white;
+  text-align: center;
+  font-family: sans-serif;
 }
 
-div{
+div {
   color: grey;
   background-color: white;
   opacity: 0.9;
@@ -13,7 +13,7 @@ div{
   padding-bottom: 0px;
 }
 
-#userName{
+#userName {
   display: inline-block;
   text-align: justify;
   border: 2.5px dotted lightgrey;
@@ -21,6 +21,6 @@ div{
   padding: 50px;
 }
 
-#formBack{
+/*.formBack{
   height: 50%;
-}
+}*/
