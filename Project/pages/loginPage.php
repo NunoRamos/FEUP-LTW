@@ -9,6 +9,8 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])){
 <head>
     <title>Log-in</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/loginPage.css" type="text/css">
 </head>
 <body>
 <div>
@@ -21,17 +23,25 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])){
         }
     ?>
     <form action="actions/login.php" method="post">
-        Username<br>
-        <input type="text" name="username"><br>
-        Password<br>
-        <input type="password" name="password"><br>
+        <label>
+          Username:
+          <br>
+          <input type="text" name="username" placeholder="Email ou Username">
+          <br>
+        </label>
+        <label>
+          Password:
+          <br>
+          <input type="password" name="password" placeholder="Password">
+          <br>
+        </label>
         <input type="submit" value="login">
     </form>
-    <div>
+    <!-- <div> -->
         <form action="mainPage.php" method="post">
             <input type="submit" value="Back to main Page">
         </form>
-    </div>
+    <!-- </div> -->
 </div>
 </body>
 </html>
