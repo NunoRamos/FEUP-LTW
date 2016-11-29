@@ -15,13 +15,8 @@ function getUser($username){
 function putUser($username,$password,$name,$email,$gender){
     global $db;
 
-<<<<<<< HEAD
     $stmt = $db->prepare("INSERT INTO user VALUES(?,?,?,?,?)");
     $stmt->execute(array($username,$password,$name,$email,$gender));
-}
-=======
-    $stmt = $db->prepare("INSERT INTO user VALUES(?,?)");
-    $stmt->execute(array($username,$password));
 }
 
 function getRestaurantsNames(){
@@ -45,4 +40,3 @@ function getRestaurantsTypes(){
     return $result;
 
 }
->>>>>>> Ines
