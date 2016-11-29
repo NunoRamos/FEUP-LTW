@@ -1,4 +1,5 @@
 body {
+  margin: 0 auto;
     background-color: white;
     text-align: center;
     font-family: sans-serif;
@@ -7,9 +8,19 @@ body {
 div{
   color: grey;
   background-color: white;
-  text-align: center;
-  display: block;
-  padding-top: 20%;
   opacity: 0.9;
-  border-style: 1.5px solid grey;
+  margin-top: 100px;
+  padding-bottom: 0px;
+}
+
+#userName{
+  display: inline-block;
+  text-align: justify;
+  border: 2.5px dotted lightgrey;
+  width: 300px;
+  padding: 50px;
+}
+
+#formBack{
+  height: 50%;
 }

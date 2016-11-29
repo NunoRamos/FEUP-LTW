@@ -13,7 +13,7 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])){
     <link rel="stylesheet" href="../css/loginPage.css" type="text/css">
 </head>
 <body>
-<div id="username">
+<div id="userName">
     <?php
         if(isset($_SESSION['incorrectLogin_flag']) && $_SESSION['incorrectLogin_flag']==1){
             echo '<div>
@@ -22,7 +22,7 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])){
             </div>';
         }
     ?>
-    <form action="actions/login.php" method="post" id="formUser">
+    <form action="actions/login.php" method="post" class="formUser">
         <label>
           Username:
           <br>
@@ -30,18 +30,22 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])){
           <br>
         </label>
         <label>
+          <br>
           Password:
           <br>
           <input type="password" name="password" placeholder="Password">
           <br>
         </label>
+        <br>
+        <br>
         <input type="submit" value="Login">
     </form>
-    <!-- <div> -->
-        <form action="mainPage.php" method="post" id="formBack">
+    <div>
+        <form action="mainPage.php" method="post" class="formBack">
+          <!-- <input type="submit" value="Login"> -->
             <input type="submit" value="Back to main Page">
         </form>
-    <!-- </div> -->
+    </div>
 </div>
 </body>
 </html>
