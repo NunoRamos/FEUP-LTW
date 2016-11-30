@@ -20,10 +20,10 @@
     <form action="actions/signup.php" method="post" onsubmit="return validateForm()">
         Username<br>
         <input id="username" type="text" name="username" required><br>
-        <p id="invalidUsername" style="display:none;">Write a valid username<br></p>
+        <p id="invalidUsername" style="display:none;">Write a valid username, 8 characters<br></p>
         Password<br>
         <input id="password" type="password" name="password" required><br>
-        <p id="invalidPassword" style="display:none;">Write a valid password<br></p>
+        <p id="invalidPassword" style="display:none;">Write a valid password, 8 characters<br></p>
         Confirm Password<br>
         <input id="confirmPassword" type="password" name="confirmPassword" required><br>
         <p id="checkingPasswords" style="display:none;">The passwords doesn't match<br></p>
