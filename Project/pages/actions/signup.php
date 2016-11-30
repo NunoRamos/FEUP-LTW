@@ -7,6 +7,9 @@ $_SESSION['invalid_user'] = 0;
 
 $username = $_POST["username"];
 $password = $_POST["password"];
+$name = $_POST["name"];
+$email = $_POST["email"];
+$gender = $_POST["gender"];
 
 if($username != null && $password != null){
 
@@ -15,7 +18,7 @@ if($username != null && $password != null){
 
     if($number_of_rows == 0){
 
-        putUser($username,$password);
+        putUser($username,$password,$name,$email,$gender);
         $_SESSION['username']=$username;
         $_SESSION['password']=$password;
         header('Location: ../mainPage.php');

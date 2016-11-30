@@ -14,7 +14,7 @@ session_start();
                 </form>';
         }
         else {
-            echo '<form action="loginPage.php">
+            echo '<form action="login.php">
                 <input type="submit" value="login">
                 </form>';
             echo '<form action="signup.php">
