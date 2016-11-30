@@ -1,0 +1,26 @@
+body {
+  margin: 0 auto;
+    background-color: white;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+div{
+  color: grey;
+  background-color: white;
+  opacity: 0.9;
+  margin-top: 100px;
+  padding-bottom: 0px;
+}
+
+#userName{
+  display: inline-block;
+  text-align: justify;
+  border: 2.5px dotted lightgrey;
+  width: 300px;
+  padding: 50px;
+}
+
+#formBack{
+  height: 50%;
+}
