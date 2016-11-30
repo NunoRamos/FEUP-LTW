@@ -19,9 +19,20 @@
 <div id="userNameSU">
     <form action="actions/signup.php" method="post">
         Username<br>
-        <input type="text" name="username"><br>
+        <input type="text" name="username" required><br>
         Password<br>
-        <input type="password" name="password"><br>
+        <input type="password" name="password" required><br>
+        Confirm Password<br>
+        <input type="password" name="confirmPassword" required><br>
+        Name<br>
+        <input type="text" name="name" required><br>
+        Email<br>
+        <input type="e-mail" name="email" required><br>
+        Gender<br>
+        <select name="gender">
+            <option value="male">Male</option>
+            <option value="Female">Female</option>
+        </select><br>
         <input type="submit" value="Create Account">
     </form>
 </div>

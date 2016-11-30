@@ -14,18 +14,16 @@ session_start();
             echo '<form action="actions/logout.php">
                 <input type="submit" value="Logout"/>
                 </form>';
-}
-
-else {
-  // <div id="header">
-            echo '<form action="loginPage.php">
+        }
+        else {
+            echo '<form action="login.php">
                 <input type="submit" value="login">
                 </form>';
             echo '<form action="signup.php">
                 <input type="submit" value="Create Account">
                 </form>';
                 // </div>
-}
+              }
         ?>
         <h4>The best restaurant website!!</h4>
     </head>
