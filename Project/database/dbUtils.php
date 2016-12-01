@@ -2,6 +2,10 @@
 
 include_once('connection.php');
 
+/** Gets the user with username
+ * @param $username username to be search
+ * @return array results of the search
+ */
 function getUser($username){
     global $db;
 
@@ -12,6 +16,13 @@ function getUser($username){
     return $result;
 }
 
+/** Puts the newe user on the database
+ * @param $username
+ * @param $password
+ * @param $name
+ * @param $email
+ * @param $gender
+ */
 function putUser($username,$password,$name,$email,$gender){
     global $db;
 
@@ -19,6 +30,9 @@ function putUser($username,$password,$name,$email,$gender){
     $stmt->execute(array($username,$password,$name,$email,$gender));
 }
 
+/** Gets the restaurants names
+ * @return array
+ */
 function getRestaurantsNames(){
   global $db;
 
@@ -30,6 +44,9 @@ function getRestaurantsNames(){
 
 }
 
+/** Gets the restaurant types
+ * @return array
+ */
 function getRestaurantsTypes(){
     global $db;
 

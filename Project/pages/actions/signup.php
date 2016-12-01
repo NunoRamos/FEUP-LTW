@@ -17,7 +17,7 @@ if($username != null && $password != null){
     $number_of_rows = sizeof($result);
 
     if($number_of_rows == 0){
-
+        $password = password_hash($password,PASSWORD_DEFAULT);
         putUser($username,$password,$name,$email,$gender);
         $_SESSION['username']=$username;
         $_SESSION['password']=$password;
