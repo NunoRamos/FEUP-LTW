@@ -13,7 +13,7 @@ for($i = 0; $i < $number_of_rows;$i++) {
 
     similar_text(strtoupper($search), strtoupper($result_names[$i]['name']), $percent);
     if ($percent > 35) {
-        $array[] = $result_names[$i]['name'];
+        $array[] = $result_names[$i]['id'];
     }
 }
 
@@ -23,12 +23,22 @@ $number_of_rows = sizeof($result_types);
 for($i = 0; $i < $number_of_rows;$i++) {
     similar_text(strtoupper($search), strtoupper($result_types[$i]['type']), $percent);
     if ($percent > 85) {
-        $array[] = $result_names[$i]['name'];
+        $array[] = $result_types[$i]['id'];
     }
 
 }
 
-$searches= array_unique($array);
+$idSearches= array_unique($array);
+$searches = array();
+
+$number_of_rows = sizeof($result_types);
+
+for($i = 0; $i < $number_of_rows;$i++) {
+    $id = $idSearches[$i];
+    $names = getRestaurant($id);
+    $searches[$i]['id'] = $id;
+    $searches[$i]['name'] = $names[0]['name'];
+}
 
 if(sizeof($searches) !=0){
     $_SESSION['search'] = $searches;

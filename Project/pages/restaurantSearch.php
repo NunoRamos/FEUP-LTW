@@ -26,9 +26,9 @@ session_start();
         if(count($_SESSION['search'])){
             echo '<div><ul>';
             foreach ($_SESSION['search'] as $item) {
-
-                echo '<span style="color:#000000;">
-                   ' .$item.'<br><br>
+                $link = "actions/restaurant.php?id=".$item['id']  ;
+                echo '<a style="text-decoration:none;"href="'.$link.'" ><span style="color:#000000;">
+                   ' .$item['name'].'<br><br>
                  </span>';
             }
             echo '</ul></div>';
