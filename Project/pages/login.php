@@ -11,19 +11,24 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/reset.css" type="text/css">
     <link rel="stylesheet" href="../css/loginPage.css" type="text/css">
+    <link rel="stylesheet" href="../css/footer.css" type="text/css">
 </head>
 <body>
+  <div id="logoImage">
+    <img src="../images/logo.jpg" alt="logo" height="200px">
+  </div>
 <div id="userName">
     <?php
         if(isset($_SESSION['incorrectLogin_flag']) && $_SESSION['incorrectLogin_flag']==1) {
   echo '<div>
-            <span style="color:#FF0000;">
+            <span id="loginError">
             Incorrect username or password.</span>
             </div>';
 }
     ?>
     <form action="actions/login.php" method="post" class="formUser">
         <label>
+          <br>
           Username:
           <br>
           <input type="text" name="username" placeholder="Email ou Username">
@@ -41,13 +46,11 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
         <input type="submit" value="Login">
     </form>
     </div>
-    <div>
+    <div id="backButonLogin">
         <form action="mainPage.php" method="post" class="formBack">
-          <!-- <input type="submit" value="Login"> -->
             <input type="submit" value="Back to main Page">
         </form>
     </div>
-<!-- </div> -->
 <?php
 include_once('templates/footer.php');
 ?>

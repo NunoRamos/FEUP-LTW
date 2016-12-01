@@ -6,21 +6,41 @@ body {
 }
 
 div {
-  color: grey;
+
+  margin-top: 150px;
+  /*margin-left: 50px;*/
+
   background-color: white;
   opacity: 0.9;
-  margin-top: 100px;
   padding-bottom: 0px;
 }
 
+#logoImage{
+  display: inline-block;
+  /*display: inline-grid;*/
+  /*text-align: left;*/
+  /*margin-top: 100px;*/
+  /*margin-left: 35.4%;*/
+}
+
 #userName {
+  color: grey;
   display: inline-block;
   text-align: justify;
   border: 2.5px dotted lightgrey;
   width: 300px;
   padding: 50px;
+  /*margin-top: 100px;*/
 }
 
-/*.formBack{
-  height: 50%;
-}*/
+#loginError{
+  color: red;
+  display: inline;
+  text-align: left;
+  padding-left: -1px;
+  width: 3px;
+}
+
+#backButonLogin{
+  margin-top: 100px;
+}

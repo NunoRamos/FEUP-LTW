@@ -3,11 +3,12 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
+    <head id="head">
         <title>My Restaurant</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="../css/reset.css" type="text/css">
         <link rel="stylesheet" href="../css/header.css" type="text/css">
+        <link rel="stylesheet" href="../css/footer.css" type="text/css">
         <?php
         if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
   echo '<p> Logado como '. $_SESSION['username'] . '</p><br>';
