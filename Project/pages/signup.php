@@ -3,6 +3,8 @@
 <head>
     <title>Log-in</title>
     <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="/js/sign_up.js"></script>
 </head>
 <body>
 <div>
@@ -15,17 +17,20 @@
     ?>
 </div>
 <div>
-    <form action="actions/signup.php" method="post">
+    <form action="actions/signup.php" method="post" onsubmit="return validateForm()">
         Username<br>
-        <input type="text" name="username" required><br>
+        <input id="username" type="text" name="username" required><br>
+        <p id="invalidUsername" style="display:none;">Write a valid username, 8 characters<br></p>
         Password<br>
-        <input type="password" name="password" required><br>
+        <input id="password" type="password" name="password" required><br>
+        <p id="invalidPassword" style="display:none;">Write a valid password, 8 characters<br></p>
         Confirm Password<br>
-        <input type="password" name="confirmPassword" required><br>
+        <input id="confirmPassword" type="password" name="confirmPassword" required><br>
+        <p id="checkingPasswords" style="display:none;">The passwords doesn't match<br></p>
         Name<br>
-        <input type="text" name="name" required><br>
+        <input id="name" type="text" name="name" required><br>
         Email<br>
-        <input type="e-mail" name="email" required><br>
+        <input  id="email" type="e-mail" name="email" required><br>
         Gender<br>
         <select name="gender">
             <option value="male">Male</option>
