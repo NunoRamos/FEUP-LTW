@@ -5,18 +5,20 @@
     <meta charset="utf-8">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="/js/sign_up.js"></script>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/signup.css" type="text/css">
 </head>
 <body>
 <div>
     <?php
     session_start();
     $invalid_user = $_SESSION['invalid_user'];
-        if($invalid_user){
-            echo '<p>Invalid username</p>';
-        }
+        if($invalid_user) {
+  echo '<p>Invalid username</p>';
+}
     ?>
 </div>
-<div>
+<div id="userNameSU">
     <form action="actions/signup.php" method="post" onsubmit="return validateForm()">
         Username<br>
         <input id="username" type="text" name="username" required><br>
@@ -39,7 +41,7 @@
         <input type="submit" value="Create Account">
     </form>
 </div>
-<div>
+<div id="mainPageSU">
     <form action="mainPage.php" method="post">
         <input type="submit" value="Back to main Page">
     </form>
@@ -47,6 +49,4 @@
 <?php
 include_once('templates/footer.php');
 ?>
-<!--  -->
 </html>
-<!--  -->
