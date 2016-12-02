@@ -17,12 +17,12 @@ div {
 
 #userName {
   color: grey;
-  display: inline-block;;
+  display: inline-block;
   text-align: justify;
   border: 2.5px dotted lightgrey;
   width: 21%;
   padding: 3.5%;
-  margin-top: 11%
+  margin-top: 11%;
 }
 
 #loginError{

@@ -6,23 +6,21 @@ body {
 }
 
 div {
-  color: grey;
   background-color: white;
   opacity: 0.9;
-  margin-top: 100px;
-  padding-bottom: 0px;
+}
+
+#logoImage{
+  display: inline-block;
+  margin-top: 12%
 }
 
 #userNameSU {
+  color: grey;
   display: inline-block;
   text-align: justify;
   border: 2.5px dotted lightgrey;
-  width: 300px;
-  padding: 50px;
+  width: 21%;
+  padding: 3.5%;
+  margin-top: 11%;
 }
-
-/*
-#formBack{
-  height: 50%;
-}
-*/

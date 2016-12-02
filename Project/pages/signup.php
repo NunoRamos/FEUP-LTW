@@ -7,6 +7,7 @@
     <script src="/js/sign_up.js"></script>
     <link rel="stylesheet" href="../css/reset.css" type="text/css">
     <link rel="stylesheet" href="../css/signup.css" type="text/css">
+    <link rel="stylesheet" href="../css/footer.css" type="text/css">
 </head>
 <body>
 <div>
@@ -18,12 +19,17 @@
 }
     ?>
 </div>
+<div id="logoImage">
+  <img src="../images/logo.jpg" alt="logo" height="200px">
+</div>
 <div id="userNameSU">
     <form action="actions/signup.php" method="post" onsubmit="return validateForm()">
-        Username<br>
+        Username
+        <br>
         <input id="username" type="text" name="username" required><br>
         <p id="invalidUsername" style="display:none;">Write a valid username, 8 characters<br></p>
-        Password<br>
+        Password
+        <br>
         <input id="password" type="password" name="password" required><br>
         <p id="invalidPassword" style="display:none;">Write a valid password, 8 characters<br></p>
         Confirm Password<br>
