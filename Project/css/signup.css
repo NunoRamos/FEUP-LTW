@@ -11,8 +11,10 @@ div {
 }
 
 #logoImage{
+  /*position: sticky;*/
+  top: 5%;
   display: inline-block;
-  margin-top: 12%
+  margin-top: 1%;
 }
 
 #userNameSU {
@@ -22,5 +24,8 @@ div {
   border: 2.5px dotted lightgrey;
   width: 21%;
   padding: 3.5%;
-  margin-top: 11%;
+}
+
+#mainPageSU{
+  margin-top: 5%;
 }

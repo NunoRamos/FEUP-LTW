@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Log-in</title>
+    <title>Sign Up</title>
     <meta charset="utf-8">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="/js/sign_up.js"></script>
@@ -24,26 +24,55 @@
 </div>
 <div id="userNameSU">
     <form action="actions/signup.php" method="post" onsubmit="return validateForm()">
-        Username
-        <br>
+        <label>
+          Username
+          <br>
         <input id="username" type="text" name="username" required><br>
         <p id="invalidUsername" style="display:none;">Write a valid username, 8 characters<br></p>
+        <br>
+      </label>
+      <label>
+        <br>
         Password
         <br>
         <input id="password" type="password" name="password" required><br>
         <p id="invalidPassword" style="display:none;">Write a valid password, 8 characters<br></p>
-        Confirm Password<br>
+        <br>
+      </label>
+      <label>
+        <br>
+        Confirm Password
+        <br>
         <input id="confirmPassword" type="password" name="confirmPassword" required><br>
         <p id="checkingPasswords" style="display:none;">The passwords doesn't match<br></p>
-        Name<br>
+        <br>
+      </label>
+      <label>
+        <br>
+        Name
+        <br>
         <input id="name" type="text" name="name" required><br>
-        Email<br>
+        <br>
+      </label>
+      <label>
+        <br>
+        Email
+        <br>
         <input  id="email" type="e-mail" name="email" required><br>
-        Gender<br>
+        <br>
+      </label>
+      <label>
+        <br>
+        Gender
+        <br>
         <select name="gender">
             <option value="male">Male</option>
             <option value="Female">Female</option>
-        </select><br>
+        </select>
+        <br>
+      </label>
+      <br>
+      <br>
         <input type="submit" value="Create Account">
     </form>
 </div>
