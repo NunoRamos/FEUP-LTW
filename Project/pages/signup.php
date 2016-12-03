@@ -23,7 +23,6 @@
 <div id="userNameSU">
     <form action="actions/signup.php" method="post">
         <label>
-          <br>
           Username
           <br>
         <input type="text" name="username" required>

@@ -24,9 +24,10 @@ div {
   border: 2.5px dotted lightgrey;
   width: 21%;
   padding: 3.5%;
-  margin-top: 5%
+  /*padding: 3%;*/
+  margin-top: 2%
 }
 
 #mainPageSU{
-  margin-top: 10%;
+  margin-top: 5%;
 }
