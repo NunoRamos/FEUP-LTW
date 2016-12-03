@@ -3,6 +3,8 @@
 <head>
     <title>Sign Up</title>
     <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="/js/sign_up.js"></script>
     <link rel="stylesheet" href="../css/reset.css" type="text/css">
     <link rel="stylesheet" href="../css/signup.css" type="text/css">
     <link rel="stylesheet" href="../css/footer.css" type="text/css">
@@ -21,25 +23,25 @@
   <img src="../images/logo.jpg" alt="logo" height="200px">
 </div>
 <div id="userNameSU">
-    <form action="actions/signup.php" method="post">
+    <form action="actions/signup.php" method="post" onsubmit="return validateForm()">
         <label>
           Username
           <br>
-        <input type="text" name="username" required>
+        <input id="username" type="text" name="username" required>
         <br>
       </label>
       <label>
         <br>
         Password
         <br>
-        <input type="password" name="password" required>
+        <input id="password" type="password" name="password" required>
         <br>
       </label>
       <label>
         <br>
         Confirm Password
         <br>
-        <input type="password" name="confirmPassword" required>
+        <input id="confirmPassword" type="password" name="confirmPassword" required>
         <br>
       </label>
       <label>
