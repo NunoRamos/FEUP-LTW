@@ -4,18 +4,19 @@ session_start();
 include_once('templates/header.php');
 ?>
 
+<link rel="stylesheet" href="../css/restaurant.css" type="text/css">
 <div>
-    <h2><?php echo $_SESSION['restaurant']['name']; ?></h2>
+    <h2 id="restaurantName"><?php echo $_SESSION['restaurant']['name']; ?></h2>
     <h4>
-        <?php echo $_SESSION['restaurant']['type']; ?>
-        | <?php echo $_SESSION['restaurant']['location']; ?>
+        <div id="restaurantType"> <?php echo $_SESSION['restaurant']['type']; ?> </div>
+        <div id="restaurantLocation"> <?php echo $_SESSION['restaurant']['location']; ?> </div>
     </h4>
 </div>
 <div>
-    <h3>Comments</h3>
+    <h3 id="reviewTitle">Reviews</h3>
     <?php
        foreach ($_SESSION['reviews'] as $review){
-            echo '<div>
+            echo '<div id="divReview">
                 <div>'.$review['id_user'].'</div>
                 <div>'.$review['text'].'</div>
                 <div>'.$review['grade'].'</div>
@@ -33,7 +34,7 @@ include_once('templates/header.php');
         </form>';
     }
     else {
-        echo '<div>
+        echo '<div id="reviewNotLogued">
         <a href="login.php">To leave a review, just log in</a>
         </div>';
     }
