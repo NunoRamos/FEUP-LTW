@@ -41,6 +41,7 @@ for($i = 0; $i < $number_of_rows;$i++) {
 }
 
 if(sizeof($searches) !=0){
+    unset($_SESSION['search']);
     $_SESSION['search'] = $searches;
     $_SESSION['noResultsFound'] = 0;
     header('Location: ../restaurantSearch.php');

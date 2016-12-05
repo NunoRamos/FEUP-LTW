@@ -61,11 +61,26 @@ function getRestaurantsTypes(){
 /** Gets the given restaurant row
  * @param $restaurant
  */
-    function getRestaurant($id){
+function getRestaurant($id){
     global $db;
 
     $stmt = $db->prepare("SELECT * FROM restaurant WHERE id ==?");
     $stmt->execute(array($id));
+    $result = $stmt->fetchAll();
+
+    return $result;
+
+}
+
+/** Gets the reviews of a restaurant
+ * @param $id_restaurant id of the restaurant to search on reviews
+ * @return array reviews of the given restaurant
+ */
+function getRestaurantReviews($id_restaurant){
+    global $db;
+
+    $stmt = $db->prepare("SELECT * FROM review WHERE id_restaurant == ?");
+    $stmt->execute(array($id_restaurant));
     $result = $stmt->fetchAll();
 
     return $result;

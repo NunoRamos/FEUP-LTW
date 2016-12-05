@@ -26,10 +26,12 @@ session_start();
         if(count($_SESSION['search'])){
             echo '<div><ul>';
             foreach ($_SESSION['search'] as $item) {
-                $link = "actions/restaurant.php?id=".$item['id']  ;
-                echo '<a style="text-decoration:none;"href="'.$link.'" ><span style="color:#000000;">
-                   ' .$item['name'].'<br><br>
-                 </span>';
+                if(!is_null($item['id'])){
+                    $link = "actions/restaurant.php?id=".$item['id'];
+                     echo '<li><a style="text-decoration:none;"href="'.$link.'" ><span style="color:#000000;">
+                    ' .$item['name'].'<br><br>
+                    </span></li>';
+                }
             }
             echo '</ul></div>';
         }
