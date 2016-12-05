@@ -20,7 +20,7 @@
     ?>
 </div>
 <div id="logoImage">
-  <img src="../images/logo.jpg" alt="logo" height="200px">
+  <img src="../images/logo.png" alt="logo" height="200px">
 </div>
 <div id="userNameSU">
     <form action="actions/signup.php" method="post" onsubmit="return validateForm()">
