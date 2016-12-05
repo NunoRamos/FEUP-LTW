@@ -3,3 +3,20 @@
   background-color: grey; /*temporario*/
   padding: 25px 25px 25px 25px;
 }
+
+#header{
+  background-color: #807e7c;
+  padding: 10px 10px 30px 10px;
+}
+
+.button{
+  display:inline-block;
+  padding-left: 5px;
+  float: right;
+}
+
+.buttonStyle{
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 10px;
+}

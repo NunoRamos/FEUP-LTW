@@ -1,13 +1,11 @@
-<!--p>Best Restaurant</p-->
-<!--form action="actions/restaurantSearch.php" method="post">
-  <input type="text" name="search" value="Search Restaurants">
-  <input type="submit" value="search">
-</form-->
+<link rel="stylesheet" href="../css/mainPage.css" type="text/css">
+<div class="relative">
+    <h4 id="mainPageTitle">The best restaurant website!!</h4>
+</div>
+<div id="searchBox">
+   <form action="actions/restaurantSearch.php" method="post">
+       <input id="searchBoxStyle" required type="text" name="search" placeholder="Search Restaurants">
+       <input id="searchBoxSubmit" type="submit" value="Search">
+   </form>
+</div>
 
-<h4>The best restaurant website!!</h4>
-<?php
-echo '<form action="actions/restaurantSearch.php" method="post">
-        <input required type="text" name="search" placeholder="Search Restaurants">
-        <input type="submit" value="search">
-        </form>';
-?>
