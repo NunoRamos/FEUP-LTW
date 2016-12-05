@@ -15,7 +15,7 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
 </head>
 <body>
   <div id="logoImage">
-    <img src="../images/logo.jpg" alt="logo" height="200px">
+    <img src="../images/logo.png" alt="logo" height="200px">
   </div>
 <div id="userName">
     <?php
