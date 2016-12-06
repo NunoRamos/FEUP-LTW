@@ -27,35 +27,38 @@
         <label>
           Username
           <br>
-        <input id="username" type="text" name="username" required>
+        <input id="username" type="text" name="username" required><br>
+        <p id="invalidUsername" style="display:none;">Write a valid username, 8 characters<br></p>
         <br>
       </label>
       <label>
         <br>
         Password
         <br>
-        <input id="password" type="password" name="password" required>
+        <input id="password" type="password" name="password" required><br>
+        <p id="invalidPassword" style="display:none;">Write a valid password, 8 characters<br></p>
         <br>
       </label>
       <label>
         <br>
         Confirm Password
         <br>
-        <input id="confirmPassword" type="password" name="confirmPassword" required>
+        <input id="confirmPassword" type="password" name="confirmPassword" required><br>
+        <p id="checkingPasswords" style="display:none;">The passwords doesn't match<br></p>
         <br>
       </label>
       <label>
         <br>
         Name
         <br>
-        <input type="text" name="name" required>
+        <input id="name" type="text" name="name" required><br>
         <br>
       </label>
       <label>
         <br>
         Email
         <br>
-        <input type="e-mail" name="email" required>
+        <input  id="email" type="e-mail" name="email" required><br>
         <br>
       </label>
       <label>

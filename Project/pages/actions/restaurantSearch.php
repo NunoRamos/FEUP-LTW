@@ -1,8 +1,10 @@
 <?php
 include_once('../../database/dbUtils.php');
 
-$search = $_POST["search"];
+session_start();
 
+$_SESSION['noResultsFound']=0;
+$search = $_POST["search"];
 $result_names = getRestaurantsNames();
 $number_of_rows = sizeof($result_names);
 $array= array();
@@ -10,8 +12,8 @@ $array= array();
 for($i = 0; $i < $number_of_rows;$i++) {
 
     similar_text(strtoupper($search), strtoupper($result_names[$i]['name']), $percent);
-    if ($percent > 40) {
-        $array[] = $result_names[$i]['name'];
+    if ($percent > 35) {
+        $array[] = $result_names[$i]['id'];
     }
 }
 
@@ -21,24 +23,32 @@ $number_of_rows = sizeof($result_types);
 for($i = 0; $i < $number_of_rows;$i++) {
     similar_text(strtoupper($search), strtoupper($result_types[$i]['type']), $percent);
     if ($percent > 85) {
-        $array[] = $result_names[$i]['name'];
+        $array[] = $result_types[$i]['id'];
     }
 
 }
 
-$searches= array_unique($array);
-print_r($searches);
+$idSearches= array_unique($array);
+$searches = array();
 
-//similar_text($search, $result)
-//echo $number_of_rows;
+$number_of_rows = sizeof($result_types);
 
-   /* if($number_of_rows != 0){
-    $_SESSION['username'] = $username;
-    $_SESSION['password'] = $password;
-    $_SESSION['incorrectLogin_flag']=0;
-    header('Location: ../index.php');
+for($i = 0; $i < $number_of_rows;$i++) {
+    $id = $idSearches[$i];
+    $names = getRestaurant($id);
+    $searches[$i]['id'] = $id;
+    $searches[$i]['name'] = $names[0]['name'];
+    echo $id;
+    echo $names;
 }
-else {
-    $_SESSION['incorrectLogin_flag']=1;
+
+if(sizeof($searches) !=0){
+    unset($_SESSION['search']);
+    $_SESSION['search'] = $searches;
+    $_SESSION['noResultsFound'] = 0;
+    header('Location: ../restaurantSearch.php');
 }
-header('Location: ../restaurantSearch.php');*/
+else{
+    $_SESSION['noResultsFound'] = 1;
+    header('Location: ../restaurantSearch.php');
+}

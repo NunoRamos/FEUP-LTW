@@ -28,5 +28,5 @@ INSERT INTO restaurant VALUES (NULL,'Churasqueira da Pinta','Rua forum da maia,M
 INSERT INTO review VALUES (NULL,1,1,'Melhor restaurante do porto e não sei se do mundo, melhores rojoes de sempre',9);
 INSERT INTO review VALUES (NULL,2,1,'Quem quiser provar a melhor francesinha do Porto basta ir a este restaurante, que tambem tem uma otima localizacao',8);
 
-INSERT INTO user VALUES ('username1','vivaaoporto','Nuno Ramos','nuno@gmail.com','Male');
-INSERT INTO user VALUES ('username2','portoooo','Ines peixe','peixe@gmail.com','Female');
+/*INSERT INTO user VALUES ('username1','vivaaoporto','Nuno Ramos','nuno@gmail.com','Male');
+INSERT INTO user VALUES ('username2','portoooo','Ines peixe','peixe@gmail.com','Female');*/
