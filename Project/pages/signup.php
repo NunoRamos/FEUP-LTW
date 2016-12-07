@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +20,6 @@
 <div class="pageContent">
   <div>
       <?php
-      session_start();
       $invalid_user = $_SESSION['invalid_user'];
           if($invalid_user) {
     echo '<p>Invalid username</p>';
