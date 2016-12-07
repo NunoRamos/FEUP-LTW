@@ -9,6 +9,7 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
 <head>
     <title>Log-in</title>
     <meta charset="utf-8">
+    <link rel="icon" type="image/png"  href="../images/logo.png" />
     <link rel="stylesheet" href="../css/reset.css" type="text/css">
     <link rel="stylesheet" href="../css/loginPage.css" type="text/css">
     <link rel="stylesheet" href="../css/footer.css" type="text/css">

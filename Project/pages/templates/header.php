@@ -5,9 +5,7 @@ session_start();
 <html>
     <head id="head">
         <title>My Restaurant</title>
-        <!-- ICON -->
-        <link rel="shortcut icon" type="image/png" href="../images/logoIcon.ico" />
-        <!--  -->
+        <link rel="icon" type="image/png"  href="../images/logo.png" />
         <meta charset="utf-8">
         <link rel="stylesheet" href="../css/reset.css" type="text/css">
         <link rel="stylesheet" href="../css/header.css" type="text/css">
