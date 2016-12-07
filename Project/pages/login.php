@@ -9,12 +9,12 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
 <head>
     <title>Log-in</title>
     <meta charset="utf-8">
+    <link rel="icon" type="image/png"  href="../images/logo.png" />
     <link rel="stylesheet" href="../css/reset.css" type="text/css">
     <link rel="stylesheet" href="../css/loginPage.css" type="text/css">
     <link rel="stylesheet" href="../css/footer.css" type="text/css">
-    <!-- definições pagina -->
-    <link rel="stylesheet" href="../css/globalContent.css" type="text/css">
-    <!-- letra -->
+    <link rel="stylesheet" href="../css/imageSingInUp.css" type="text/css">
+    <link rel="stylesheet" href="../css/lettering.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i" rel="stylesheet">
 </head>
 <body>

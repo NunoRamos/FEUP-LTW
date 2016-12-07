@@ -8,14 +8,14 @@ $_SESSION['page'] = 'signup.php';
 <head>
     <title>Sign Up</title>
     <meta charset="utf-8">
+    <link rel="icon" type="image/png"  href="../images/logo.png" />
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="/js/sign_up.js"></script>
     <link rel="stylesheet" href="../css/reset.css" type="text/css">
     <link rel="stylesheet" href="../css/signup.css" type="text/css">
     <link rel="stylesheet" href="../css/footer.css" type="text/css">
-    <!-- definições pagina -->
-    <link rel="stylesheet" href="../css/globalContent.css" type="text/css">
-    <!-- letra -->
+    <link rel="stylesheet" href="../css/imageSingInUp.css" type="text/css">
+    <link rel="stylesheet" href="../css/lettering.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i" rel="stylesheet">
 </head>
 <body>
