@@ -2,19 +2,20 @@ body {
   margin: 0 auto;
   background-color: white;
   text-align: center;
-  font-family: sans-serif;
-}
-
-div {
-  background-color: white;
-  opacity: 0.9;
+  margin-top: 3%;
 }
 
 #logoImage{
-  /*position: sticky;*/
   top: 5%;
   display: inline-block;
   margin-top: 1%;
+}
+
+/*Centrar Imagem*/
+.pageContent,
+#logoImage,
+#userNameSU {
+  vertical-align: middle;
 }
 
 #userNameSU {
@@ -23,9 +24,30 @@ div {
   text-align: justify;
   border: 2.5px dotted lightgrey;
   width: 21%;
-  padding: 3.5%;
+  padding: 2.5%;
+}
+
+#username{
+  width: 98.5%;
+}
+
+#password{
+  width: 98.5%;
+}
+
+#confirmPassword{
+  width: 98.5%;
+}
+
+#name{
+  width: 98.5%;
+}
+
+#email{
+  width: 98.5%;
 }
 
 #mainPageSU{
   margin-top: 5%;
+  padding-bottom: 1%;
 }
