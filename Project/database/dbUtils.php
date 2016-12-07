@@ -9,8 +9,8 @@ include_once('connection.php');
 function getUser($username){
     global $db;
 
-    $stmt = $db->prepare("SELECT * FROM user WHERE username == ?");
-    $stmt->execute(Array($username));
+    $stmt = $db->prepare("SELECT * FROM user WHERE username = ?");
+    $stmt->execute(array($username));
     $result = $stmt->fetchAll();
 
     return $result;

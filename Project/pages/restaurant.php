@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+$_SESSION['page'] = 'restaurant.php';
+
 include_once('templates/header.php');
 ?>
 
@@ -27,11 +29,14 @@ include_once('templates/header.php');
 <div>
     <?php
     if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
-        echo '<h3>Leave Your Review</h3>
-        <form action="actions/review.php" method="post">
-          <input type="text" name="text" placeholder="text">
-         <p>Leave a grade:<input type="number" name="grade" min="0" max="10" step="1"></p>
-        </form>';
+        echo '<h3 id="leaveReviewHeader">Leave Your Review</h3>
+            <div id="leaveReview">
+                <form action="actions/review.php" method="post">
+                    <textarea type="text" cols="40" rows="10" name="text"> </textarea>
+                    <p>Leave a grade:<input type="number" name="grade" min="0" max="10" step="1"></p>
+                    <input type="submit" value="Send Review">
+                </form>
+            </div>';
     }
     else {
         echo '<div id="reviewNotLogued">

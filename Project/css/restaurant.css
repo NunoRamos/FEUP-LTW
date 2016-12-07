@@ -32,3 +32,16 @@
     padding: 10px 10px 10px 10px;
     margin: 10px 10px 10px 10px;
 }
+
+#leaveReviewHeader{
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+    border-top: solid;
+    border-top-color: #e0e0e0;
+    border-top-width: 2px;
+}
+
+#leaveReview{
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+}

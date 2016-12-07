@@ -36,14 +36,14 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
           <br>
           Username:
           <br>
-          <input type="text" name="usernameI" placeholder="Email ou Username">
+          <input type="text" name="username" placeholder="Email ou Username">
           <br>
         </label>
         <label>
           <br>
           Password:
           <br>
-          <input type="password" name="passwordI" placeholder="Password">
+          <input type="password" name="password" placeholder="Password">
           <br>
         </label>
         <br>
