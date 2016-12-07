@@ -5,10 +5,16 @@ session_start();
 <html>
     <head id="head">
         <title>My Restaurant</title>
+        <!-- ICON -->
+        <link rel="shortcut icon" type="image/png" href="../images/logoIcon.ico" />
+        <!--  -->
         <meta charset="utf-8">
         <link rel="stylesheet" href="../css/reset.css" type="text/css">
         <link rel="stylesheet" href="../css/header.css" type="text/css">
         <link rel="stylesheet" href="../css/footer.css" type="text/css">
+        <!-- letra -->
+        <link rel="stylesheet" href="../css/lettering.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i" rel="stylesheet">
 
     </head>
     <body>

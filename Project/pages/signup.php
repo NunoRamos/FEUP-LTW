@@ -11,9 +11,8 @@ session_start();
     <link rel="stylesheet" href="../css/reset.css" type="text/css">
     <link rel="stylesheet" href="../css/signup.css" type="text/css">
     <link rel="stylesheet" href="../css/footer.css" type="text/css">
-    <!-- definições pagina -->
-    <link rel="stylesheet" href="../css/globalContent.css" type="text/css">
-    <!-- letra -->
+    <link rel="stylesheet" href="../css/imageSingInUp.css" type="text/css">
+    <link rel="stylesheet" href="../css/lettering.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i" rel="stylesheet">
 </head>
 <body>

@@ -3,8 +3,3 @@ aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu,
   font-family: 'Lato', sans-serif;
   font-weight: 300;
 }
-
-body {
-  background-image: url("../images/background.jpg");
-  background-size: cover;
-}
