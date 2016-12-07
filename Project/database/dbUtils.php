@@ -86,3 +86,10 @@ function getRestaurantReviews($id_restaurant){
     return $result;
 
 }
+
+function putReview($id_restaurant,$id_user, $text, $grade){
+    global $db;
+
+    $stmt = $db->prepare("INSERT INTO review VALUES(NULL,?,?,?,?)");
+    $stmt->execute(array($id_restaurant,$id_user,$text,$grade));
+}

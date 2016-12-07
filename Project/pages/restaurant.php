@@ -32,8 +32,8 @@ include_once('templates/header.php');
         echo '<h3 id="leaveReviewHeader">Leave Your Review</h3>
             <div id="leaveReview">
                 <form action="actions/review.php" method="post">
-                    <textarea type="text" cols="40" rows="10" name="text"> </textarea>
-                    <p>Leave a grade:<input type="number" name="grade" min="0" max="10" step="1"></p>
+                    <textarea type="text" cols="40" rows="10" name="text" required></textarea>
+                    <p>Leave a grade:<input type="number" name="grade" min="0" max="10" step="1" required></p>
                     <input type="submit" value="Send Review">
                 </form>
             </div>';
