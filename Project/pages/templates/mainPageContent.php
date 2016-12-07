@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="../css/mainPage.css" type="text/css">
+<link rel="stylesheet" href="../css/imageMainPage.css" type="text/css">
 <!-- letra -->
 <link rel="stylesheet" href="../css/lettering.css" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i" rel="stylesheet">
