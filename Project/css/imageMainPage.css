@@ -1,4 +1,5 @@
 body {
-  background-image: url("../images/backgroundMainPage.png");
-  /*background-size: cover;*/
+  background-image: url("../images/backgroundMainPage.png") !important;
+  background-repeat: repeat-y;
+  background-size: contain;
 }
