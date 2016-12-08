@@ -1,22 +1,18 @@
-#head{
-  color: grey;
-  background-color: grey; /*temporario*/
-  padding: 25px 25px 25px 25px;
+#head {
+  color: gray;
+  background-color: white;
+  padding-top: .5em;
 }
 
-#header{
-  background-color: #807e7c;
-  padding: 10px 10px 30px 10px;
+#header {
+  background-color: white;
 }
 
-.button{
-  display:inline-block;
-  padding-left: 5px;
+div.button {
+  display: inline-block;
+  padding-left: 0px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   float: right;
-}
-
-.buttonStyle{
-  padding-right: 10px;
-  padding-left: 10px;
-  border-radius: 10px;
 }

@@ -16,6 +16,8 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
     <link rel="stylesheet" href="../css/imageSingInUp.css" type="text/css">
     <link rel="stylesheet" href="../css/lettering.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i" rel="stylesheet">
+    <!-- button -->
+    <link rel="stylesheet" href="../css/button.css" type="text/css">
 </head>
 <body>
 <div class="pageContent">
@@ -25,35 +27,35 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
   <div id="userNameSI">
     <?php
         if(isset($_SESSION['incorrectLogin_flag']) && $_SESSION['incorrectLogin_flag']==1) {
-          echo '<div>
+  echo '<div>
             <span id="loginError">
             Incorrect username or password.</span>
             </div>';
-          }
+}
       ?>
       <form action="actions/login.php" method="post" class="formUser">
         <label>
           <br>
           Username:
           <br>
-          <input type="text" name="username" placeholder="Email ou Username">
+          <input id="usernameI" type="text" name="username" placeholder="Email ou Username">
           <br>
         </label>
         <label>
           <br>
           Password:
           <br>
-          <input type="password" name="password" placeholder="Password">
+          <input id="passwordI" type="password" name="password" placeholder="Password">
           <br>
         </label>
         <br>
         <br>
-        <input type="submit" value="Login">
+        <input id="buttonLogin" class="buttonStyle" type="submit" value="Login">
       </form>
     </div>
     <div id="backButonLogin">
       <form action="mainPage.php" method="post" class="formBack">
-        <input type="submit" value="Back to main Page">
+        <input class="buttonStyle" type="submit" value="Back to main Page">
       </form>
     </div>
   </div>
