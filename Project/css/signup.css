@@ -5,7 +5,7 @@ body {
   margin-top: 3%;
 }
 
-#logoImage{
+#logoImage {
   top: 5%;
   display: inline-block;
   margin-top: 1%;
@@ -18,8 +18,9 @@ body {
   vertical-align: middle;
 }
 
-div#userNameSU{
+div#userNameSU {
   background-color: white;
+  opacity: 0.95;
 }
 
 #userNameSU {
@@ -29,32 +30,35 @@ div#userNameSU{
   border: 2.5px dotted lightgrey;
   width: 21%;
   padding: 2.5%;
-  /*Rever!!!*/
   margin-top: 5%;
-  /**/
 }
 
-#username{
+#username {
   width: 98.5%;
 }
 
-#password{
+#password {
   width: 98.5%;
 }
 
-#confirmPassword{
+#confirmPassword {
   width: 98.5%;
 }
 
-#name{
+#name {
   width: 98.5%;
 }
 
-#email{
+#email {
   width: 98.5%;
 }
 
-#mainPageSU{
+#buttonCreateAccount {
+  display: inline-block;
+  float: right;
+}
+
+#mainPageSU {
   margin-top: 5%;
   padding-bottom: 1%;
 }
