@@ -14,4 +14,12 @@ $reviews = getRestaurantReviews($restaurant_id);
 
 $_SESSION['reviews'] = $reviews;
 
+$owners = getOwners($id);
+$newOwners = array();
+foreach ($owners as $owner){
+    array_push($newOwners,$owner['username']);
+}
+
+$_SESSION['owners'] = $newOwners;
+
 header('Location: ../restaurant.php');

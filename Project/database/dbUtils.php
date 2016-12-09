@@ -87,6 +87,12 @@ function getRestaurantReviews($id_restaurant){
 
 }
 
+/** Add a review to the review table
+ * @param $id_restaurant
+ * @param $id_user
+ * @param $text
+ * @param $grade
+ */
 function putReview($id_restaurant,$id_user, $text, $grade){
     global $db;
 
@@ -94,6 +100,11 @@ function putReview($id_restaurant,$id_user, $text, $grade){
     $stmt->execute(array($id_restaurant,$id_user,$text,$grade));
 }
 
+/** Add a restaurant to the restaurant table
+ * @param $name
+ * @param $location
+ * @param $type
+ */
 function putRestaurant($name,$location,$type){
     global $db;
 
@@ -101,6 +112,10 @@ function putRestaurant($name,$location,$type){
     $stmt->execute(array($name,$location,$type));
 }
 
+/** Gets a restaurant by name
+ * @param $name
+ * @return array
+ */
 function getRestaurantByName($name){
     global $db;
 
@@ -111,9 +126,27 @@ function getRestaurantByName($name){
     return $result;
 }
 
+/** Adds a owner to a restaurant
+ * @param $id_restaurant
+ * @param $id_user
+ */
 function addOwner($id_restaurant,$id_user){
     global $db;
 
     $stmt = $db->prepare("INSERT INTO owner VALUES(?,?)");
     $stmt->execute(array($id_restaurant,$id_user));
+}
+
+/** Gets the owner/owners of a given restaurant
+ * @param $id_restaurant
+ * @return array
+ */
+function getOwners($id_restaurant){
+    global $db;
+
+    $stmt = $db->prepare("SELECT username FROM owner WHERE id_restaurant == ?");
+    $stmt->execute(array($id_restaurant));
+    $result = $stmt->fetchAll();
+
+    return $result;
 }

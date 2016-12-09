@@ -10,6 +10,11 @@ include_once('templates/header.php');
 <div>
     <h2 id="restaurantName"><?php echo $_SESSION['restaurant']['name']; ?></h2>
     <h4>
+        <?php
+        if(in_array($_SESSION['username'],$_SESSION['owners'])){
+            echo 'ÉS O DONO DO RESTAURANTE';
+        }
+        ?>
         <div id="restaurantType"> <?php echo $_SESSION['restaurant']['type']; ?> </div>
         <div id="restaurantLocation"> <?php echo $_SESSION['restaurant']['location']; ?> </div>
     </h4>
