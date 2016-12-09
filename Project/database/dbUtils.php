@@ -93,3 +93,20 @@ function putReview($id_restaurant,$id_user, $text, $grade){
     $stmt = $db->prepare("INSERT INTO review VALUES(NULL,?,?,?,?)");
     $stmt->execute(array($id_restaurant,$id_user,$text,$grade));
 }
+
+function putRestaurant($name,$location,$type){
+    global $db;
+
+    $stmt = $db->prepare("INSERT INTO restaurant VALUES(NULL,?,?,?)");
+    $stmt->execute(array($name,$location,$type));
+}
+
+function getRestaurantByName($name){
+    global $db;
+
+    $stmt = $db->prepare("SELECT * FROM restaurant WHERE name == ?");
+    $stmt->execute(array($name));
+    $result = $stmt->fetchAll();
+
+    return $result;
+}

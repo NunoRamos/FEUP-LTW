@@ -3,7 +3,7 @@ CREATE TABLE restaurant (
 	name VARCHAR,
 	location VARCHAR,
   type VARCHAR
-	);
+);
 
 CREATE TABLE review (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
