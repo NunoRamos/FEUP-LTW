@@ -1,42 +1,52 @@
-body{
+body {
   margin: 0 auto;
   background-color: white;
   text-align: center;
 }
 
-#logoImage{
+#logoImage {
   top: 5%;
   display: inline-block;
-  margin-top: 1%;
+  margin-top: 15%;
 }
 
  /*Centrar Imagem*/
-.pageContent,#logoImage,#userNameSI{
+.pageContent,#logoImage,#userNameSI {
   vertical-align: middle;
 }
 
-div#userNameSI{
+div#userNameSI {
   background-color: white;
 }
 
-#userNameSI{
+#userNameSI {
   color: grey;
   display: inline-block;
   text-align: justify;
   border: 2.5px dotted lightgrey;
   width: 21%;
   padding: 2.5%;
+  margin-top: 15%;
 }
 
-formUser#usernameI{
-  width: 100%;
+#usernameI {
+  width: 98.5%;
 }
 
-#passwordI{
-  width: 100%;
+#passwordI {
+  width: 98.5%;
 }
 
-#backButonLogin{
+#buttonLogin {
+  display: inline-block;
+  float: right;
+}
+
+#backButonLogin {
   margin-top: 5%;
   padding-bottom: 0.5%;
+}
+
+span#loginError {
+  color: red;
 }

@@ -8,6 +8,9 @@ $_SESSION['page'] = 'restaurantSearch.php';
 <head>
     <title>Search</title>
     <meta charset="utf-8">
+    <!-- letra -->
+    <link rel="stylesheet" href="../css/lettering.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i" rel="stylesheet">
 </head>
 <body>
 <div>

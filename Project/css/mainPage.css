@@ -1,32 +1,82 @@
-#mainPageTitle{
-    position: fixed;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 200%;
+#mainPageTitle {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 200%;
+}
+
+.pageContent {
+  background-color: white;
+  margin-left: 25%;
+}
+
+#searchAndText {
+  align-items: center;
+  text-align: center;
+  position: fixed;
 }
 
 .relative {
-    position: relative;
+  padding-top: 1em;
 }
 
-#searchBox{
-    position: fixed;
-    top: 40%;
-    left: 55%;
-    transform: translate(-50%,-50%);
+#searchBox {
+  text-align: center;
+  position: fixed;
+  top: 40%;
+  left: 55%;
+  transform: translate(-50%,-50%);
 }
 
-#searchBoxStyle{
-    padding: 5px 15% 5px 15%;
-    display:inline-block;
-    margin-right: 20px;
-    border: solid;
-    border-width: 1px;
+#searchBoxStyle {
+  padding: 5px 15% 5px 15%;
+  display: inline-block;
+  margin-right: 1em;
 }
 
-#searchBoxSubmit{
-    padding: 5px 5% 5px 5%;
-    display:inline-block;
-    border-radius: 10px;
+#logo {
+  padding-top: 2.5em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+#iconsTypes {
+  display: inline-block;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+#iconPequenoAlmoco {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+#iconAlmoco {
+  padding-right: 1em;
+}
+
+#iconJantar {
+  padding-right: 1em;
+}
+
+#iconEntregas {
+  padding-right: 1em;
+}
+
+#iconBeberUmCopo {
+  padding-right: 1em;
+}
+
+#iconCafesEPastelarias {
+  padding-right: 1em;
+}
+
+#iconTakeAway {
+  padding-right: 1em;
+}
+
+#iconRefeicoesDeLuxo {
+  padding-right: 1em;
 }

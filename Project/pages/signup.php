@@ -6,36 +6,39 @@ $_SESSION['page'] = 'signup.php';
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sign Up</title>
-    <meta charset="utf-8">
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="/js/sign_up.js"></script>
-    <link rel="stylesheet" href="../css/reset.css" type="text/css">
-    <link rel="stylesheet" href="../css/signup.css" type="text/css">
-    <link rel="stylesheet" href="../css/footer.css" type="text/css">
-    <!-- definições pagina -->
-    <link rel="stylesheet" href="../css/globalContent.css" type="text/css">
-    <!-- letra -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i" rel="stylesheet">
+  <title>Sign Up</title>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png"  href="../images/logo.png" />
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="/js/sign_up.js"></script>
+  <link rel="stylesheet" href="../css/reset.css" type="text/css">
+  <link rel="stylesheet" href="../css/signup.css" type="text/css">
+  <link rel="stylesheet" href="../css/footer.css" type="text/css">
+  <link rel="stylesheet" href="../css/imageSingInUp.css" type="text/css">
+  <link rel="stylesheet" href="../css/lettering.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i" rel="stylesheet">
+  <!-- button -->
+  <link rel="stylesheet" href="../css/button.css" type="text/css">
 </head>
+
 <body>
-<div class="pageContent">
-  <div>
+  <div class="pageContent">
+    <div id="error">
       <?php
       $invalid_user = $_SESSION['invalid_user'];
-          if($invalid_user) {
-    echo '<p>Invalid username</p>';
-  }
+      if($invalid_user) {
+  echo '<p>Invalid username</p>';
+}
       ?>
-  </div>
-  <div id="logoImage">
-    <img src="../images/logo.png" alt="logo" height="200px">
-  </div>
-  <div id="userNameSU">
+    </div>
+    <div id="logoImage">
+      <img src="../images/logo.png" alt="logo" height="200px">
+    </div>
+    <div id="userNameSU">
       <form action="actions/signup.php" method="post" onsubmit="return validateForm()">
-          <label>
-            Username
-            <br>
+        <label>
+          Username
+          <br>
           <input id="username" type="text" name="username" required><br>
           <p id="invalidUsername" style="display:none;">Write a valid username, 8 characters<br></p>
           <br>
@@ -82,12 +85,12 @@ $_SESSION['page'] = 'signup.php';
         </label>
         <br>
         <br>
-          <input type="submit" value="Create Account">
+          <input id="buttonCreateAccount" class="buttonStyle" type="submit" value="Create Account" >
       </form>
   </div>
   <div id="mainPageSU">
       <form action="mainPage.php" method="post">
-          <input type="submit" value="Back to main Page">
+          <input class="buttonStyle" type="submit" value="Back to main Page">
       </form>
   </div>
 </div>
