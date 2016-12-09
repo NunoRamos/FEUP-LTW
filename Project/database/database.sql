@@ -6,7 +6,7 @@ CREATE TABLE restaurant (
 );
 
 CREATE TABLE owner (
-	id_restaurant INTEGER,
+	id_restaurant INTEGER UNIQUE,
 	id_user INTEGER,
 	PRIMARY KEY (id_restaurant, id_user)
 );
