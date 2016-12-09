@@ -8,4 +8,9 @@
        <input id="searchBoxSubmit" type="submit" value="Search">
    </form>
 </div>
+<div>
+    <form action="addRestaurant.php">
+        <input type="submit" value="Add a restaurant">
+    </form>
+</div>
 

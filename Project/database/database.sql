@@ -21,6 +21,14 @@ CREATE TABLE user (
   gender VARCHAR
 );
 
+CREATE TABLE restaurantImages (
+	id INTEGER PRIMARY KEY AUTOINCREMENT ,
+	id_restaurant INTEGER,
+	path VARCHAR
+);
+
+INSERT INTO restaurantImages VALUES (NULL, 1, 'default-restaurant-icon.jpg');
+
 INSERT INTO restaurant VALUES (NULL,'Melhor Restaurante','Rua dos Clerigos,Porto','Gourmet');
 INSERT INTO restaurant VALUES (NULL,'Melhor francesinha do Mundo','Rua de todos os santo,Porto','Francesinha');
 INSERT INTO restaurant VALUES (NULL,'Churasqueira da Pinta','Rua forum da maia,Maia,Porto','Churasqueira');
