@@ -13,6 +13,9 @@ include_once('templates/header.php');
         <div id="restaurantType"> <?php echo $_SESSION['restaurant']['type']; ?> </div>
         <div id="restaurantLocation"> <?php echo $_SESSION['restaurant']['location']; ?> </div>
     </h4>
+    <div>
+        <img id="restaurantImage" src="../images/restaurants/default-restaurant-icon.jpg" alt="Restaurant Image">
+    </div>
 </div>
 <div>
     <h3 id="reviewTitle">Reviews</h3>

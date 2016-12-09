@@ -5,6 +5,12 @@ CREATE TABLE restaurant (
   type VARCHAR
 );
 
+CREATE TABLE owner (
+	id_restaurant INTEGER,
+	id_user INTEGER,
+	PRIMARY KEY (id_restaurant, id_user)
+);
+
 CREATE TABLE review (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	id_restaurant INTEGER REFERENCES restaurant,
@@ -32,6 +38,9 @@ INSERT INTO restaurantImages VALUES (NULL, 1, 'default-restaurant-icon.jpg');
 INSERT INTO restaurant VALUES (NULL,'Melhor Restaurante','Rua dos Clerigos,Porto','Gourmet');
 INSERT INTO restaurant VALUES (NULL,'Melhor francesinha do Mundo','Rua de todos os santo,Porto','Francesinha');
 INSERT INTO restaurant VALUES (NULL,'Churasqueira da Pinta','Rua forum da maia,Maia,Porto','Churasqueira');
+
+INSERT INTO owner VALUES (1,1);
+INSERT INTO owner VALUES (2,1);
 
 INSERT INTO review VALUES (NULL,1,1,'Melhor restaurante do porto e não sei se do mundo, melhores rojoes de sempre',9);
 INSERT INTO review VALUES (NULL,2,1,'Quem quiser provar a melhor francesinha do Porto basta ir a este restaurante, que tambem tem uma otima localizacao',8);

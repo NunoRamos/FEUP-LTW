@@ -110,3 +110,10 @@ function getRestaurantByName($name){
 
     return $result;
 }
+
+function addOwner($id_restaurant,$id_user){
+    global $db;
+
+    $stmt = $db->prepare("INSERT INTO owner VALUES(?,?)");
+    $stmt->execute(array($id_restaurant,$id_user));
+}

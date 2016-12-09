@@ -21,10 +21,17 @@ session_start();
     <header id="header">
         <?php
         if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
-  echo '<p> Logado como '. $_SESSION['username'] . '</p><br>';
-            echo '<form action="actions/logout.php">
-                    <input type="submit" value="Logout"/>
-                    </form>';
+  //echo '<p> Logado como '. $_SESSION['username'] . '</p><br>';
+            echo '<div class="button">
+                   <form action="actions/logout.php">
+                        <input class="buttonStyle" type="submit" value="Logout"/>
+                   </form>
+                  </div>';
+            echo '<div class="button">
+                    <form action="addRestaurant.php">
+                        <input class="buttonStyle" type="submit" value="Add a restaurant">
+                    </form>
+                   </div>';
 }
 
 else {

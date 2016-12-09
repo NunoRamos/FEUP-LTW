@@ -17,11 +17,6 @@
 <!-- <div class="relative">
       <h4 id="mainPageTitle">The best restaurant website!!</h4>
     </div>-->
-   <div>
-        <form action="addRestaurant.php">
-            <input type="submit" value="Add a restaurant">
-        </form>
-    </div>
     <div id="searchBox">
       <form action="actions/restaurantSearch.php" method="post">
         <input id="searchBoxStyle" class="box" required type="text" name="search" placeholder="Search Restaurants">
