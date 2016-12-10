@@ -1,53 +1,39 @@
-#mainPageTitle {
-  position: fixed;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  font-size: 200%;
-}
-
 .pageContent {
   background-color: white;
   margin-left: 25%;
-}
-
-#searchAndText {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
-  position: fixed;
-}
-
-.relative {
-  padding-top: 1em;
 }
 
 #searchBox {
-  text-align: center;
-  position: fixed;
-  top: 40%;
-  left: 55%;
-  transform: translate(-50%,-50%);
+  padding-top: 2%;
+  padding-bottom: 5%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
 #searchBoxStyle {
-  padding: 5px 15% 5px 15%;
-  display: inline-block;
-  margin-right: 1em;
+  width: inherit;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  padding-left: 0.2em;
+  margin-right: 0.2em;
 }
 
 #logo {
-  padding-top: 2.5em;
-  padding-left: 1em;
-  padding-bottom: 1em;
-  text-align: center;
+  height: 5%;
+  width: 5%;
+  padding-top: 10%;
 }
-
+/*
 #iconsTypes {
-  display: inline-block;
+ /* display: inline-block;
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
-
+/*
 #iconPequenoAlmoco {
   padding-left: 1em;
   padding-right: 1em;
@@ -79,4 +65,4 @@
 
 #iconRefeicoesDeLuxo {
   padding-right: 1em;
-}
+}*/

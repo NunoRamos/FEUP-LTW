@@ -9,20 +9,16 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i" rel="stylesheet">
 <!--  -->
 <div class="pageContent">
-  <div id="logo">
-    <img src="../images/logo.png" alt="logo" height="200px">
-  </div>
-  <br><br><br>
-  <div id="logo">
-<!-- <div class="relative">
-      <h4 id="mainPageTitle">The best restaurant website!!</h4>
-    </div>-->
-    <div id="searchBox">
-      <form action="actions/restaurantSearch.php" method="post">
+    <img id="logo" src="../images/logo.png" alt="logo">
+    <!--<br><br><br>
+      <!--      <div id="logo">
+       <div class="relative">
+            <h4 id="mainPageTitle">The best restaurant website!!</h4>
+          </div>-->
+      <form id="searchBox" action="actions/restaurantSearch.php" method="post">
         <input id="searchBoxStyle" class="box" required type="text" name="search" placeholder="Search Restaurants">
         <input id="searchBoxSubmit" class="buttonStyle" type="submit" value="Search">
       </form>
-    </div>
     <div id="iconsTypes">
       <img id="iconPequenoAlmoco" src="../images/icons/pequenoAlmoco.png" alt="Pequeno Almoço" height="100px">
       <img id="iconAlmoco" src="../images/icons/almoco.png" alt="Almoço" height="100px">
