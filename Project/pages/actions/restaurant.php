@@ -12,6 +12,11 @@ $restaurant_id = $_SESSION['restaurant']['id'];
 
 $reviews = getRestaurantReviews($restaurant_id);
 
+for($i = 0; $i < count($reviews);++$i){
+    $nameOfTheUser = getUser($reviews[$i]['id_user']);
+    $reviews[$i]['fullName'] = $nameOfTheUser[0]['name'];
+}
+
 $_SESSION['reviews'] = $reviews;
 
 $owners = getOwners($id);

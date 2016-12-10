@@ -90,3 +90,15 @@
     align-items: center;
 }
 
+#reviewContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+#userImage{
+    padding: 1em 1em 1em 1em;
+    border-radius: 50%;
+    width: 5%;
+    height: 5%;
+}
+
