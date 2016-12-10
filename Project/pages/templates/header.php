@@ -3,39 +3,40 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
-    <head id="head">
-        <title>My Restaurant</title>
-        <link rel="icon" type="image/png"  href="../images/logo.png" />
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="../css/reset.css" type="text/css">
-        <link rel="stylesheet" href="../css/header.css" type="text/css">
-        <link rel="stylesheet" href="../css/footer.css" type="text/css">
-        <!-- button -->
-        <link rel="stylesheet" href="../css/button.css" type="text/css">
-        <!-- letra -->
-        <link rel="stylesheet" href="../css/lettering.css" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i" rel="stylesheet">
+<head id="head">
+    <title>My Restaurant</title>
+    <link rel="icon" type="image/png"  href="../images/logo.png" />
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/header.css" type="text/css">
+    <link rel="stylesheet" href="../css/footer.css" type="text/css">
+    <!-- button -->
+    <link rel="stylesheet" href="../css/button.css" type="text/css">
+    <!-- letra -->
+    <link rel="stylesheet" href="../css/lettering.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i" rel="stylesheet">
 
-    </head>
-    <body>
-    <header id="header">
+</head>
+<body>
+<header id="header">
+    <div id="headerDiv">
         <?php
         if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
-  //echo '<p> Logado como '. $_SESSION['username'] . '</p><br>';
+            //echo '<p> Logado como '. $_SESSION['username'] . '</p><br>';
             echo '<div class="button">
                    <form action="actions/logout.php">
-                        <input class="buttonStyle" type="submit" value="Logout"/>
+                        <input class="buttonStyle buttonMargin" type="submit" value="Logout"/>
                    </form>
                   </div>';
             echo '<div class="button">
                     <form action="addRestaurant.php">
-                        <input class="buttonStyle" type="submit" value="Add a restaurant">
+                        <input class="buttonStyle buttonMargin" type="submit" value="Add a restaurant">
                     </form>
                    </div>';
-}
+        }
 
-else {
-  echo '<div class="button">
+        else {
+            echo '<div class="button">
                     <form action="login.php">
                     <input class="buttonStyle" type="submit" value="Sign In">
                     </form>
@@ -45,6 +46,7 @@ else {
                     <input class="buttonStyle" type="submit" value="Sign Up">
                     </form>
                   </div>';
-}
-    ?>
-    </header>
+        }
+        ?>
+    </div>
+</header>

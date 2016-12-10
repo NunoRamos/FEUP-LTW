@@ -150,3 +150,26 @@ function getOwners($id_restaurant){
 
     return $result;
 }
+
+function updateRestaurantName($id_restaurant,$new_name){
+    global $db;
+
+    $stmt = $db->prepare("UPDATE restaurant SET name=? WHERE id=?");
+    return $stmt->execute(array($new_name,$id_restaurant));
+
+
+}
+
+function updateRestaurantType($id_restaurant,$new_type){
+    global $db;
+
+    $stmt = $db->prepare("UPDATE restaurant SET type=? WHERE id=?");
+    return $stmt->execute(array($new_type,$id_restaurant));
+}
+
+function updateRestaurantLocation($id_restaurant,$new_location){
+    global $db;
+
+    $stmt = $db->prepare("UPDATE restaurant SET location=? WHERE id=?");
+    return $stmt->execute(array($new_location,$id_restaurant));
+}

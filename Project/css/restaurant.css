@@ -1,5 +1,10 @@
 #restaurantName{
     padding: 10px 10px 10px 10px;
+    display: inline-block;
+}
+
+#editButton{
+    display: inline-block;
 }
 
 #restaurantType{
@@ -52,3 +57,36 @@
     width: 20%;
     height: 20%
 }
+
+#editRestaurantName{
+    display: block;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#editRestaurantType{
+    display:block;
+}
+
+#editRestaurantLocation{
+    display: block;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#editRestaurantImage{
+    margin-bottom: 2%;
+    width: 20%;
+    height: 20%
+}
+
+#editSubmitButton{
+    margin-bottom: 5%;
+}
+
+#editForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

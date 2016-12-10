@@ -8,11 +8,20 @@
   background-color: white;
 }
 
-div.button {
+#headerDiv {
+  display: flex;
+  justify-content: flex-end;
+}
+/*
+#headerDiv.button {
   display: inline-block;
   padding-left: 0px;
   padding-right: 15px;
   padding-top: 15px;
   padding-bottom: 15px;
-  float: right;
+}*/
+
+.buttonMargin{
+  margin: 1em 0.5em 1em 0.5em;
 }
+

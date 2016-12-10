@@ -7,14 +7,21 @@ include_once('templates/header.php');
 ?>
 
 <link rel="stylesheet" href="../css/restaurant.css" type="text/css">
+<link rel="stylesheet" href="../css/button.css" type="text/css">
+
 <div>
     <h2 id="restaurantName"><?php echo $_SESSION['restaurant']['name']; ?></h2>
-    <h4>
-        <?php
-        if(in_array($_SESSION['username'],$_SESSION['owners'])){
-            echo 'ÉS O DONO DO RESTAURANTE';
+
+    <?php
+        if(in_array($_SESSION['username'],$_SESSION['owners']) && $_SESSION['page'] != 'editRestaurant.php'){
+            echo '<div id="editButton">
+                <form action="editRestaurant.php" method="post"> 
+                    <input class="buttonStyle" type="submit" value="Edit Restaurant">
+                </form>
+               </div>';
         }
-        ?>
+    ?>
+    <h4>
         <div id="restaurantType"> <?php echo $_SESSION['restaurant']['type']; ?> </div>
         <div id="restaurantLocation"> <?php echo $_SESSION['restaurant']['location']; ?> </div>
     </h4>
@@ -22,6 +29,7 @@ include_once('templates/header.php');
         <img id="restaurantImage" src="../images/restaurants/default-restaurant-icon.jpg" alt="Restaurant Image">
     </div>
 </div>
+
 <div>
     <h3 id="reviewTitle">Reviews</h3>
     <?php
