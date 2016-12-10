@@ -22,7 +22,6 @@ session_start();
     <div id="headerDiv">
         <?php
         if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
-            //echo '<p> Logado como '. $_SESSION['username'] . '</p><br>';
             echo '<div class="button">
                    <form action="actions/logout.php">
                         <input class="buttonStyle buttonMargin" type="submit" value="Logout"/>
@@ -38,12 +37,12 @@ session_start();
         else {
             echo '<div class="button">
                     <form action="login.php">
-                    <input class="buttonStyle" type="submit" value="Sign In">
+                    <input class="buttonStyle buttonMargin" type="submit" value="Sign In">
                     </form>
                   </div>';
             echo '<div class="button">
                     <form action="signup.php">
-                    <input class="buttonStyle" type="submit" value="Sign Up">
+                    <input class="buttonStyle buttonMargin" type="submit" value="Sign Up">
                     </form>
                   </div>';
         }
