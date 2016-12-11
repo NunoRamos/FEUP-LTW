@@ -52,4 +52,9 @@ session_start();
         <input id="buttonAddRestaurant" class="buttonStyle" type="submit" value="Add Restaurant">
     </form>
   </div>
+  <div id="backButonAddRestaurant">
+    <form action="mainPage.php" method="post" class="formBack">
+      <input class="buttonStyle" type="submit" value="Back to main Page">
+    </form>
+  </div>
 </div>
