@@ -22,35 +22,35 @@
     <div id="iconsTypes">
 
         <a href="../pages/actions/restaurantSearch.php?search=Cafe">
-      <img id="iconPequenoAlmoco" src="../images/icons/pequenoAlmoco.png" alt="Pequeno Almoço" height="100px">
+      <img id="iconPequenoAlmoco"  title="Coffee" src="../images/icons/pequenoAlmoco.png" alt="Pequeno Almoço" height="100px">
         </a>
 
         <a href="../pages/actions/restaurantSearch.php?search=Italiano">
-            <img id="iconAlmoco" src="../images/icons/almoco.png" alt="Almoço" height="100px">
+            <img id="iconAlmoco" title="Italian" src="../images/icons/almoco.png" alt="Almoço" height="100px">
         </a>
 
         <a href="../pages/actions/restaurantSearch.php?search=Churrasqueira">
-      <img id="iconJantar" src="../images/icons/jantar.png" alt="Jantar" height="100px">
+      <img id="iconJantar" title="Barbacue" src="../images/icons/jantar.png" alt="Jantar" height="100px">
         </a>
 
         <a href="../pages/actions/restaurantSearch.php?search=Francesinha">
-      <img id="iconLoaf" src="../images/icons/loaf.png" alt="Francesinha" height="100px">
+      <img id="iconLoaf" title="Francesinha" src="../images/icons/loaf.png" alt="Francesinha" height="100px">
         </a>
 
         <a href="../pages/actions/restaurantSearch.php?search=Pub">
-      <img id="iconBeberUmCopo" src="../images/icons/beberUmCopo.png" alt="Beber Um Copo" height="100px">
+      <img id="iconBeberUmCopo" title="Pub" src="../images/icons/beberUmCopo.png" alt="Beber Um Copo" height="100px">
         </a>
 
         <a href="../pages/actions/restaurantSearch.php?search=Pastelaria">
-      <img id="iconCafesEPastelarias" src="../images/icons/cafesEPastelarias.png" alt="Cafés E Pastelarias" height="100px">
+      <img id="iconCafesEPastelarias" title="Coffee and Cakes" src="../images/icons/cafesEPastelarias.png" alt="Cafés E Pastelarias" height="100px">
         </a>
 
         <a href="../pages/actions/restaurantSearch.php?search=Takeway">
-        <img id="iconTakeAway" src="../images/icons/takeAway.png" alt="Take Away" height="100px">
+        <img id="iconTakeAway" title="Takeaway" src="../images/icons/takeAway.png" alt="Take Away" height="100px">
         </a>
 
         <a href="../pages/actions/restaurantSearch.php?search=Gourmet">
-      <img id="iconRefeicoesDeLuxo" src="../images/icons/refeicoesDeLuxo.png" alt="Refeições De Luxo" height="100px">
+      <img id="iconRefeicoesDeLuxo" title="Gourmet"src="../images/icons/refeicoesDeLuxo.png" alt="Refeições De Luxo" height="100px">
         </a>
     </div>
   </div>
