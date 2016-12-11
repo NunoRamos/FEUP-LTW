@@ -16,6 +16,12 @@ for($i = 0; $i < count($reviews);++$i){
     $nameOfTheUser = getUser($reviews[$i]['id_user']);
     $reviews[$i]['fullName'] = $nameOfTheUser[0]['name'];
     $replies = getReplies($reviews[$i]['id']);
+
+    for($j = 0; $j < count($replies);++$j){
+        $nameOfTheUserThatReply = getUser($replies[$j]['id_user']);
+        $replies[$j]['fullName'] = $nameOfTheUserThatReply[0]['name'];
+    }
+
     $reviews[$i]['replies'] = $replies;
 }
 

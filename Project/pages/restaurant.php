@@ -42,7 +42,7 @@ include_once('templates/header.php');
                         <div>'.$review['text'].'</div>';
                         foreach ($review['replies'] as $reply){
                         echo '<div id="reviewReply">
-                                 <div>'.$reply['id_user'].' reply</div>
+                                 <div>'.$reply['fullName'].' reply</div>
                                  <div>'.$reply['text'].'</div>
                               </div>';
             }
