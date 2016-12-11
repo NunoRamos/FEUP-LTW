@@ -17,6 +17,8 @@ body {
 
 div#userNameSI {
   background-color: white;
+  /*opacity: 0.85;*/
+  opacity: 0.85;
 }
 
 #userNameSI {
