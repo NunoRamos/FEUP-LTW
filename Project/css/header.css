@@ -25,3 +25,7 @@
   margin: 1em 0.5em 1em 0.5em;
 }
 
+#logoImageHeader{
+  display: flex;
+  flex-direction: row;
+}

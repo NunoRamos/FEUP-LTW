@@ -1,0 +1,9 @@
+body{
+  background-image: url("../images/backgroundRestaurant.png");
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+
+.pageContent {
+  background-color: rgba(255,255,255, 0.5);
+}

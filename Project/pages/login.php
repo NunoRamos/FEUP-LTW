@@ -18,6 +18,8 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i" rel="stylesheet">
     <!-- button -->
     <link rel="stylesheet" href="../css/button.css" type="text/css">
+    <!-- box -->
+    <link rel="stylesheet" href="../css/box.css" type="text/css">
 </head>
 <body>
 <div class="pageContent">
@@ -38,14 +40,14 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
           <br>
           Username:
           <br>
-          <input id="usernameI" type="text" name="username" placeholder="Email ou Username">
+          <input id="usernameI" class="box" type="text" name="username" placeholder="Email or Username">
           <br>
         </label>
         <label>
           <br>
           Password:
           <br>
-          <input id="passwordI" type="password" name="password" placeholder="Password">
+          <input id="passwordI" class="box" type="password" name="password">
           <br>
         </label>
         <br>
