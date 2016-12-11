@@ -29,6 +29,15 @@
         <input id="editSubmitButton" class="buttonStyle" type="submit" value="Edit restaurant">
     </form>
 
+    <div id="userRestaurantContainer">
+        <?php
+        foreach ($_SESSION['userRestaurants'] as $restaurant){
+            $link = "actions/restaurant.php?id=".$restaurant[0]['id'];
+            echo '<a id=restaurantInfo href='.$link.'>'.$restaurant[0]['name'].' in '.$restaurant[0]['location'].'</a>';
+        }
+        ?>
+    </div>
+
     <div id="photoContainer">
         <img id="editUserImage" src="../images/user/default-user.png" alt="Restaurant Image">
         <input id="editSubmitButton" class="buttonStyle" type="submit" value="Upload Photo">
