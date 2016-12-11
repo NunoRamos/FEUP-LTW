@@ -151,6 +151,11 @@ function getOwners($id_restaurant){
     return $result;
 }
 
+/** Updates the restaurante name
+ * @param $id_restaurant
+ * @param $new_name
+ * @return bool
+ */
 function updateRestaurantName($id_restaurant,$new_name){
     global $db;
 
@@ -160,6 +165,11 @@ function updateRestaurantName($id_restaurant,$new_name){
 
 }
 
+/** Updates the restaurante type
+ * @param $id_restaurant
+ * @param $new_type
+ * @return bool
+ */
 function updateRestaurantType($id_restaurant,$new_type){
     global $db;
 
@@ -167,9 +177,24 @@ function updateRestaurantType($id_restaurant,$new_type){
     return $stmt->execute(array($new_type,$id_restaurant));
 }
 
+/** Updates the restaurante location
+ * @param $id_restaurant
+ * @param $new_location
+ * @return bool
+ */
 function updateRestaurantLocation($id_restaurant,$new_location){
     global $db;
 
     $stmt = $db->prepare("UPDATE restaurant SET location=? WHERE id=?");
     return $stmt->execute(array($new_location,$id_restaurant));
+}
+
+function getReplies($id_review){
+    global $db;
+
+    $stmt = $db->prepare("SELECT * FROM reply WHERE id_review == ?");
+    $stmt->execute(array($id_review));
+    $result = $stmt->fetchAll();
+
+    return $result;
 }
