@@ -43,7 +43,7 @@ session_start();
 
         else {
             echo '</div>';
-            echo '<div>';
+            echo '<div class="buttonsDiv">';
             echo '<div class="button">';
             echo '<form action="login.php">';
             echo '<input class="buttonStyle buttonMargin" type="submit" value="Sign In">';
