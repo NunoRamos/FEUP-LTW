@@ -23,6 +23,7 @@ for($i = 0; $i < count($reviews);++$i){
     }
 
     $reviews[$i]['replies'] = $replies;
+    $reviews[$i]['showReplies'] = 0;
 }
 
 $_SESSION['reviews'] = $reviews;

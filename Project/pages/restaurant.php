@@ -33,19 +33,26 @@ include_once('templates/header.php');
     <div>
         <h3 id="reviewTitle">Reviews</h3>
         <?php
-        foreach ($_SESSION['reviews'] as $review){
+        $reviews = $_SESSION['reviews'];
+        for($i = 0; $i < count($reviews);++$i){
             echo '
                 <div id="reviewContainer">
                     <img id="userImage" src="../images/user/default-user.png" alt="User image">
                     <div id="divReview">
-                        <div>'.$review['fullName'].' gives '.$review['grade'].'/10</div>
-                        <div>'.$review['text'].'</div>';
-                        foreach ($review['replies'] as $reply){
-                        echo '<div id="reviewReply">
-                                 <div>'.$reply['fullName'].' reply</div>
-                                 <div>'.$reply['text'].'</div>
-                              </div>';
+                        <div>'.$reviews[$i]['fullName'].' gives '.$reviews[$i]['grade'].'/10</div>
+                        <div>'.$reviews[$i]['text'].'</div>';
+                        $replies = $reviews[$i]['replies'];
+                        if(sizeof($replies)){
+                            echo '<a href=?i=' .$i. '>Show Replies</a>';
+                            if ($reviews[$i]['showReplies']) {
+                                 foreach ($reviews[$i]['replies'] as $reply) {
+                                    echo '<div id="reviewReplyStyle">
+                                        <div>' . $reply['fullName'] . ' reply</div>
+                                        <div>' . $reply['text'] . '</div>
+                                      </div>';
+                             }
             }
+        }
               echo '</div>
                 </div>';
         }
