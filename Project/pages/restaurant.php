@@ -39,10 +39,15 @@ include_once('templates/header.php');
                     <img id="userImage" src="../images/user/default-user.png" alt="User image">
                     <div id="divReview">
                         <div>'.$review['fullName'].' gives '.$review['grade'].'/10</div>
-                        <div>'.$review['text'].'</div>
-                    </div>
-                </div>
-            ';
+                        <div>'.$review['text'].'</div>';
+                        foreach ($review['replies'] as $reply){
+                        echo '<div id="reviewReply">
+                                 <div>'.$reply['id_user'].' reply</div>
+                                 <div>'.$reply['text'].'</div>
+                              </div>';
+            }
+              echo '</div>
+                </div>';
         }
         ?>
     </div>

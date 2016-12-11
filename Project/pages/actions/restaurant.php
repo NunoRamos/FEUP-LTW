@@ -15,6 +15,8 @@ $reviews = getRestaurantReviews($restaurant_id);
 for($i = 0; $i < count($reviews);++$i){
     $nameOfTheUser = getUser($reviews[$i]['id_user']);
     $reviews[$i]['fullName'] = $nameOfTheUser[0]['name'];
+    $replies = getReplies($reviews[$i]['id']);
+    $reviews[$i]['replies'] = $replies;
 }
 
 $_SESSION['reviews'] = $reviews;
