@@ -42,6 +42,12 @@ span#addRestaurantError {
   color: red;
 }
 
+#backButonAddRestaurant {
+  /*margin-top: 5%;*/
+  padding-top: 5em;
+  padding-bottom: 0.5%;
+}
+
 /*#titleAdd{
   font-family: 'Lato', sans-serif;
   font-weight: 400;
