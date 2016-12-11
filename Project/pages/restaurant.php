@@ -33,47 +33,49 @@ include_once('templates/header.php');
     <div>
         <h3 id="reviewTitle">Reviews</h3>
         <?php
-        $reviews = $_SESSION['reviews'];
-        for($i = 0; $i < count($reviews);++$i){
-            echo '
-                <div id="reviewContainer">
-                    <img id="userImage" src="../images/user/default-user.png" alt="User image">
-                    <div id="divReview">
-                        <div>'.$reviews[$i]['fullName'].' gives '.$reviews[$i]['grade'].'/10</div>
-                        <div>'.$reviews[$i]['text'].'</div>';
-                        $replies = $reviews[$i]['replies'];
-                        if(sizeof($replies)){
-                            echo '<a href=?i=' .$i. '>Show Replies</a>';
-                            if ($reviews[$i]['showReplies']) {
-                                 foreach ($reviews[$i]['replies'] as $reply) {
-                                    echo '<div id="reviewReplyStyle">
-                                        <div>' . $reply['fullName'] . ' reply</div>
-                                        <div>' . $reply['text'] . '</div>
-                                      </div>';
-                             }
+        foreach ($_SESSION['reviews'] as $review){
+
+            echo '<div id="reviewContainer">';
+            echo '<img id="userImage" src="../images/user/default-user.png" alt="User image">';
+            echo '<div id="divReview">';
+            echo '<div>'.$review['fullName'].' gives '.$review['grade'].'/10</div>';
+            echo '<div>'.$review['text'].'</div>';
+
+            $replies = $review['replies'];
+
+            if(sizeof($replies)){
+                echo '<a href="">Show Replies</a>';
+                if ($review['showReplies']) {
+
+                    foreach ($review['replies'] as $reply) {
+                        echo '<div id="reviewReplyStyle">';
+                        echo '<div>' . $reply['fullName'] . ' reply</div>';
+                        echo '<div>' . $reply['text'] . '</div>';
+                        echo '</div>';
+                    }
+                }
             }
-        }
-              echo '</div>
-                </div>';
+            echo '</div>';
+            echo '</div>';
         }
         ?>
     </div>
     <div>
         <?php
         if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
-            echo '<h3 id="leaveReviewHeader">Leave Your Review</h3>
-            <div id="leaveReview">
-                <form action="actions/review.php" method="post">
-                    <textarea type="text" cols="40" rows="10" name="text" required></textarea>
-                    <p>Leave a grade:<input type="number" name="grade" min="0" max="10" step="1" required></p>
-                    <input type="submit" value="Send Review">
-                </form>
-            </div>';
+            echo '<h3 id="leaveReviewHeader">Leave Your Review</h3>';
+            echo '<div id="leaveReview">';
+            echo '<form action="actions/review.php" method="post">';
+            echo '<textarea type="text" cols="40" rows="10" name="text" required></textarea>';
+            echo '<p>Leave a grade:<input type="number" name="grade" min="0" max="10" step="1" required></p>';
+            echo '<input type="submit" value="Send Review">';
+            echo '</form>';
+            echo '</div>';
         }
         else {
-            echo '<div id="reviewNotLogued">
-        <a href="login.php">To leave a review, just log in</a>
-        </div>';
+            echo '<div id="reviewNotLogued">';
+            echo '<a href="login.php">To leave a review, just log in</a>';
+            echo '</div>';
         }
         ?>
     </div>
