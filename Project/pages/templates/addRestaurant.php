@@ -1,7 +1,7 @@
 <?php
 session_start();
 ?>
-<div>
+<div class="pageContent">
     <?php
     if(isset($_SESSION['invalid_restaurant']) && $_SESSION['invalid_restaurant']){
         echo '<p>Invalid Restaurant</p>';
