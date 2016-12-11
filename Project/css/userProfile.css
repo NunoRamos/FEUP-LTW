@@ -46,3 +46,16 @@
     flex-direction: column;
     align-items: center;
 }
+
+#headerFormUser{
+    margin-top: 1em;
+}
+
+#changesMaded{
+    margin-bottom: 0.5em;
+}
+
+#rightImage{
+    width: 15%;
+    height: 10%;
+}
