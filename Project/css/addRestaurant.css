@@ -1,3 +1,48 @@
-.pageContent{
-  
+body{
+  margin: 0 auto;
+  background-color: white;
+  text-align: center;
 }
+
+.pageContent,#addRestaurantForm{
+  vertical-align: middle;
+}
+
+div#addRestaurantForm{
+  background-color: white;
+  opacity: 0.85;
+}
+
+#addRestaurantForm{
+  color: grey;
+  display: inline-block;
+  text-align: justify;
+  border: 0.15em dotted lightgrey;
+  width: 21%;
+  padding: 2.5%;
+  margin-top: 15%;
+}
+
+#nameR{
+  margin-top: 0.5em;
+  width: 98.5%;
+}
+
+#locationR{
+  margin-top: 0.5em;
+  width: 98.5%;
+}
+
+#buttonAddRestaurant{
+  display: inline-block;
+  float: right;
+}
+
+span#addRestaurantError {
+  color: red;
+}
+
+/*#titleAdd{
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}*/
