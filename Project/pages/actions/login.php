@@ -12,6 +12,7 @@ $number_of_rows = sizeof($result);
 if($number_of_rows != 0 && $result[0]["username"] == $username && password_verify($password, $result[0]["password"])){
     $_SESSION['username'] = $username;
     $_SESSION['password'] = $password;
+    $_SESSION['fullName'] = $result[0]['name'];
     $_SESSION['incorrectLogin_flag']=0;
     if(isset($_SESSION['page']))
         header('Location: ../'.$_SESSION['page']);

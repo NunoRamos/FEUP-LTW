@@ -25,29 +25,31 @@ session_start();
       </div>
         <?php
         if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
-            echo '<div class="button">
-                   <form action="actions/logout.php">
-                        <input class="buttonStyle buttonMargin" type="submit" value="Logout"/>
-                   </form>
-                  </div>';
-            echo '<div class="button">
-                    <form action="addRestaurant.php">
-                        <input class="buttonStyle buttonMargin" type="submit" value="Add a restaurant">
-                    </form>
-                   </div>';
+            $link = "actions/userProfile.php";
+            echo '<a class=buttonMargin href='.$link.'>Hello, '.$_SESSION['fullName'].' </a>';
+            echo '<div class="button">';
+            echo '<form action="actions/logout.php">';
+            echo '<input class="buttonStyle buttonMargin" type="submit" value="Logout"/>';
+            echo '</form>';
+            echo '</div>';
+            echo '<div class="button">';
+            echo '<form action="addRestaurant.php">';
+            echo '<input class="buttonStyle buttonMargin" type="submit" value="Add a restaurant">';
+            echo '</form>';
+            echo '</div>';
         }
 
         else {
-            echo '<div class="button">
-                    <form action="login.php">
-                    <input class="buttonStyle buttonMargin" type="submit" value="Sign In">
-                    </form>
-                  </div>';
-            echo '<div class="button">
-                    <form action="signup.php">
-                    <input class="buttonStyle buttonMargin" type="submit" value="Sign Up">
-                    </form>
-                  </div>';
+            echo '<div class="button">';
+            echo '<form action="login.php">';
+            echo '<input class="buttonStyle buttonMargin" type="submit" value="Sign In">';
+            echo '</form>';
+            echo '</div>';
+            echo '<div class="button">';
+            echo '<form action="signup.php">';
+            echo '<input class="buttonStyle buttonMargin" type="submit" value="Sign Up">';
+            echo '</form>';
+            echo '</div>';
         }
         ?>
     </div>

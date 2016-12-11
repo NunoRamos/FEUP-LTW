@@ -21,6 +21,7 @@ if($username != null && $password != null){
         putUser($username,$password,$name,$email,$gender);
         $_SESSION['username']=$username;
         $_SESSION['password']=$password;
+        $_SESSION['fullName'] =$name;
         header('Location: ../mainPage.php');
         $_SESSION['invalid_user'] = 0;
     }

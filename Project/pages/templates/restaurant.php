@@ -6,11 +6,11 @@
 
     <?php
     if(in_array($_SESSION['username'],$_SESSION['owners']) && $_SESSION['page'] != 'editRestaurant.php'){
-        echo '<div id="editButton">
-                <form action="editRestaurant.php" method="post"> 
-                    <input class="buttonStyle" type="submit" value="Edit Restaurant">
-                </form>
-               </div>';
+        echo '<div id="editButton">';
+        echo '<form action="editRestaurant.php" method="post">';
+        echo '<input class="buttonStyle" type="submit" value="Edit Restaurant">';
+        echo '</form>';
+        echo '</div>';
     }
     ?>
     <h4>

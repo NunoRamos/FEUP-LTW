@@ -1,0 +1,73 @@
+#userEditMainDiv{
+    margin: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#editUserName{
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#editUserEmail{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display:block;
+}
+
+#editUserFullName{
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#editUserImage{
+    border-radius: 50%;
+    margin: 2em;
+    width: 30%;
+    height: 50%
+}
+
+#editSubmitButton{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#editUserForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5em;
+}
+
+#photoContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#headerFormUser{
+    margin-top: 1em;
+}
+
+#changesMaded{
+    margin-bottom: 0.5em;
+}
+
+#rightImage{
+    width: 10%;
+    height: 10%;
+}
+
+#userRestaurantContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#restaurantInfo{
+    margin: 0em 1em 1em 1em;
+}

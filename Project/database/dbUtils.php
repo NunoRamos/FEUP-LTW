@@ -189,6 +189,10 @@ function updateRestaurantLocation($id_restaurant,$new_location){
     return $stmt->execute(array($new_location,$id_restaurant));
 }
 
+/** Get replies of a given review
+ * @param $id_review
+ * @return array
+ */
 function getReplies($id_review){
     global $db;
 
@@ -197,4 +201,54 @@ function getReplies($id_review){
     $result = $stmt->fetchAll();
 
     return $result;
+}
+
+/** Gets the id of all the user restaurants
+ * @param $id_user
+ * @return array
+ */
+function getUserRestaurants($id_user){
+    global $db;
+
+    $stmt = $db->prepare("SELECT id_restaurant FROM owner WHERE username == ?");
+    $stmt->execute(array($id_user));
+    $result = $stmt->fetchAll();
+
+    return $result;
+}
+
+/** Updates user email
+ * @param $id_user
+ * @param $new_email
+ * @return bool
+ */
+function updateUserEmail($id_user,$new_email){
+    global $db;
+
+    $stmt = $db->prepare("UPDATE user SET email=? WHERE username=?");
+    return $stmt->execute(array($new_email,$id_user));
+}
+
+/** Updates user full name
+ * @param $id_user
+ * @param $new_full_name
+ * @return bool
+ */
+function updateUserFullName($id_user,$new_full_name){
+    global $db;
+
+    $stmt = $db->prepare("UPDATE user SET name=? WHERE username=?");
+    return $stmt->execute(array($new_full_name,$id_user));
+}
+
+/** Updates user gender
+ * @param $id_user
+ * @param $new_gender
+ * @return bool
+ */
+function updateUserGender($id_user,$new_gender){
+    global $db;
+
+    $stmt = $db->prepare("UPDATE user SET gender=? WHERE username=?");
+    return $stmt->execute(array($new_gender,$id_user));
 }
