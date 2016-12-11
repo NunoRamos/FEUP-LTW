@@ -30,27 +30,37 @@ div#userNameSU {
   border: 2.5px dotted lightgrey;
   width: 21%;
   padding: 2.5%;
-  margin-top: 5%;
+  margin-top: 3.5em;
 }
 
 #username {
+  margin-top: 0.5em;
   width: 98.5%;
 }
 
 #password {
+  margin-top: 0.5em;
   width: 98.5%;
 }
 
 #confirmPassword {
+  margin-top: 0.5em;
   width: 98.5%;
 }
 
 #name {
+  margin-top: 0.5em;
   width: 98.5%;
 }
 
 #email {
+  margin-top: 0.5em;
   width: 98.5%;
+}
+
+#gender{
+  margin-top: 0.5em;
+  padding-left: 1em;
 }
 
 #buttonCreateAccount {
@@ -59,6 +69,10 @@ div#userNameSU {
 }
 
 #mainPageSU {
-  margin-top: 5%;
+  margin-top: 3.5em;
   padding-bottom: 1%;
+}
+
+span#singUpError {
+  color: red;
 }

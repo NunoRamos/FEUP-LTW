@@ -19,6 +19,8 @@ $_SESSION['page'] = 'signup.php';
   <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i" rel="stylesheet">
   <!-- button -->
   <link rel="stylesheet" href="../css/button.css" type="text/css">
+  <!-- box -->
+  <link rel="stylesheet" href="../css/box.css" type="text/css">
 </head>
 
 <body>
@@ -27,7 +29,9 @@ $_SESSION['page'] = 'signup.php';
       <?php
       $invalid_user = $_SESSION['invalid_user'];
       if($invalid_user) {
-  echo '<p>Invalid username</p>';
+        echo '<div id="singUpError">
+        <span>Invalid username</span>
+        </div>';
 }
       ?>
     </div>
@@ -39,7 +43,7 @@ $_SESSION['page'] = 'signup.php';
         <label>
           Username
           <br>
-          <input id="username" type="text" name="username" required><br>
+          <input id="username" class="box" type="text" name="username" required><br>
           <p id="invalidUsername" style="display:none;">Write a valid username, 8 characters<br></p>
           <br>
         </label>
@@ -47,7 +51,7 @@ $_SESSION['page'] = 'signup.php';
           <br>
           Password
           <br>
-          <input id="password" type="password" name="password" required><br>
+          <input id="password" class="box" type="password" name="password" required><br>
           <p id="invalidPassword" style="display:none;">Write a valid password, 8 characters<br></p>
           <br>
         </label>
@@ -55,7 +59,7 @@ $_SESSION['page'] = 'signup.php';
           <br>
           Confirm Password
           <br>
-          <input id="confirmPassword" type="password" name="confirmPassword" required><br>
+          <input id="confirmPassword" class="box" type="password" name="confirmPassword" required><br>
           <p id="checkingPasswords" style="display:none;">The passwords doesn't match<br></p>
           <br>
         </label>
@@ -63,21 +67,20 @@ $_SESSION['page'] = 'signup.php';
           <br>
           Name
           <br>
-          <input id="name" type="text" name="name" required><br>
+          <input id="name" class="box" type="text" name="name" required><br>
           <br>
         </label>
         <label>
           <br>
           Email
           <br>
-          <input  id="email" type="e-mail" name="email" required><br>
+          <input  id="email" class="box" type="e-mail" name="email" required><br>
           <br>
         </label>
         <label>
           <br>
           Gender
-          <br>
-          <select name="gender">
+          <select id="gender" class="box" name="gender">
               <option value="male">Male</option>
               <option value="Female">Female</option>
           </select>
