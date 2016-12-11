@@ -26,7 +26,7 @@ session_start();
         <?php
         if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
             $link = "actions/userProfile.php";
-            echo '<a class=buttonMargin href='.$link.'>Hello, '.$_SESSION['fullName'].' </a>';
+            echo '<a id="msgHello" class=buttonMargin href='.$link.'>Hello '.$_SESSION['fullName'].' </a>';
             echo '<div class="button">';
             echo '<form action="actions/logout.php">';
             echo '<input class="buttonStyle buttonMargin" type="submit" value="Logout"/>';
