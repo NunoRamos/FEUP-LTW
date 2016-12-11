@@ -4,7 +4,11 @@ include_once('../../database/dbUtils.php');
 session_start();
 
 $_SESSION['noResultsFound']=0;
-$search = $_POST["search"];
+if(isset($_GET["search"]))
+    $search= $_GET["search"];
+else
+    $search = $_POST["search"];
+
 $result_names = getRestaurantsNames();
 $number_of_rows = sizeof($result_names);
 $array= array();
