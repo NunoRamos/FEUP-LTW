@@ -20,6 +20,9 @@ session_start();
 <body>
 <header id="header">
     <div id="headerDiv">
+      <div id="logoImageHeader">
+        <img src="../images/logo.png" alt="logo" height="50px">
+      </div>
         <?php
         if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
             echo '<div class="button">
