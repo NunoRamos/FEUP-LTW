@@ -189,11 +189,29 @@ function updateRestaurantLocation($id_restaurant,$new_location){
     return $stmt->execute(array($new_location,$id_restaurant));
 }
 
+/** Get replies of a given review
+ * @param $id_review
+ * @return array
+ */
 function getReplies($id_review){
     global $db;
 
     $stmt = $db->prepare("SELECT * FROM reply WHERE id_review == ?");
     $stmt->execute(array($id_review));
+    $result = $stmt->fetchAll();
+
+    return $result;
+}
+
+/** Gets the id of all the user restaurants
+ * @param $id_user
+ * @return array
+ */
+function getUserRestaurants($id_user){
+    global $db;
+
+    $stmt = $db->prepare("SELECT id_restaurant FROM owner WHERE username == ?");
+    $stmt->execute(array($id_user));
     $result = $stmt->fetchAll();
 
     return $result;
