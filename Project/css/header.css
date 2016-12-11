@@ -10,7 +10,7 @@
 
 #headerDiv {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 /*
 #headerDiv.button {
@@ -25,11 +25,17 @@
   margin: 1em 0.5em 1em 0.5em;
 }
 
-#logoImageHeader{
+.buttonsDiv{
   display: flex;
   flex-direction: row;
+  align-content: flex-end;
+}
+
+#logoHeaderImage{
+  margin-left: 0.5em;
 }
 
 a:hover{
   background-color: none;
 }
+
