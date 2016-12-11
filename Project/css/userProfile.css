@@ -1,0 +1,48 @@
+#userEditMainDiv{
+    margin: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#editUserName{
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#editUserEmail{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display:block;
+}
+
+#editUserFullName{
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#editUserImage{
+    border-radius: 50%;
+    margin: 2em;
+    width: 30%;
+    height: 50%
+}
+
+#editSubmitButton{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#editUserForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#photoContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
