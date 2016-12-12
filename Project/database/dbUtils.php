@@ -298,3 +298,10 @@ function deleteReview($id_review){
     $stmt = $db->prepare("DELETE FROM review WHERE id=?");
     $stmt->execute(array($id_review));
 }
+
+function deleteReply($id_reply){
+    global $db;
+
+    $stmt = $db->prepare("DELETE FROM reply WHERE id=?");
+    $stmt->execute(array($id_reply));
+}

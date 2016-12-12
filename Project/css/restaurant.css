@@ -102,7 +102,9 @@
     height: 5%;
 }
 
-#reviewReplyStyle{
+.reviewReplyStyle{
+    display: flex;
+    flex-direction: row;
     padding: 1em 1em 1em 1em;
 }
 
@@ -148,4 +150,8 @@
 
 .deleteReview:hover{
     cursor: pointer; cursor: hand;
+}
+
+.formToDeleteReply{
+    margin-left: 2em;
 }

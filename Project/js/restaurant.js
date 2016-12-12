@@ -18,15 +18,15 @@ $(function() {
     $('.deleteReview').click(function() {
 
         /*$.ajax({
-            url: "actions/deleteReviews.php",
+            url: "actions/deleteReviewsAndReplies.php",
             type: 'POST',
             data: { isAReview: 1}
         }).done(function () {
-            window.location = "actions/deleteReviews.php";
+            window.location = "actions/deleteReviewsAndReplies.php";
         }).fail(function () {
             console.log('error');
         });
 
-        window.location = 'actions/deleteReviews.php';
+        window.location = 'actions/deleteReviewsAndReplies.php';
     });
 });*/

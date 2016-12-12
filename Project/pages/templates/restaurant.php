@@ -52,9 +52,19 @@ $_SESSION['token'] = generateRandomToken();
         if(sizeof($replies)){
 
             foreach ($review['replies'] as $reply) {
-                echo '<div id="reviewReplyStyle">';
+                echo '<div class="reviewReplyStyle">';
+                echo '<div>';
                 echo '<div>' . $reply['fullName'] . ' reply</div>';
                 echo '<div>' . $reply['text'] . '</div>';
+                echo '</div>';
+                if($_SESSION['username'] == $reply['id_user']) {
+                    echo '<form class="formToDeleteReply" action="actions/deleteReviewsAndReplies.php" method="post">';
+                    echo '<input type="hidden" name="isAReview" value=0>';
+                    echo '<input type="hidden" name="replyId" value=' . $reply['id'] . '>';
+                    echo '<input type="hidden" name="restaurantId" value='.$_SESSION['restaurant']['id'].'>';
+                    echo '<input class="deleteReview" type="submit" value="X">';
+                    echo '</form>';
+                }
                 echo '</div>';
             }
         }
@@ -73,8 +83,8 @@ $_SESSION['token'] = generateRandomToken();
 
         echo '</div>';
         if($_SESSION['username']==$review['id_user']){
-            //echo '<div class="deleteReview">X</div>';
-            echo '<form action="actions/deleteReviews.php" method="post">';
+            echo '<form action="actions/deleteReviewsAndReplies.php" method="post">';
+            echo '<input type="hidden" name="isAReview" value="1">';
             echo '<input type="hidden" name="reviewId" value='.$review['id'].'>';
             echo '<input type="hidden" name="restaurantId" value='.$_SESSION['restaurant']['id'].'>';
             echo '<input class="deleteReview" type="submit" value="X">';
