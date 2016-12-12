@@ -20,7 +20,7 @@ div#addRestaurantForm{
   border: 0.15em dotted lightgrey;
   width: 21%;
   padding: 2.5%;
-  margin-top: 15%;
+  margin-top: 8%;
 }
 
 #nameR{
@@ -33,8 +33,26 @@ div#addRestaurantForm{
   width: 98.5%;
 }
 
-#buttonAddRestaurant{
+#phone{
+  display: block;
+  margin-top: 0.5em;
+  width: 98.5%;
+}
+
+#price{
   display: inline-block;
+  width: 80%;
+  margin-bottom: 2%;
+}
+
+#typeSelect{
+  display: inline-block;
+  margin-top: 8%;
+}
+
+#buttonAddRestaurant{
+  display: block;
+  /*margin-top: 10%;*/
   float: right;
 }
 
@@ -43,12 +61,7 @@ span#addRestaurantError {
 }
 
 #backButonAddRestaurant {
-  /*margin-top: 5%;*/
-  padding-top: 5em;
+  margin-top: 5%;
+  /*padding-top: 5em;*/
   padding-bottom: 0.5%;
 }
-
-/*#titleAdd{
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-}*/

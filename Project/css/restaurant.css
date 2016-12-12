@@ -102,7 +102,9 @@
     height: 5%;
 }
 
-#reviewReplyStyle{
+.reviewReplyStyle{
+    display: flex;
+    flex-direction: row;
     padding: 1em 1em 1em 1em;
 }
 
@@ -129,4 +131,27 @@
 #addReplyForm{
     margin-top: 1em;
     margin-left: 1em;
+}
+
+#restaurantEditMainDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#deleteForm{
+    align-items: center;
+}
+
+.deleteReview{
+    border: none;
+    background-color: inherit;
+}
+
+.deleteReview:hover{
+    cursor: pointer; cursor: hand;
+}
+
+.formToDeleteReply{
+    margin-left: 2em;
 }
