@@ -1,8 +1,18 @@
+<?php
+
+include_once('utils/utils.php');
+
+$_SESSION['token'] = generateRandomToken();
+
+?>
+
 <link rel="stylesheet" href="../css/restaurant.css" type="text/css">
 <link rel="stylesheet" href="../css/button.css" type="text/css">
 
 <div>
     <form id="editForm" action="actions/editRestaurant.php" method="post">
+        <input type="hidden" name="token" value=<?php echo $_SESSION['token']; ?>>
+
         <h2>Edit Page!</h2>
 
         <input id="editRestaurantName" type="text" name="newName" value="<?php echo $_SESSION['restaurant']['name']; ?>">

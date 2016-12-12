@@ -3,8 +3,15 @@ session_start();
 
 include_once('../../database/dbUtils.php');
 
+
+
 if(!isset($_SESSION['username'])){
     header('Location: ../mainPage.php');
+}
+
+$token = $_POST['token'];
+if($_SESSION['token'] != $token){
+    header('Location: ../niceTry.php');
 }
 
 $name = $_GET['name'];

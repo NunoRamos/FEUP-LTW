@@ -3,6 +3,11 @@ session_start();
 
 include_once('../../database/dbUtils.php');
 
+$token = $_POST['token'];
+if($_SESSION['token'] != $token){
+    header('Location: ../niceTry.php');
+}
+
 $newEmail = $_POST['newEmail'];
 $newFullName = $_POST['newFullName'];
 $newGender = $_POST['newGender'];

@@ -1,3 +1,11 @@
+<?php
+
+include_once('utils/utils.php');
+
+$_SESSION['token'] = generateRandomToken();
+
+?>
+
 <link rel="stylesheet" href="../css/restaurant.css" type="text/css">
 <link rel="stylesheet" href="../css/button.css" type="text/css">
 
@@ -30,37 +38,39 @@
     <?php
     foreach ($_SESSION['reviews'] as $review){
 
-        echo '<div id="reviewContainer">';
-        echo '<img id="userImage" src="../images/user/default-user.png" alt="User image">';
-        echo '<div id="divReview">';
+        echo '<div class="reviewContainer">';
+        echo '<img class="userImage" src="../images/user/default-user.png" alt="User image">';
+        echo '<div class="divReview">';
         echo '<div>'.$review['fullName'].' gives '.$review['grade'].'/10</div>';
         echo '<div>'.$review['text'].'</div>';
 
         $replies = $review['replies'];
 
-        if(sizeof($replies)){
-            echo '<div id="showRepliesLink">Show Replies/Add Reply</div>';
+        echo '<div class="showRepliesLink">Show Replies/Add Reply</div>';
 
-            echo '<div hidden>';
+        echo '<div hidden>';
+        if(sizeof($replies)){
+
             foreach ($review['replies'] as $reply) {
                 echo '<div id="reviewReplyStyle">';
                 echo '<div>' . $reply['fullName'] . ' reply</div>';
                 echo '<div>' . $reply['text'] . '</div>';
                 echo '</div>';
             }
-
-            if(isset($_SESSION['username'])) {
-                echo '<form id="addReplyForm" action="actions/addReply.php" method="post">';
-                echo '<input type="hidden" name="reviewId" value='.$review['id'].'>';
-                echo '<input type="hidden" name="restaurantId" value='.$_SESSION['restaurant']['id'].'>';
-                echo '<input type="text" name="replyText">';
-                echo '<input type="submit" value="Add Reply">';
-                echo '</form>';
-            }
-            echo '<div id="hideRepliesLink">Hide Replies</div>';
-            echo '</div>';
-
         }
+
+        if(isset($_SESSION['username'])) {
+            echo '<form id="addReplyForm" action="actions/addReply.php" method="post">';
+            echo '<input type="hidden" name="token" value='.$_SESSION['token'].'>';
+            echo '<input type="hidden" name="reviewId" value='.$review['id'].'>';
+            echo '<input type="hidden" name="restaurantId" value='.$_SESSION['restaurant']['id'].'>';
+            echo '<input type="text" name="replyText">';
+            echo '<input type="submit" value="Add Reply">';
+            echo '</form>';
+        }
+        echo '<div class="hideRepliesLink">Hide Replies</div>';
+        echo '</div>';
+
         echo '</div>';
         echo '</div>';
     }
@@ -72,6 +82,7 @@
         echo '<h3 id="leaveReviewHeader">Leave Your Review</h3>';
         echo '<div id="leaveReview">';
         echo '<form action="actions/review.php" method="post">';
+        echo '<input type="hidden" name="token" value='.$_SESSION['token'].'>';
         echo '<textarea type="text" cols="40" rows="10" name="text" required></textarea>';
         echo '<p>Leave a grade:<input type="number" name="grade" min="0" max="10" step="1" required></p>';
         echo '<input type="submit" value="Send Review">';

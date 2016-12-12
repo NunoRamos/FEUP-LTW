@@ -1,5 +1,10 @@
 <?php
 session_start();
+
+include_once('utils/utils.php');
+
+$_SESSION['token'] = generateRandomToken();
+
 ?>
 
 <!-- Imagem -->
@@ -19,12 +24,8 @@ session_start();
         </div>';
     }
     ?>
-    <!-- <label id="titleAdd">
-      Restaurant Information
-    </label>
-    <br>
-    <br> -->
       <form action="actions/addRestaurant.php" method="get">
+        <input type="hidden" name="token" value=<?php echo $_SESSION['token']; ?>>
         <label>
           Name:
           <br>

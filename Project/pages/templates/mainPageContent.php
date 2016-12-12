@@ -1,3 +1,11 @@
+<?php
+
+include_once('utils/utils.php');
+
+$_SESSION['token'] = generateRandomToken();
+
+?>
+
 <link rel="stylesheet" href="../css/mainPage.css" type="text/css">
 <link rel="stylesheet" href="../css/imageMainPage.css" type="text/css">
 <!-- button -->
@@ -10,12 +18,8 @@
 <!--  -->
 <div class="pageContent">
     <img id="logo" src="../images/logo.png" alt="logo">
-    <!--<br><br><br>
-      <!--      <div id="logo">
-       <div class="relative">
-            <h4 id="mainPageTitle">The best restaurant website!!</h4>
-          </div>-->
       <form id="searchBox" action="actions/restaurantSearch.php" method="post">
+        <input type="hidden" name="token" value=<?php echo $_SESSION['token']; ?>>
         <input id="searchBoxStyle" class="box" required type="text" name="search" placeholder="Search Restaurants">
         <input id="searchBoxSubmit" class="buttonStyle" type="submit" value="Search">
       </form>

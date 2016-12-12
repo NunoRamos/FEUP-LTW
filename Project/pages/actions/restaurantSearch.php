@@ -3,6 +3,11 @@ include_once('../../database/dbUtils.php');
 
 session_start();
 
+$token = $_POST['token'];
+if($_SESSION['token'] != $token){
+    header('Location: ../niceTry.php');
+}
+
 $_SESSION['noResultsFound']=0;
 if(isset($_GET["search"]))
     $search= $_GET["search"];
