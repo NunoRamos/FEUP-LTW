@@ -72,6 +72,8 @@ $_SESSION['token'] = generateRandomToken();
         echo '</div>';
 
         echo '</div>';
+        if($_SESSION['username']==$review['id_user'])
+            echo '<div class="deleteReview">X</div>';
         echo '</div>';
     }
     ?>

@@ -140,3 +140,7 @@
 #deleteForm{
     align-items: center;
 }
+
+.deleteReview:hover{
+    cursor: pointer; cursor: hand;
+}

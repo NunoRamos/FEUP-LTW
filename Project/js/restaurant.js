@@ -12,3 +12,15 @@ $(function() {
         $(this).parent().hide();
     });
 });
+
+$(function() {
+    $('.deleteReview').click(function() {
+        console.log('boas');
+        window.location = 'actions/deleteReviewsReplies.php';
+        $.ajax({
+            type: 'POST',
+            url: 'actions/deleteReviewsReplies.php',
+            data: { isAReview: 1}
+        });
+    });
+});
