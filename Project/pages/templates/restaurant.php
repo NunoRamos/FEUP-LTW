@@ -31,6 +31,9 @@ $_SESSION['token'] = generateRandomToken();
     <div>
         <img id="restaurantImage" src="../images/restaurants/default-restaurant-icon.jpg" alt="Restaurant Image">
     </div>
+    <iframe width="400" height="200" frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?q=<?php echo $_SESSION['restaurant']['location'];?>&key=AIzaSyB1g45KMgxhy_MQhXdiZtF7Kxm-hhNNbes" allowfullscreen>
+    </iframe>
 </div>
 
 <div>
