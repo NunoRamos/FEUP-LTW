@@ -1,3 +1,11 @@
+<?php
+
+include_once('utils/utils.php');
+
+$_SESSION['token'] = generateRandomToken();
+
+?>
+
 <link rel="stylesheet" href="../css/userProfile.css" type="text/css">
 <link rel="stylesheet" href="../css/button.css" type="text/css">
 
@@ -5,6 +13,8 @@
 <div id="userEditMainDiv">
 
     <form id="editUserForm" action="actions/editUser.php" method="post">
+
+        <input type="hidden" name="token" value=<?php echo $_SESSION['token']; ?>>
 
         <?php
         if($_SESSION["profile_updated"]){
