@@ -1,4 +1,4 @@
-.pageContent{
+.pageContent {
   margin-top: 0;
   margin-left: 22.75em;
   margin-right: auto;
@@ -6,12 +6,15 @@
   background-color: white;
 }
 
-#searchError,#msgResults{
-  color: #808088;
+#searchError,#msgResults {
   font-size: xx-large;
 }
 
-#searchRestaurants{
+#msgResults {
+  color: #808088;
+}
+
+#searchRestaurants {
   color: grey;
   display: inline-block;
   text-align: justify;
@@ -21,29 +24,28 @@
   margin-left: 10em;
 }
 
-div#resultsList{
+div#resultsList {
   display: inline-flex;
   margin-left: 5.5em;
 }
 
-a:hover, a:visited, a:link{
+a:hover, a:visited, a:link {
   color: grey;
   text-decoration: none;
 }
 
-#msgResults{
+#msgResults {
   padding-bottom: 1.5em;
 }
 
-#span{
+#span {
   display: inline-flex;
 }
 
-span#a{
+span#a {
   padding-bottom: 1.5em;
 }
 
-#ul{
+ol,ul {
   list-style: circle;
-  /*list-style-type: circle;*/
 }
