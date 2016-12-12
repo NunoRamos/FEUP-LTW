@@ -72,8 +72,14 @@ $_SESSION['token'] = generateRandomToken();
         echo '</div>';
 
         echo '</div>';
-        if($_SESSION['username']==$review['id_user'])
-            echo '<div class="deleteReview">X</div>';
+        if($_SESSION['username']==$review['id_user']){
+            //echo '<div class="deleteReview">X</div>';
+            echo '<form action="actions/deleteReviews.php" method="post">';
+            echo '<input type="hidden" name="reviewId" value='.$review['id'].'>';
+            echo '<input type="hidden" name="restaurantId" value='.$_SESSION['restaurant']['id'].'>';
+            echo '<input class="deleteReview" type="submit" value="X">';
+            echo '</form>';
+        }
         echo '</div>';
     }
     ?>

@@ -141,6 +141,11 @@
     align-items: center;
 }
 
+.deleteReview{
+    border: none;
+    background-color: inherit;
+}
+
 .deleteReview:hover{
     cursor: pointer; cursor: hand;
 }

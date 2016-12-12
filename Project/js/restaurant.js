@@ -1,4 +1,5 @@
 
+
 $(function() {
     $('.showRepliesLink').click(function() {
         $(this).hide();
@@ -12,15 +13,20 @@ $(function() {
         $(this).parent().hide();
     });
 });
-
+/*
 $(function() {
     $('.deleteReview').click(function() {
-        console.log('boas');
-        window.location = 'actions/deleteReviewsReplies.php';
-        $.ajax({
+
+        /*$.ajax({
+            url: "actions/deleteReviews.php",
             type: 'POST',
-            url: 'actions/deleteReviewsReplies.php',
             data: { isAReview: 1}
+        }).done(function () {
+            window.location = "actions/deleteReviews.php";
+        }).fail(function () {
+            console.log('error');
         });
+
+        window.location = 'actions/deleteReviews.php';
     });
-});
+});*/

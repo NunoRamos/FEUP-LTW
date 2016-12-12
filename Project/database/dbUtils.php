@@ -285,3 +285,16 @@ function deleteRestaurant($id_restaurant){
     $stmt->execute(array($id_restaurant));
 
 }
+
+function deleteReview($id_review){
+    global $db;
+
+    $replies = getReplies($id_review);
+    foreach ($replies as $reply){
+        $stmt = $db->prepare("DELETE FROM reply WHERE id_review=?");
+        $stmt->execute(array($id_review));
+    }
+
+    $stmt = $db->prepare("DELETE FROM review WHERE id=?");
+    $stmt->execute(array($id_review));
+}
