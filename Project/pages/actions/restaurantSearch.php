@@ -9,10 +9,8 @@ if($_SESSION['token'] != $token){
 }
 
 $_SESSION['noResultsFound']=0;
-if(isset($_GET["search"]))
-    $search= $_GET["search"];
-else
-    $search = $_POST["search"];
+
+$search = htmlspecialchars($_POST["search"]);
 
 $result_names = getRestaurantsNames();
 $number_of_rows = sizeof($result_names);

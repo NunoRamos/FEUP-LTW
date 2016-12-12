@@ -10,7 +10,7 @@ if($_SESSION['token'] != $token){
 
 $id_restaurant = $_SESSION['restaurant']['id'];
 $username = $_SESSION['username'];
-$text = $_POST['text'];
+$text = htmlspecialchars($_POST['text']);
 $grade = $_POST['grade'];
 
 putReview($id_restaurant,$username,$text,$grade);

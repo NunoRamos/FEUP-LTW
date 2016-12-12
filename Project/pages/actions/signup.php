@@ -5,11 +5,11 @@ session_start();
 
 $_SESSION['invalid_user'] = 0;
 
-$username = $_POST["username"];
-$password = $_POST["password"];
-$name = $_POST["name"];
-$email = $_POST["email"];
-$gender = $_POST["gender"];
+$username = htmlspecialchars($_POST["username"]);
+$password = htmlspecialchars($_POST["password"]);
+$name = htmlspecialchars($_POST["name"]);
+$email = htmlspecialchars($_POST["email"]);
+$gender = htmlspecialchars($_POST["gender"]);
 
 if($username != null && $password != null){
 

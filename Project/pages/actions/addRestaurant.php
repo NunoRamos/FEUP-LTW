@@ -14,9 +14,9 @@ if($_SESSION['token'] != $token){
     header('Location: ../niceTry.php');
 }
 
-$name = $_GET['name'];
-$location = $_GET['location'];
-$type = $_GET['type'];
+$name = htmlspecialchars($_GET['name']);
+$location = htmlspecialchars($_GET['location']);
+$type = htmlspecialchars($_GET['type']);
 $username = $_SESSION['username'];
 
 $doesTheRestaurantExist = getRestaurantByName($name);
