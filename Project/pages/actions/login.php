@@ -22,6 +22,3 @@ else {
     $_SESSION['incorrectLogin_flag']=1;
     header('Location: ../login.php');
 }
-
-
-

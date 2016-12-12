@@ -12,6 +12,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 /*
 #headerDiv.button {
   display: inline-block;
@@ -34,7 +35,6 @@
 #logoHeaderImage{
   display: inline-block;
   margin: 0.5em 0.5em 0.5em 0.5em;
-
 }
 
 a:hover,a:visited,a:link{
