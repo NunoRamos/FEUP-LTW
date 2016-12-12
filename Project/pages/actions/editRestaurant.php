@@ -8,9 +8,9 @@ if($_SESSION['token'] != $token){
     header('Location: ../niceTry.php');
 }
 
-$newName = $_POST['newName'];
-$newType = $_POST['newType'];
-$newLocation = $_POST['newLocation'];
+$newName = htmlspecialchars($_POST['newName']);
+$newType = htmlspecialchars($_POST['newType']);
+$newLocation = htmlspecialchars($_POST['newLocation']);
 $restaurantID = $_SESSION['restaurant']['id'];
 
 if($newName != $_SESSION['restaurant']['name']){

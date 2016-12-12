@@ -4,8 +4,8 @@ include_once('../../database/dbUtils.php');
 session_start();
 
 $_SESSION['incorrectLogin_flag']=0;
-$username = $_POST["username"];
-$password = $_POST["password"];
+$username = htmlspecialchars($_POST["username"]);
+$password = htmlspecialchars($_POST["password"]);
 $result = getUser($username);
 $number_of_rows = sizeof($result);
 

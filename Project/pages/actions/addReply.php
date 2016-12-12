@@ -8,7 +8,7 @@ if($_SESSION['token'] != $token){
     header('Location: ../niceTry.php');
 }
 
-$replyText = $_POST['replyText'];
+$replyText = htmlspecialchars($_POST['replyText']);
 $reviewId = $_POST['reviewId'];
 $restaurantId = $_POST['restaurantId'];
 $username = $_SESSION['username'];
