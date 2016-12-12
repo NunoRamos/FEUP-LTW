@@ -264,3 +264,24 @@ function addReply($id_review,$id_user,$text_reply){
     $stmt = $db->prepare("INSERT INTO reply VALUES(NULL,?,?,?)");
     $stmt->execute(array($id_review,$id_user,$text_reply));
 }
+
+function deleteRestaurant($id_restaurant){
+    global $db;
+
+    $stmt = $db->prepare("DELETE FROM restaurant WHERE id=?");
+    $stmt->execute(array($id_restaurant));
+
+    $stmt = $db->prepare("DELETE FROM owner WHERE id_restaurant=?");
+    $stmt->execute(array($id_restaurant));
+
+    $reviews = getRestaurantReviews($id_restaurant);
+
+    foreach ($reviews as $review){
+        $stmt = $db->prepare("DELETE FROM reply WHERE id_review=?");
+        $stmt->execute(array($review['id']));
+    }
+
+    $stmt = $db->prepare("DELETE FROM review WHERE id_restaurant=?");
+    $stmt->execute(array($id_restaurant));
+
+}

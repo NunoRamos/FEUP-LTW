@@ -130,3 +130,13 @@
     margin-top: 1em;
     margin-left: 1em;
 }
+
+#restaurantEditMainDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#deleteForm{
+    align-items: center;
+}
