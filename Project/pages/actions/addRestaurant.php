@@ -21,7 +21,7 @@ if(sizeof($doesTheRestaurantExist) != 0){
 else {
     putRestaurant($name,$location,$type);
     $restaurantId = getRestaurantByName($name);
-    addOwner($restaurantId,$username);
+    addOwner($restaurantId[0]['id'],$username);
     $_SESSION['invalid_restaurant'] = 0;
     $link = "restaurant.php?id=".$restaurantId[0]['id'];
     header('Location: '.$link);
