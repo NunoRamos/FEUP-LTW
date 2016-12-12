@@ -11,8 +11,17 @@
 
         <input id="editRestaurantLocation" type="text" name="newLocation" value="<?php echo $_SESSION['restaurant']['location']; ?>">
 
-        <img id="editRestaurantImage" src="../images/restaurants/default-restaurant-icon.jpg" alt="Restaurant Image">
+        <!--img id="editRestaurantImage" src="../images/restaurants/default-restaurant-icon.jpg" alt="Restaurant Image"-->
+
+        <form action="actions/upload.php" method="post" enctype="multipart/form-data">
+            Select image to upload:
+            <input required type="file" name="image">
+            <input type="hidden" name="type" value="restaurant">
+            <input id="editSubmitButton" class="buttonStyle" type="submit" value="Upload Photo">
+        </form>
 
         <input id="editSubmitButton" class="buttonStyle" type="submit" value="Edit restaurant">
+
+
     </form>
 </div>

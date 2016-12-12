@@ -33,10 +33,16 @@ if(isset($_FILES['image'])){
         else
             updateUserImage($_SESSION['username'], $file_name);
 
-        header("Location: ../actions/userProfile.php");
+        if(!$_POST['restaurant'])
+            header("Location: ../actions/userProfile.php");
+        else
+            header("Location: ../actions/editRestaurant.php");
     }
     else{
-        header("Location: ../actions/userProfile.php");
+        if(!$_POST['restaurant'])
+            header("Location: ../actions/userProfile.php");
+        else
+            header("Location: ../actions/editRestaurant.php");
     }
 }
 
