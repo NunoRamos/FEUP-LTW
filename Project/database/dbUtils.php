@@ -252,3 +252,40 @@ function updateUserGender($id_user,$new_gender){
     $stmt = $db->prepare("UPDATE user SET gender=? WHERE username=?");
     return $stmt->execute(array($new_gender,$id_user));
 }
+
+/** Creates user image
+ * @param $id_user
+ * @param $path
+ * @return bool
+ */
+function createUserImage($id_user,$path){
+    global $db;
+
+    $stmt = $db->prepare("INSERT INTO userImages VALUES (NULL, ?, ?)");
+    return $stmt->execute(array($id_user, $path));
+}
+
+/** Gets the user image
+* @param $id_user
+* @return bool
+    */
+function getUserImage($id_user){
+    global $db;
+
+    $stmt = $db->prepare("SELECT path FROM userImages WHERE img_username = ?");
+    $stmt->execute(array($id_user));
+    $result = $stmt->fetchAll();
+
+    return $result;
+}
+
+/** Updates the user image
+ * @param $id_user
+ * @return bool
+ */
+function updateUserImage($id_user, $path){
+    global $db;
+
+    $stmt = $db->prepare("UPDATE userImages SET path = ? WHERE img_username = ?");
+    return $stmt->execute(array($path, $id_user));
+}
