@@ -12,6 +12,7 @@ $_SESSION['page'] = 'signup.php';
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="/js/sign_up.js"></script>
   <link rel="stylesheet" href="../css/reset.css" type="text/css">
+  <link rel="stylesheet" href="../css/header.css" type="text/css">
   <link rel="stylesheet" href="../css/signup.css" type="text/css">
   <link rel="stylesheet" href="../css/footer.css" type="text/css">
   <link rel="stylesheet" href="../css/imageSingInUp.css" type="text/css">
@@ -24,6 +25,9 @@ $_SESSION['page'] = 'signup.php';
 </head>
 
 <body>
+  <?php
+  include_once('templates/header.php');
+  ?>
   <div class="pageContent">
     <div id="error">
       <?php
