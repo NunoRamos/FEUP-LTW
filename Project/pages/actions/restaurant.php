@@ -15,6 +15,10 @@ $reviews = getRestaurantReviews($restaurant_id);
 for($i = 0; $i < count($reviews);++$i){
     $nameOfTheUser = getUser($reviews[$i]['id_user']);
     $reviews[$i]['fullName'] = $nameOfTheUser[0]['name'];
+
+    $userImage = getUserImage($reviews[$i]['id_user']);
+    $reviews[$i]['userImage'] = $userImage[0]['path'];
+
     $replies = getReplies($reviews[$i]['id']);
 
     for($j = 0; $j < count($replies);++$j){

@@ -42,7 +42,8 @@ $_SESSION['token'] = generateRandomToken();
     foreach ($_SESSION['reviews'] as $review){
 
         echo '<div class="reviewContainer">';
-        echo '<img class="userImage" src="../images/user/default-user.png" alt="User image">';
+        $imagePath = '../images/user/'.$review['userImage'];
+        echo '<img class="userImage" src='.$imagePath.' alt="User image">';
         echo '<div class="divReview">';
         echo '<div>'.$review['fullName'].' gives '.$review['grade'].'/10</div>';
         echo '<div>'.$review['text'].'</div>';
