@@ -32,7 +32,9 @@
 }
 
 #logoHeaderImage{
-  margin-left: 0.5em;
+  display: inline-block;
+  margin: 0.5em 0.5em 0.5em 0.5em;
+
 }
 
 a:hover,a:visited,a:link{
