@@ -1,0 +1,49 @@
+.pageContent{
+  margin-top: 0;
+  margin-left: 22.75em;
+  margin-right: auto;
+  margin-bottom: auto;
+  background-color: white;
+}
+
+#searchError,#msgResults{
+  color: #808088;
+  font-size: xx-large;
+}
+
+#searchRestaurants{
+  color: grey;
+  display: inline-block;
+  text-align: justify;
+  width: 21%;
+  padding: 2.5%;
+  margin-top: 15%;
+  margin-left: 10em;
+}
+
+div#resultsList{
+  display: inline-flex;
+  margin-left: 5.5em;
+}
+
+a:hover, a:visited, a:link{
+  color: grey;
+  text-decoration: none;
+}
+
+#msgResults{
+  padding-bottom: 1.5em;
+}
+
+#span{
+  display: inline-flex;
+}
+
+span#a{
+  padding-bottom: 1.5em;
+}
+
+#ul{
+  list-style: circle;
+  /*list-style-type: circle;*/
+}
