@@ -1,32 +1,51 @@
 .pageContent {
   margin-top: 0;
-  margin-left: 22.75em;
+  margin-left: 25%;
   margin-right: auto;
   margin-bottom: auto;
   background-color: white;
 }
 
 #searchError,#msgResults {
-  font-size: xx-large;
-}
-
-#msgResults {
-  color: #808088;
+  color: black;
+  font-size: 300%;
 }
 
 #searchRestaurants {
   color: grey;
   display: inline-block;
   text-align: justify;
-  width: 21%;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+#restaurantInfo {
+  color: grey;
+  display: grid;
+  text-align: justify;
+  border: 2.5px solid black;
+  /*width: 21%;*/
   padding: 2.5%;
-  margin-top: 15%;
-  margin-left: 10em;
+  margin-top: 3.5em;
+}
+
+ul {
+  display: inline-block;
+  margin-left: 25%;
 }
 
 div#resultsList {
   display: inline-flex;
-  margin-left: 5.5em;
+  margin-left: 25.5%;
+}
+
+div.restaurantInfo {
+  color: grey;
+  text-align: justify;
+  border: 2.5px dotted lightgrey;
+  width: 200%;
+  padding: 5%;
+  margin-top: 3.5em;
 }
 
 a:hover, a:visited, a:link {
@@ -34,18 +53,25 @@ a:hover, a:visited, a:link {
   text-decoration: none;
 }
 
-#msgResults {
+li {
+  display: flex;
+  text-align: center;
+}
+
+span {
+  text-align: left;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+/*#msgResults {
   padding-bottom: 1.5em;
-}
+}*/
 
-#span {
-  display: inline-flex;
-}
-
-span#a {
+/*span#a {
   padding-bottom: 1.5em;
-}
+}*/
 
-ol,ul {
+/*ol,ul {
   list-style: circle;
-}
+}*/

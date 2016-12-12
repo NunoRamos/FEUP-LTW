@@ -18,12 +18,14 @@ else {
         </div>';
 
         if(count($_SESSION['search'])){
-            echo '<div id="resultsList"><ul>';
+            echo '<div class="resultsList"><ul>';
             foreach ($_SESSION['search'] as $item) {
                 if(!is_null($item['id'])){
                   echo '<div class="restaurantInfo">';
                     $link = "actions/restaurant.php?id=".$item['id'];
-                    echo '<li><img id="restaurantIMG" src="../images/icons/noImgRestaurant.png" alt="Restaurant Image"><a href="'.$link.'" ><span>';
+                    echo '<li>
+                    <img id="restaurantIMG" src="../images/icons/noImgRestaurant.png" alt="Restaurant Image" height="100px">
+                    <a href="'.$link.'" ><span>';
                     echo $item['name'];
                     echo '</span></li>';
                     echo '</div>';
