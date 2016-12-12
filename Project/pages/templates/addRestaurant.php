@@ -41,6 +41,18 @@ $_SESSION['token'] = generateRandomToken();
           <br>
         </label>
         <label>
+          Phone:
+          <input id="phone" class="box" type="text" name="phone" min="0" max="9"required>
+          <br>
+          <br>
+        </label>
+        <label>
+          Price:
+          <span>€ <input id="price" class="box" type="text" name="price" required></span
+          <br>
+          <br>
+        </label>
+        <label id="typeSelect">
           Type
           <select class="box" name="type" required>
             <?php
@@ -50,6 +62,7 @@ $_SESSION['token'] = generateRandomToken();
           <br>
           <br>
         </label>
+        <br>
         <input id="buttonAddRestaurant" class="buttonStyle" type="submit" value="Add Restaurant">
     </form>
   </div>

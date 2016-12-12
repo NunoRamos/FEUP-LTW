@@ -49,8 +49,41 @@ $_SESSION['token'] = generateRandomToken();
     </div>
 
     <div id="photoContainer">
-        <img id="editUserImage" src="../images/user/default-user.png" alt="Restaurant Image">
-        <input id="editSubmitButton" class="buttonStyle" type="submit" value="Upload Photo">
+        <?php
+
+
+
+        /* if(!empty($_SESSION['errors'])) {
+             foreach ($_SESSION['errors'] as $item) {
+                 echo $item;
+             }
+         }*/
+
+        $userImg = $_SESSION['userImg'];
+        $number_of_rows = sizeof($userImg);
+
+        if($number_of_rows === 0){
+            echo '<img id="editUserImage" src="../images/user/default-user.png" alt="Restaurant Image">';
+        }
+        else if($_SESSION['error_size']==1){
+            echo '<p Image size excceds the limit of 2MB.</p>';
+            echo '<img id="editUserImage" src="../images/user/default-user.png" alt="Restaurant Image">';
+        }
+        else if($_SESSION['error_ext']==1){
+            echo '<p Pleae upload an image JPG, JPEG or PNG..</p>';
+            echo '<img id="editUserImage" src="../images/user/default-user.png" alt="Restaurant Image">';
+        }
+        else
+            echo '<img id="editUserImage" src="../images/user/' . $userImg[0]['path'] . '" alt="Restaurant Image">';
+        ?>
+
+        <form action="actions/upload.php" method="post" enctype="multipart/form-data">
+            Select image to upload:
+            <input required type="file" name="image">
+            <input type="hidden" name="type" value="user">
+            <input id="editSubmitButton" class="buttonStyle" type="submit" value="Upload Photo">
+        </form>
+
     </div>
 
 </div>
