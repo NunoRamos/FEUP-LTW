@@ -14,6 +14,9 @@ $userInfo = $results[0];
 
 $results = getUserRestaurants($username);
 
+
+$_SESSION['userImg'] = getUserImage($_SESSION['username']);
+
 $restaurantsInfo = array();
 
 foreach ($results as $restaurantID){
@@ -25,4 +28,5 @@ $_SESSION['userInfo'] = $userInfo;
 $_SESSION['userRestaurants'] = $restaurantsInfo;
 
 header('Location: ../userProfile.php');
+
 
