@@ -39,7 +39,7 @@
         $replies = $review['replies'];
 
         if(sizeof($replies)){
-            echo '<div id="showRepliesLink">Show Replies</div>';
+            echo '<div id="showRepliesLink">Show Replies/Add Reply</div>';
 
             echo '<div hidden>';
             foreach ($review['replies'] as $reply) {
@@ -47,6 +47,15 @@
                 echo '<div>' . $reply['fullName'] . ' reply</div>';
                 echo '<div>' . $reply['text'] . '</div>';
                 echo '</div>';
+            }
+
+            if(isset($_SESSION['username'])) {
+                echo '<form id="addReplyForm" action="actions/addReply.php" method="post">';
+                echo '<input type="hidden" name="reviewId" value='.$review['id'].'>';
+                echo '<input type="hidden" name="restaurantId" value='.$_SESSION['restaurant']['id'].'>';
+                echo '<input type="text" name="replyText">';
+                echo '<input type="submit" value="Add Reply">';
+                echo '</form>';
             }
             echo '<div id="hideRepliesLink">Hide Replies</div>';
             echo '</div>';
