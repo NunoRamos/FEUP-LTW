@@ -3,9 +3,14 @@ session_start();
 
 include_once('../../database/dbUtils.php');
 
-$newEmail = $_POST['newEmail'];
-$newFullName = $_POST['newFullName'];
-$newGender = $_POST['newGender'];
+$token = $_POST['token'];
+if($_SESSION['token'] != $token){
+    header('Location: ../niceTry.php');
+}
+
+$newEmail = htmlspecialchars($_POST['newEmail']);
+$newFullName = htmlspecialchars($_POST['newFullName']);
+$newGender = htmlspecialchars($_POST['newGender']);
 $username = $_SESSION['username'];
 $_SESSION["profile_updated"] = 0;
 

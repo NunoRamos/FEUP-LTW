@@ -3,11 +3,14 @@ include_once('../../database/dbUtils.php');
 
 session_start();
 
+$token = $_POST['token'];
+if($_SESSION['token'] != $token){
+    header('Location: ../niceTry.php');
+}
+
 $_SESSION['noResultsFound']=0;
-if(isset($_GET["search"]))
-    $search= $_GET["search"];
-else
-    $search = $_POST["search"];
+
+$search = htmlspecialchars($_POST["search"]);
 
 $result_names = getRestaurantsNames();
 $number_of_rows = sizeof($result_names);

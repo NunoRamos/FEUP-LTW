@@ -3,13 +3,20 @@ session_start();
 
 include_once('../../database/dbUtils.php');
 
+
+
 if(!isset($_SESSION['username'])){
     header('Location: ../mainPage.php');
 }
 
-$name = $_GET['name'];
-$location = $_GET['location'];
-$type = $_GET['type'];
+$token = $_POST['token'];
+if($_SESSION['token'] != $token){
+    header('Location: ../niceTry.php');
+}
+
+$name = htmlspecialchars($_GET['name']);
+$location = htmlspecialchars($_GET['location']);
+$type = htmlspecialchars($_GET['type']);
 $username = $_SESSION['username'];
 
 $doesTheRestaurantExist = getRestaurantByName($name);

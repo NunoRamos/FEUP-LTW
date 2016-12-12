@@ -28,7 +28,7 @@
     border-bottom-width: 2px;
 }
 
-#divReview{
+.divReview{
     padding: 10px 10px 10px 10px;
     margin: 10px 10px 10px 10px;
 }
@@ -90,12 +90,12 @@
     align-items: center;
 }
 
-#reviewContainer{
+.reviewContainer{
     display: flex;
     flex-direction: row;
 }
 
-#userImage{
+.userImage{
     padding: 1em 1em 1em 1em;
     border-radius: 50%;
     width: 5%;
@@ -106,23 +106,23 @@
     padding: 1em 1em 1em 1em;
 }
 
-#showRepliesLink{
+.showRepliesLink{
     margin-top: 1em;
     margin-left: 1em;
     text-decoration: underline;
 }
 
-#showRepliesLink:hover{
+.showRepliesLink:hover{
     cursor: pointer; cursor: hand;
 }
 
-#hideRepliesLink{
+.hideRepliesLink{
     margin-top: 0.5em;
     margin-left: 1em;
     text-decoration: underline;
 }
 
-#hideRepliesLink:hover{
+.hideRepliesLink:hover{
     cursor: pointer; cursor: hand;
 }
 

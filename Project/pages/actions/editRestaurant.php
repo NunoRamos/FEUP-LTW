@@ -3,9 +3,14 @@ session_start();
 
 include_once('../../database/dbUtils.php');
 
-$newName = $_POST['newName'];
-$newType = $_POST['newType'];
-$newLocation = $_POST['newLocation'];
+$token = $_POST['token'];
+if($_SESSION['token'] != $token){
+    header('Location: ../niceTry.php');
+}
+
+$newName = htmlspecialchars($_POST['newName']);
+$newType = htmlspecialchars($_POST['newType']);
+$newLocation = htmlspecialchars($_POST['newLocation']);
 $restaurantID = $_SESSION['restaurant']['id'];
 
 if($newName != $_SESSION['restaurant']['name']){

@@ -3,7 +3,12 @@ session_start();
 
 include_once('../../database/dbUtils.php');
 
-$replyText = $_POST['replyText'];
+$token = $_POST['token'];
+if($_SESSION['token'] != $token){
+    header('Location: ../niceTry.php');
+}
+
+$replyText = htmlspecialchars($_POST['replyText']);
 $reviewId = $_POST['reviewId'];
 $restaurantId = $_POST['restaurantId'];
 $username = $_SESSION['username'];
