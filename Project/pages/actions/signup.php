@@ -19,9 +19,12 @@ if($username != null && $password != null){
     if($number_of_rows == 0){
         $password = password_hash($password,PASSWORD_DEFAULT);
         putUser($username,$password,$name,$email,$gender);
+        createUserImage($username,"../images/user/default-user.png");
+
         $_SESSION['username']=$username;
         $_SESSION['password']=$password;
         $_SESSION['fullName'] =$name;
+        $_SESSION['userPhotoPath'] = "../images/user/default-user.png";
         header('Location: ../mainPage.php');
         $_SESSION['invalid_user'] = 0;
     }

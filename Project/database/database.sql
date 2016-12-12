@@ -34,6 +34,12 @@ CREATE TABLE user (
   gender VARCHAR
 );
 
+CREATE TABLE userImages (
+	id INTEGER PRIMARY KEY AUTOINCREMENT ,
+	img_username  VARCHAR,
+	path VARCHAR
+);
+
 CREATE TABLE restaurantImages (
 	id INTEGER PRIMARY KEY AUTOINCREMENT ,
 	id_restaurant INTEGER,

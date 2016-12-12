@@ -43,13 +43,7 @@
 
 
 
-        /* if(!empty($_SESSION['errors'])) {
-             foreach ($_SESSION['errors'] as $item) {
-                 echo $item;
-             }
-         }*/
-
-        $userImg = $_SESSION['userImg'];
+       /*$userImg = $_SESSION['userImg'];
         $number_of_rows = sizeof($userImg);
 
         if($number_of_rows === 0){
@@ -63,8 +57,11 @@
             echo '<p Pleae upload an image JPG, JPEG or PNG..</p>';
             echo '<img id="editUserImage" src="../images/user/default-user.png" alt="Restaurant Image">';
         }
-        else
-            echo '<img id="editUserImage" src="../images/user/' . $userImg[0]['path'] . '" alt="Restaurant Image">';
+        else*/
+            echo '<img id="editUserImage" src='.$_SESSION['userPhotoPath'].' alt="Restaurant Image">';
+
+
+
         ?>
 
         <form action="actions/upload.php" method="post" enctype="multipart/form-data">
