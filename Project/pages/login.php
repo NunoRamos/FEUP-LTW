@@ -11,6 +11,7 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
     <meta charset="utf-8">
     <link rel="icon" type="image/png"  href="../images/logo.png" />
     <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/header.css" type="text/css">
     <link rel="stylesheet" href="../css/loginPage.css" type="text/css">
     <link rel="stylesheet" href="../css/footer.css" type="text/css">
     <link rel="stylesheet" href="../css/imageSingInUp.css" type="text/css">
@@ -22,6 +23,9 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
     <link rel="stylesheet" href="../css/box.css" type="text/css">
 </head>
 <body>
+  <?php
+  include_once('templates/header.php');
+  ?>
 <div class="pageContent">
   <div id="logoImage">
     <img src="../images/logo.png" alt="logo" height="200px">
