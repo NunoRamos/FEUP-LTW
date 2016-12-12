@@ -14,6 +14,9 @@ $userInfo = $results[0];
 
 $results = getUserRestaurants($username);
 
+
+$_SESSION['userImg'] = getUserImage($_SESSION['username']);
+
 $restaurantsInfo = array();
 
 foreach ($results as $restaurantID){

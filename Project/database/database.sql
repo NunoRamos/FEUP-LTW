@@ -40,7 +40,15 @@ CREATE TABLE restaurantImages (
 	path VARCHAR
 );
 
+CREATE TABLE userImages (
+	id INTEGER PRIMARY KEY AUTOINCREMENT ,
+	img_username  VARCHAR,
+	path VARCHAR
+);
+
+
 INSERT INTO restaurantImages VALUES (NULL, 1, 'default-restaurant-icon.jpg');
+
 
 INSERT INTO restaurant VALUES (NULL,'Melhor Restaurante','Rua dos Clerigos,Porto','Gourmet');
 INSERT INTO restaurant VALUES (NULL,'Melhor francesinha do Mundo','Rua de todos os santo,Porto','Francesinha');

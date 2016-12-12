@@ -20,13 +20,14 @@ session_start();
 <body>
 <header id="header">
     <div id="headerDiv">
-      <div id="logoImageHeader">
-          <a href="mainPage.php"><img src="../images/logo.png" alt="logo" height="50px"></a>
-      </div>
+        <div>
+            <a id="logoHeaderImage" href="mainPage.php"><img src="../images/logo.png" alt="logo" height="40px"></a>
         <?php
         if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
             $link = "actions/userProfile.php";
             echo '<a class=buttonMargin href='.$link.'>Hello, '.$_SESSION['fullName'].' </a>';
+            echo '</div>';
+            echo '<div class="buttonsDiv">';
             echo '<div class="button">';
             echo '<form action="actions/logout.php">';
             echo '<input class="buttonStyle buttonMargin" type="submit" value="Logout"/>';
@@ -37,9 +38,12 @@ session_start();
             echo '<input class="buttonStyle buttonMargin" type="submit" value="Add a restaurant">';
             echo '</form>';
             echo '</div>';
+            echo '</div>';
         }
 
         else {
+            echo '</div>';
+            echo '<div>';
             echo '<div class="button">';
             echo '<form action="login.php">';
             echo '<input class="buttonStyle buttonMargin" type="submit" value="Sign In">';
@@ -49,6 +53,7 @@ session_start();
             echo '<form action="signup.php">';
             echo '<input class="buttonStyle buttonMargin" type="submit" value="Sign Up">';
             echo '</form>';
+            echo '</div>';
             echo '</div>';
         }
         ?>
