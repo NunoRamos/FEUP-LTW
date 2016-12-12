@@ -26,8 +26,8 @@
 #editUserImage{
     border-radius: 50%;
     margin: 2em;
-    width: 30%;
-    height: 50%
+    width: 15em;
+    height: 15em;
 }
 
 #editSubmitButton{

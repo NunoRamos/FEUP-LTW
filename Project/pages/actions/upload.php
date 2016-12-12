@@ -24,25 +24,25 @@ if(isset($_FILES['image'])){
     }
 
     if($_SESSION['error_size'] !=1 && $_SESSION['error_ext']!=1){
-        move_uploaded_file($file_tmp,"../../images/user/");
+        $file_name = $_SESSION['username'].'.'.$file_ext;
+        move_uploaded_file($file_tmp,"../../images/user/".$file_name);
 
-        $userImg = getUserImage($_SESSION['username']);
+        /*$userImg = getUserImage($_SESSION['username']);
         $number_of_rows = sizeof($userImg);
 
         if($number_of_rows === 0)
             createUserImage($_SESSION['username'], $file_name);
-        else
-            updateUserImage($_SESSION['username'], $file_name);
+        else*/
+        updateUserImage($_SESSION['username'], $file_name);
+        $_SESSION['userPhotoPath'] = '../images/user/'.$file_name;
 
-        if(!$_POST['restaurant'])
+
             header("Location: ../actions/userProfile.php");
-        else
-            header("Location: ../actions/editRestaurant.php");
+
     }
     else{
-        if(!$_POST['restaurant'])
+
             header("Location: ../actions/userProfile.php");
-        else
-            header("Location: ../actions/editRestaurant.php");
+
     }
 }

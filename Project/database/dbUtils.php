@@ -265,6 +265,47 @@ function addReply($id_review,$id_user,$text_reply){
     $stmt->execute(array($id_review,$id_user,$text_reply));
 }
 
+function deleteRestaurant($id_restaurant){
+    global $db;
+
+    $stmt = $db->prepare("DELETE FROM restaurant WHERE id=?");
+    $stmt->execute(array($id_restaurant));
+
+    $stmt = $db->prepare("DELETE FROM owner WHERE id_restaurant=?");
+    $stmt->execute(array($id_restaurant));
+
+    $reviews = getRestaurantReviews($id_restaurant);
+
+    foreach ($reviews as $review){
+        $stmt = $db->prepare("DELETE FROM reply WHERE id_review=?");
+        $stmt->execute(array($review['id']));
+    }
+
+    $stmt = $db->prepare("DELETE FROM review WHERE id_restaurant=?");
+    $stmt->execute(array($id_restaurant));
+
+}
+
+function deleteReview($id_review){
+    global $db;
+
+    $replies = getReplies($id_review);
+    foreach ($replies as $reply){
+        $stmt = $db->prepare("DELETE FROM reply WHERE id_review=?");
+        $stmt->execute(array($id_review));
+    }
+
+    $stmt = $db->prepare("DELETE FROM review WHERE id=?");
+    $stmt->execute(array($id_review));
+}
+
+function deleteReply($id_reply){
+    global $db;
+
+    $stmt = $db->prepare("DELETE FROM reply WHERE id=?");
+    $stmt->execute(array($id_reply));
+}
+
 /** Creates user image
  * @param $id_user
  * @param $path
@@ -300,4 +341,5 @@ function updateUserImage($id_user, $path){
 
     $stmt = $db->prepare("UPDATE userImages SET path = ? WHERE img_username = ?");
     return $stmt->execute(array($path, $id_user));
+
 }

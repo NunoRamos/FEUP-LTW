@@ -13,6 +13,8 @@ if($number_of_rows != 0 && $result[0]["username"] == $username && password_verif
     $_SESSION['username'] = $username;
     $_SESSION['password'] = $password;
     $_SESSION['fullName'] = $result[0]['name'];
+    $result=getUserImage($username);
+    $_SESSION['userPhotoPath'] = $result[0]['path'];
     $_SESSION['incorrectLogin_flag']=0;
     if(isset($_SESSION['page']))
         header('Location: ../'.$_SESSION['page']);
