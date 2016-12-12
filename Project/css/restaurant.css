@@ -106,4 +106,27 @@
     padding: 1em 1em 1em 1em;
 }
 
+#showRepliesLink{
+    margin-top: 1em;
+    margin-left: 1em;
+    text-decoration: underline;
+}
 
+#showRepliesLink:hover{
+    cursor: pointer; cursor: hand;
+}
+
+#hideRepliesLink{
+    margin-top: 0.5em;
+    margin-left: 1em;
+    text-decoration: underline;
+}
+
+#hideRepliesLink:hover{
+    cursor: pointer; cursor: hand;
+}
+
+#addReplyForm{
+    margin-top: 1em;
+    margin-left: 1em;
+}

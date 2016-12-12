@@ -252,3 +252,15 @@ function updateUserGender($id_user,$new_gender){
     $stmt = $db->prepare("UPDATE user SET gender=? WHERE username=?");
     return $stmt->execute(array($new_gender,$id_user));
 }
+
+/** Adds the replys to the database
+ * @param $id_review
+ * @param $id_user
+ * @param $text_reply
+ */
+function addReply($id_review,$id_user,$text_reply){
+    global $db;
+
+    $stmt = $db->prepare("INSERT INTO reply VALUES(NULL,?,?,?)");
+    $stmt->execute(array($id_review,$id_user,$text_reply));
+}

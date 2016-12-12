@@ -1,6 +1,9 @@
 <link rel="stylesheet" href="../css/restaurant.css" type="text/css">
 <link rel="stylesheet" href="../css/button.css" type="text/css">
 
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="/js/restaurant.js"></script>
+
 <div>
     <h2 id="restaurantName"><?php echo $_SESSION['restaurant']['name']; ?></h2>
 
@@ -36,16 +39,27 @@
         $replies = $review['replies'];
 
         if(sizeof($replies)){
-            echo '<a href="">Show Replies</a>';
-            if ($review['showReplies']) {
+            echo '<div id="showRepliesLink">Show Replies/Add Reply</div>';
 
-                foreach ($review['replies'] as $reply) {
-                    echo '<div id="reviewReplyStyle">';
-                    echo '<div>' . $reply['fullName'] . ' reply</div>';
-                    echo '<div>' . $reply['text'] . '</div>';
-                    echo '</div>';
-                }
+            echo '<div hidden>';
+            foreach ($review['replies'] as $reply) {
+                echo '<div id="reviewReplyStyle">';
+                echo '<div>' . $reply['fullName'] . ' reply</div>';
+                echo '<div>' . $reply['text'] . '</div>';
+                echo '</div>';
             }
+
+            if(isset($_SESSION['username'])) {
+                echo '<form id="addReplyForm" action="actions/addReply.php" method="post">';
+                echo '<input type="hidden" name="reviewId" value='.$review['id'].'>';
+                echo '<input type="hidden" name="restaurantId" value='.$_SESSION['restaurant']['id'].'>';
+                echo '<input type="text" name="replyText">';
+                echo '<input type="submit" value="Add Reply">';
+                echo '</form>';
+            }
+            echo '<div id="hideRepliesLink">Hide Replies</div>';
+            echo '</div>';
+
         }
         echo '</div>';
         echo '</div>';
