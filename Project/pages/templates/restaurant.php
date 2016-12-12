@@ -16,7 +16,7 @@ $_SESSION['token'] = generateRandomToken();
     <h2 id="restaurantName"><?php echo $_SESSION['restaurant']['name']; ?></h2>
 
     <?php
-    if(in_array($_SESSION['username'],$_SESSION['owners']) && $_SESSION['page'] != 'editRestaurant.php'){
+    if((in_array($_SESSION['username'],$_SESSION['owners']) || $_SESSION['username'] == "administrator") && $_SESSION['page'] != 'editRestaurant.php'){
         echo '<div id="editButton">';
         echo '<form action="editRestaurant.php" method="post">';
         echo '<input class="buttonStyle" type="submit" value="Edit Restaurant">';
@@ -57,7 +57,7 @@ $_SESSION['token'] = generateRandomToken();
                 echo '<div>' . $reply['fullName'] . ' reply</div>';
                 echo '<div>' . $reply['text'] . '</div>';
                 echo '</div>';
-                if($_SESSION['username'] == $reply['id_user']) {
+                if($_SESSION['username'] == $reply['id_user'] || $_SESSION['username'] == "administrator") {
                     echo '<form class="formToDeleteReply" action="actions/deleteReviewsAndReplies.php" method="post">';
                     echo '<input type="hidden" name="isAReview" value=0>';
                     echo '<input type="hidden" name="replyId" value=' . $reply['id'] . '>';
@@ -82,7 +82,7 @@ $_SESSION['token'] = generateRandomToken();
         echo '</div>';
 
         echo '</div>';
-        if($_SESSION['username']==$review['id_user']){
+        if($_SESSION['username']==$review['id_user'] || $_SESSION['username'] == "administrator"){
             echo '<form action="actions/deleteReviewsAndReplies.php" method="post">';
             echo '<input type="hidden" name="isAReview" value="1">';
             echo '<input type="hidden" name="reviewId" value='.$review['id'].'>';
