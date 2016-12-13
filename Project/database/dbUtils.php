@@ -368,3 +368,49 @@ function updateUserImage($id_user, $path){
     return $stmt->execute(array($path, $id_user));
 
 }
+
+/** Gets names that look alike param name
+ * @param $name
+ * @return array
+ */
+function getRestaurantByName2($name){
+    global $db;
+
+    $expression = '%'.$name.'%';
+
+    $stmt = $db->prepare("SELECT * FROM restaurant WHERE name LIKE ?");
+    $stmt->execute(array($expression));
+    $result = $stmt->fetchAll();
+
+    return $result;
+}
+
+/** Gets location that look alike param location
+ * @param $location
+ * @return array
+ */
+function getRestaurantByLocation($location){
+    global $db;
+
+    $expression = '%'.$location.'%';
+
+    $stmt = $db->prepare("SELECT * FROM restaurant WHERE location LIKE ?");
+    $stmt->execute(array($expression));
+    $result = $stmt->fetchAll();
+
+    return $result;
+}
+
+/** Getting all restaurants with a price smallar than param price
+ * @param $price
+ * @return array
+ */
+function getRestaurantByMaxPrice($price){
+    global $db;
+
+    $stmt = $db->prepare("SELECT * FROM restaurant WHERE price <= ?");
+    $stmt->execute(array($price));
+    $result = $stmt->fetchAll();
+
+    return $result;
+}
