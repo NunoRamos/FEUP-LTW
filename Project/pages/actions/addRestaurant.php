@@ -28,6 +28,7 @@ if(sizeof($doesTheRestaurantExist) != 0){
 else {
     putRestaurant($name,$location,$type,$phone,$price);
     $restaurantId = getRestaurantByName($name);
+    createRestaurantImage($restaurantId[0]['id'],"default-restaurant-icon.jpg");
     addOwner($restaurantId[0]['id'],$username);
     $_SESSION['invalid_restaurant'] = 0;
     $link = "restaurant.php?id=".$restaurantId[0]['id'];

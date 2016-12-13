@@ -25,11 +25,12 @@
   display: grid;
   text-align: justify;
   border: 2.5px dotted #fafafa;
-  width: 120%;
-  /*width: 21%;*/
+  /*width: 120%;
+  width: 21%;*/
   padding: 2.5%;
   margin-left: 2em;
   margin-top: 0.5em;
+  margin-right: 2em;
   display: flex;
   flex-direction: row;
   background-color: #fafafa;
@@ -105,3 +106,8 @@ span {
 /*ol,ul {
   list-style: circle;
 }*/
+
+.restaurantIMG{
+  width: 15%;
+  height: 15%;
+}
