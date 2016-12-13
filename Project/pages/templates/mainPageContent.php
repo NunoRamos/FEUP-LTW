@@ -26,7 +26,7 @@ $_SESSION['token'] = generateRandomToken();
             <option value="location">Location</option>
             <option value="price">Max Price</option>
         </select>
-        <input id="searchBoxStyle" class="box" required type="text" name="search" placeholder="Search Restaurants">
+        <input id="searchBoxStyle" class="box" type="text" name="search" placeholder="Search Restaurants">
         <input id="searchBoxSubmit" class="buttonStyle" type="submit" value="Search">
     </form>
     <div id="iconsTypes">
