@@ -11,7 +11,8 @@
 }
 
 #aux {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
@@ -26,12 +27,12 @@ label {
 #restaurantName {
   display: inline-block;
   font-size: 300%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 3%;
 }
 
 #editButton {
   display: inline-block;
+  margin-top: 5em;
 }
 
 #restaurantType,#restaurantPhone {
@@ -50,13 +51,17 @@ label {
 #star {
   font-size: 180%;
   margin-top: 1.5%;
+  margin-left: 1.5%;
+  margin-bottom: 1.5%;
 }
 
 #mapLocation {
-  margin-left: 20%;
+  margin-left: 10%;
   margin-top: 2%;
   margin-bottom: 2%;
   margin-right: auto;
+  display: flex;
+  flex-direction: row;
 }
 
 img#mapIcon {
@@ -77,7 +82,6 @@ img#mapIcon {
 .divReview {
   padding: 10px 10px 10px 10px;
   margin: 10px 10px 10px 10px;
-  bor
 }
 
 #reviewNotLogued {
@@ -104,8 +108,8 @@ img#mapIcon {
 #restaurantImage {
   padding: 10px 10px 10px 10px;
   margin: 10px 10px 10px 10px;
-  width: 20%;
-  height: 20%
+  width: 10%;
+  height: 10%
 }
 
 #editRestaurantName {
@@ -125,9 +129,10 @@ img#mapIcon {
 }
 
 #editRestaurantImage {
+  border-radius: 50%;
   margin-bottom: 2%;
-  width: 20%;
-  height: 20%
+  height: 15em;
+  width: 15em;
 }
 
 #editSubmitButton {
@@ -286,3 +291,15 @@ div.dateDivR{
   position: absolute;
   float: right;
 }*/
+
+.restaurantImage2{
+  width: 35em;
+  height: 20em;
+  margin-left: 10%;
+  margin-top: 2%;
+}
+
+#restaurantInfo{
+  display: flex;
+  flex-direction: column;
+}

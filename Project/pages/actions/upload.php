@@ -3,6 +3,8 @@
 include_once('../../database/dbUtils.php');
 session_start();
 
+$type = $_POST['type'];
+
 if(isset($_FILES['image'])){
     $errors= array();
     $file_name = $_FILES['image']['name'];
@@ -23,26 +25,38 @@ if(isset($_FILES['image'])){
         $_SESSION['error_size']=1;
     }
 
-    if($_SESSION['error_size'] !=1 && $_SESSION['error_ext']!=1){
-        $file_name = $_SESSION['username'].'.'.$file_ext;
-        move_uploaded_file($file_tmp,"../../images/user/".$file_name);
+    if($type == "user") {
+        if ($_SESSION['error_size'] != 1 && $_SESSION['error_ext'] != 1) {
+            $file_name = $_SESSION['username'] . '.' . $file_ext;
+            move_uploaded_file($file_tmp, "../../images/user/" . $file_name);
 
-        /*$userImg = getUserImage($_SESSION['username']);
-        $number_of_rows = sizeof($userImg);
-
-        if($number_of_rows === 0)
-            createUserImage($_SESSION['username'], $file_name);
-        else*/
-        updateUserImage($_SESSION['username'], $file_name);
-        $_SESSION['userPhotoPath'] = '../images/user/'.$file_name;
+            updateUserImage($_SESSION['username'], $file_name);
+            $_SESSION['userPhotoPath'] = '../images/user/' . $file_name;
 
 
             header("Location: ../actions/userProfile.php");
 
+        } else {
+
+            header("Location: ../actions/userProfile.php");
+
+        }
     }
-    else{
+    else {
+        if ($_SESSION['error_size'] != 1 && $_SESSION['error_ext'] != 1) {
+            $restaurantId = $_POST['restaurantId'];
+            $file_name = $restaurantId. '.' . $file_ext;
+            move_uploaded_file($file_tmp, "../../images/restaurants/" .$file_name);
 
-            header("Location: ../actions/userProfile.php");
+            updateRestaurantImage($restaurantId, $file_name);
+            $_SESSION['restaurant']['restaurantPhotoPath'] = '../images/restaurants/'.$file_name;
 
+            header("Location: ../editRestaurant.php");
+
+        } else {
+
+            header("Location: ../editRestaurant.php");
+
+        }
     }
 }
