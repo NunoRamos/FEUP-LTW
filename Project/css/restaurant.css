@@ -214,3 +214,11 @@ img#mapIcon {
 .formToDeleteReply {
   margin-left: 2em;
 }
+
+.userImageReply{
+  padding-right: 1em;
+  padding-left: 1em;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+}

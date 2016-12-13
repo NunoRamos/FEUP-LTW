@@ -92,12 +92,13 @@ function getRestaurantReviews($id_restaurant){
  * @param $id_user
  * @param $text
  * @param $grade
+ * @param $date
  */
-function putReview($id_restaurant,$id_user, $text, $grade){
+function putReview($id_restaurant,$id_user, $text, $grade, $date){
     global $db;
 
-    $stmt = $db->prepare("INSERT INTO review VALUES(NULL,?,?,?,?)");
-    $stmt->execute(array($id_restaurant,$id_user,$text,$grade));
+    $stmt = $db->prepare("INSERT INTO review VALUES(NULL,?,?,?,?,?)");
+    $stmt->execute(array($id_restaurant,$id_user,$text,$grade,$date));
 }
 
 /** Add a restaurant to the restaurant table
@@ -283,11 +284,11 @@ function updateUserGender($id_user,$new_gender){
  * @param $id_user
  * @param $text_reply
  */
-function addReply($id_review,$id_user,$text_reply){
+function addReply($id_review,$id_user,$text_reply,$date){
     global $db;
 
-    $stmt = $db->prepare("INSERT INTO reply VALUES(NULL,?,?,?)");
-    $stmt->execute(array($id_review,$id_user,$text_reply));
+    $stmt = $db->prepare("INSERT INTO reply VALUES(NULL,?,?,?,?)");
+    $stmt->execute(array($id_review,$id_user,$text_reply,$date));
 }
 
 function deleteRestaurant($id_restaurant){

@@ -4,7 +4,8 @@ function generateRandomToken() {
 }
 
 function getFormatAtualTIme() {
-    $date = date('d, l, F H:i');
+    //$date = date('d, l, F H:i');
+    $date = date('d/m H:i');
 
     return $date;
 }

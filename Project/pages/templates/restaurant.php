@@ -61,7 +61,12 @@ $_SESSION['token'] = generateRandomToken();
     <?php
     foreach ($_SESSION['reviews'] as $review) {
   echo '<div class="reviewContainer">';
-        $imagePath = '../images/user/'.$review['userImage'];
+        if($review['userImage'] == "../images/user/default-user.png"){
+            $imagePath = $review['userImage'];
+        }
+        else {
+            $imagePath = '../images/user/'.$review['userImage'];
+        }
         echo '<img class="userImage" src='.$imagePath.' alt="User image">';
         echo '<div class="divReview">';
         echo '<div>'.$review['fullName'].' gives '.$review['grade'].'/10 at '.$review['date'].'</div>';
@@ -72,6 +77,8 @@ $_SESSION['token'] = generateRandomToken();
         if(sizeof($replies)){
             foreach ($review['replies'] as $reply) {
                 echo '<div class="reviewReplyStyle">';
+                $imagePath = '../images/user/'.$reply['user_photo'];
+                echo '<img class="userImageReply" src='.$imagePath.' alt="User image">';
                 echo '<div>';
                 echo '<div>' . $reply['fullName'] . ' reply at '.$reply['date'].'</div>';
                 echo '<div>' . $reply['text'] . '</div>';
