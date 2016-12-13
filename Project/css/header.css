@@ -13,31 +13,31 @@
   justify-content: space-between;
 }
 
-/*
-#headerDiv.button {
-  display: inline-block;
-  padding-left: 0px;
-  padding-right: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}*/
-
-.buttonMargin{
+.buttonMargin {
   margin: 1em 0.5em 1em 0.5em;
 }
 
-.buttonsDiv{
+.buttonsDiv {
   display: flex;
   flex-direction: row;
   align-content: flex-end;
 }
 
-#logoHeaderImage{
+#logoHeaderImage {
   display: inline-block;
   margin: 0.5em 0.5em 0.5em 0.5em;
 }
 
-a:hover,a:visited,a:link{
+a.buttonMargin {
+  display: inline-block;
+  margin-left: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  /*margin: 0.5em 0.5em 0.5em 0.5em;*/
+}
+
+a:hover,a:visited,a:link {
   text-decoration: none;
   color: black;
 }
