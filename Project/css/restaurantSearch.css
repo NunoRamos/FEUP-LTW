@@ -9,6 +9,7 @@
 #searchError,#msgResults {
   color: black;
   font-size: 300%;
+  margin-bottom: 1em;
 }
 
 #searchRestaurants {
@@ -19,26 +20,31 @@
   margin-top: 5%;
 }
 
-#restaurantInfo {
+.restaurantInfo {
   color: grey;
   display: grid;
   text-align: justify;
-  border: 2.5px solid black;
+  border: 2.5px dotted #fafafa;
+  width: 120%;
   /*width: 21%;*/
   padding: 2.5%;
-  margin-top: 3.5em;
+  margin-left: 2em;
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: row;
+  background-color: #fafafa;
 }
-
+/*
 ul {
   display: inline-block;
   margin-left: 25%;
-}
+}*/
 
-div#resultsList {
+.resultsList {
   display: inline-flex;
-  margin-left: 25.5%;
+  margin-left: 1%;
 }
-
+/*
 div.restaurantInfo {
   color: grey;
   text-align: justify;
@@ -46,7 +52,7 @@ div.restaurantInfo {
   width: 200%;
   padding: 5%;
   margin-top: 3.5em;
-}
+}*/
 
 a:hover, a:visited, a:link {
   color: grey;
@@ -62,6 +68,30 @@ span {
   text-align: left;
   margin-left: 10%;
   margin-top: 10%;
+}
+
+.restaurantSearchInfo{
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurantNameInfo{
+  margin-top: 0.2em;
+  margin-left: 0.5em;
+  font-size: 170%;
+  font-weight: bold;
+}
+
+.restaurantLocationInfo{
+  margin-top: 0.2em;
+  margin-left: 0.8em;
+  font-size: 120%;
+}
+
+.restaurantPriceInfo{
+  margin-top: 0.2em;
+  margin-left: 0.8em;
+  font-size: 120%;
 }
 
 /*#msgResults {

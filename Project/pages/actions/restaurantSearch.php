@@ -59,8 +59,9 @@ for($i = 0; $i < $number_of_rows;$i++) {
     $names = getRestaurant($id);
     $searches[$i]['id'] = $id;
     $searches[$i]['name'] = $names[0]['name'];*/
-    $searches[$i]['id'] = $results[$i]['id'];
-    $searches[$i]['name'] = $results[$i]['name'];
+   /* $searches[$i]['id'] = $results[$i]['id'];
+    $searches[$i]['name'] = $results[$i]['name'];*/
+   $searches[$i] = $results[$i];
 }
 
 if(sizeof($searches) !=0){

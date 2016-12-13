@@ -36,7 +36,7 @@ $_SESSION['token'] = generateRandomToken();
             <option value="Female">Female</option>
         </select>
 
-        <input id="editSubmitButton" class="buttonStyle" type="submit" value="Edit restaurant">
+        <input id="editSubmitButton" class="buttonStyle" type="submit" value="Edit Profile">
     </form>
 
     <div id="userRestaurantContainer">
