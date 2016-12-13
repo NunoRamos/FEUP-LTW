@@ -1,16 +1,5 @@
-/*.pageContent {
-  margin-left: 30%;
-  background-color: white;
-}*/
-
 .pageContent {
   background-color: rgba(255,255,255, 0.5);
-}
-
-.design {
-  margin-left: 30%;
-  background-color: white;
-  opacity: 0.80;
 }
 
 #restaurantTag {
@@ -82,11 +71,13 @@ img#mapIcon {
   border-bottom: solid;
   border-bottom-color: #e0e0e0;
   border-bottom-width: 2px;
+  font-size: 120%;
 }
 
 .divReview {
   padding: 10px 10px 10px 10px;
   margin: 10px 10px 10px 10px;
+  bor
 }
 
 #reviewNotLogued {
@@ -97,9 +88,12 @@ img#mapIcon {
 #leaveReviewHeader {
   padding: 10px 10px 10px 10px;
   margin: 10px 10px 10px 10px;
-  border-top: solid;
-  border-top-color: #e0e0e0;
+  /*border-top: solid;*/
+  border-bottom: solid;
+  /*border-top-color: #e0e0e0;*/
+  border-bottom-color: #e0e0e0;
   border-top-width: 2px;
+  font-size: 120%;
 }
 
 #leaveReview {
@@ -147,8 +141,11 @@ img#mapIcon {
 }
 
 .reviewContainer {
+  background-color: white;
   display: flex;
   flex-direction: row;
+  margin-left: 10%;
+  margin-right: 10px;
 }
 
 .userImage {
@@ -162,6 +159,9 @@ img#mapIcon {
   display: flex;
   flex-direction: row;
   padding: 1em 1em 1em 1em;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  margin-right: auto;
 }
 
 .showRepliesLink {
@@ -215,10 +215,74 @@ img#mapIcon {
   margin-left: 2em;
 }
 
-.userImageReply{
+.userImageReply {
   padding-right: 1em;
   padding-left: 1em;
   border-radius: 50%;
   width: 2em;
   height: 2em;
 }
+
+.userNameReply {
+  margin-right: 2%;
+  font-weight: 900;
+  display: inline;
+}
+
+div.userCommetReview {
+  display: inline;
+  margin-top: 5%;
+  /*margin-bottom: 3%;*/
+}
+
+span + img {
+  margin-left: 3%;
+}
+
+div.userCommetReview + div {
+  margin-bottom: 2.5%;
+  margin-top: 2.5%;
+}
+
+.starRD {
+  display: inline;
+}
+
+div.dateDiv {
+  font-size: small;
+  margin-top: 3%;
+}
+
+.reviewText {
+  margin-left: 2.5%;
+}
+
+.reviewTextR {
+  margin-left: 15%;
+}
+
+div.dateDivR{
+  font-size: x-small;
+}
+
+#inputTextBox{
+  margin-right: 3%;
+}
+
+#lg{
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+#lgStar{
+  margin-left: 2.5%;
+}
+
+#lastLineSR{
+  display: inline;
+}
+
+/*#sendReview{
+  position: absolute;
+  float: right;
+}*/

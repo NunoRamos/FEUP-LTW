@@ -12,7 +12,6 @@
             echo '<input class="buttonStyle" type="submit" value="Back to main Page">';
             echo '</form>';
         }
-
         else {
             echo '<div id="msgResults">Results Found</div>';
 
@@ -34,7 +33,6 @@
                         echo '</a>';
                     }
                 }
-
                 echo '</ul></div>';
             }
         }
