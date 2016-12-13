@@ -62,6 +62,8 @@ for($i = 0; $i < $number_of_rows;$i++) {
    /* $searches[$i]['id'] = $results[$i]['id'];
     $searches[$i]['name'] = $results[$i]['name'];*/
    $searches[$i] = $results[$i];
+   $restaurantPhoto = getRestaurantImages($results[$i]['id']);
+   $searches[$i]['restaurant_photo'] = '../images/restaurants/'.$restaurantPhoto[0]['path'];
 }
 
 if(sizeof($searches) !=0){

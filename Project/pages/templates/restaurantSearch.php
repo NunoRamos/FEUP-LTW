@@ -22,7 +22,7 @@
                         $link = "actions/restaurant.php?id=".$item['id'];
                         echo '<a href="'.$link.'" >';
                         echo '<div class="restaurantInfo">';
-                        echo '<img id="restaurantIMG" src="../images/icons/noImgRestaurant.png" alt="Restaurant Image" height="100px">';
+                        echo '<img class="restaurantIMG" src='.$item['restaurant_photo'].' alt="Restaurant Image" height="100px">';
                         echo '<div class="restaurantSearchInfo">';
                         //echo '<a href="'.$link.'" >'.$item['name'].'</a>';
                         echo '<div class="restaurantNameInfo">'.$item['name'].'</div>';

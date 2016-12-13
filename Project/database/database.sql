@@ -51,6 +51,8 @@ CREATE TABLE restaurantImages (
 );
 
 INSERT INTO restaurantImages VALUES (NULL, 1, 'default-restaurant-icon.jpg');
+INSERT INTO restaurantImages VALUES (NULL, 2, 'default-restaurant-icon.jpg');
+INSERT INTO restaurantImages VALUES (NULL, 3, 'default-restaurant-icon.jpg');
 
 INSERT INTO restaurant VALUES (NULL,'Melhor Restaurante','Rua dos Clerigos,Porto','Gourmet',911123468,14);
 INSERT INTO restaurant VALUES (NULL,'Melhor francesinha do Mundo','Rua de todos os santo,Porto','Francesinha',931844576,20);
