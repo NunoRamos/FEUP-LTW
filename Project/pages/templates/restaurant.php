@@ -7,6 +7,7 @@ $_SESSION['token'] = generateRandomToken();
 <link rel="stylesheet" href="../css/button.css" type="text/css">
 <link rel="stylesheet" href="../css/box.css" type="text/css">
 <link rel="stylesheet" href="../css/imageRestaurant.css" type="text/css">
+<link rel="stylesheet" href="../css/design.css" type="text/css">
 
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="/js/restaurant.js"></script>
@@ -57,31 +58,37 @@ $_SESSION['token'] = generateRandomToken();
 </div>
 
 <div id="reviewsDiv">
-    <h3 id="reviewTitle">Reviews</h3>
+  <div id="reviewTitle">
+    <label id="Label">Reviews</label>
+  </div>
     <?php
     foreach ($_SESSION['reviews'] as $review) {
-  echo '<div class="reviewContainer">';
+  echo '<div class="reviewContainer box">';
         if($review['userImage'] == "../images/user/default-user.png"){
             $imagePath = $review['userImage'];
-        }
-        else {
-            $imagePath = '../images/user/'.$review['userImage'];
-        }
-        echo '<img class="userImage" src='.$imagePath.' alt="User image">';
-        echo '<div class="divReview">';
-        echo '<div>'.$review['fullName'].' gives '.$review['grade'].'/10 at '.$review['date'].'</div>';
-        echo '<div>'.$review['text'].'</div>';
+}
+
+else {
+  $imagePath = '../images/user/'.$review['userImage'];
+}
+
+echo '<img class="userImage" src='.$imagePath.' alt="User image">';
+        echo '<div class="divReview ">';
+        echo '<div class="userCommetReview"><span class="userNameReply">'.$review['fullName'].'</span><span class="starRD">'.$review['grade'].'</span><img id="iconStar" src="../images/icons/star.png" alt="star" width="6%" height="10%"></div>';
+        echo '<div class="reviewText">'.$review['text'].'</div>';
+        echo '<div class="dateDiv">'.$review['date'].'</div>';
         $replies = $review['replies'];
         echo '<div class="showRepliesLink">Show Replies/Add Reply</div>';
         echo '<div hidden>';
-        if(sizeof($replies)){
-            foreach ($review['replies'] as $reply) {
-                echo '<div class="reviewReplyStyle">';
+        if(sizeof($replies)) {
+  foreach ($review['replies'] as $reply) {
+                echo '<div class="reviewReplyStyle box">';
                 $imagePath = '../images/user/'.$reply['user_photo'];
                 echo '<img class="userImageReply" src='.$imagePath.' alt="User image">';
                 echo '<div>';
-                echo '<div>' . $reply['fullName'] . ' reply at '.$reply['date'].'</div>';
-                echo '<div>' . $reply['text'] . '</div>';
+                echo '<div><span class="userNameReply">'.$reply['fullName'].'</span></div>';
+                echo '<div class="reviewTextR">' . $reply['text'] . '</div>';
+                echo '<div class="dateDivR dateDiv">'.$reply['date'].'</div>';
                 echo '</div>';
                 if($_SESSION['username'] == $reply['id_user'] || $_SESSION['username'] == "administrator") {
                     echo '<form class="formToDeleteReply" action="actions/deleteReviewsAndReplies.php" method="post">';
@@ -101,8 +108,8 @@ echo '<form id="addReplyForm" action="actions/addReply.php" method="post">';
             echo '<input type="hidden" name="token" value='.$_SESSION['token'].'>';
             echo '<input type="hidden" name="reviewId" value='.$review['id'].'>';
             echo '<input type="hidden" name="restaurantId" value='.$_SESSION['restaurant']['id'].'>';
-            echo '<input type="text" name="replyText">';
-            echo '<input type="submit" value="Add Reply">';
+            echo '<input id="inputTextBox" class="box" type="text" name="replyText" placeholder="Add reply">';
+            echo '<input class="buttonStyle" type="submit" value="Add Reply">';
             echo '</form>';
 }
 
@@ -122,16 +129,19 @@ echo '</div>';
 }
     ?>
 </div>
-<div>
+<div id="leaveReviewDIV">
     <?php
     if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
-echo '<h3 id="leaveReviewHeader">Leave Your Review</h3>';
+//   <h3 id="leaveReviewHeader">Leave Your Review</h3>
+      echo '<div id="leaveReviewHeader">
+          <label id="Label">Leave Your Review</label>
+        </div>';
         echo '<div id="leaveReview">';
         echo '<form action="actions/review.php" method="post">';
         echo '<input type="hidden" name="token" value='.$_SESSION['token'].'>';
-        echo '<textarea type="text" cols="40" rows="10" name="text" required></textarea>';
-        echo '<p>Leave a grade:<input type="number" name="grade" min="0" max="5" step="1" required></p>';
-        echo '<input type="submit" value="Send Review">';
+        echo '<textarea class="box" type="text" cols="125" rows="10" name="text" required></textarea>';
+        echo '<div id="lastLineSR"><p id="lg">Leave a grade:<input id="lgStar" class="box" type="number" name="grade" min="0" max="5" step="1" required></p>';
+        echo '<input id="sendReview" class="buttonStyle" type="submit" value="Send Review"></div>';
         echo '</form>';
         echo '</div>';
 }
@@ -142,6 +152,7 @@ echo '<div id="reviewNotLogued">';
         echo '</div>';
 }
     ?>
+</div>
 </div>
 </div>
 </div>

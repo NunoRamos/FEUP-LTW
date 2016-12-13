@@ -4,6 +4,9 @@
 <link rel="stylesheet" href="../css/restaurantSearch.css" type="text/css">
 
 <div class="pageContent">
+  <div class="design">
+
+  </div>
   <div id="searchRestaurants">
     <?php
     if(isset($_SESSION['noResultsFound']) && $_SESSION['noResultsFound']==1) {
@@ -36,5 +39,6 @@ echo '</ul></div>';
 }
     }
     ?>
+  </div>
   </div>
 </div>
