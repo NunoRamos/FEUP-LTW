@@ -45,7 +45,7 @@ $_SESSION['token'] = generateRandomToken();
         $imagePath = '../images/user/'.$review['userImage'];
         echo '<img class="userImage" src='.$imagePath.' alt="User image">';
         echo '<div class="divReview">';
-        echo '<div>'.$review['fullName'].' gives '.$review['grade'].'/10</div>';
+        echo '<div>'.$review['fullName'].' gives '.$review['grade'].'/10 at '.$review['date'].'</div>';
         echo '<div>'.$review['text'].'</div>';
 
         $replies = $review['replies'];
@@ -58,7 +58,7 @@ $_SESSION['token'] = generateRandomToken();
             foreach ($review['replies'] as $reply) {
                 echo '<div class="reviewReplyStyle">';
                 echo '<div>';
-                echo '<div>' . $reply['fullName'] . ' reply</div>';
+                echo '<div>' . $reply['fullName'] . ' reply at '.$reply['date'].'</div>';
                 echo '<div>' . $reply['text'] . '</div>';
                 echo '</div>';
                 if($_SESSION['username'] == $reply['id_user'] || $_SESSION['username'] == "administrator") {
@@ -106,7 +106,7 @@ $_SESSION['token'] = generateRandomToken();
         echo '<form action="actions/review.php" method="post">';
         echo '<input type="hidden" name="token" value='.$_SESSION['token'].'>';
         echo '<textarea type="text" cols="40" rows="10" name="text" required></textarea>';
-        echo '<p>Leave a grade:<input type="number" name="grade" min="0" max="10" step="1" required></p>';
+        echo '<p>Leave a grade:<input type="number" name="grade" min="0" max="5" step="1" required></p>';
         echo '<input type="submit" value="Send Review">';
         echo '</form>';
         echo '</div>';
@@ -118,4 +118,5 @@ $_SESSION['token'] = generateRandomToken();
     }
     ?>
 </div>
+<?php
 

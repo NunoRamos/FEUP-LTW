@@ -59,8 +59,8 @@ INSERT INTO restaurant VALUES (NULL,'Churasqueira da Pinta','Rua forum da maia,M
 INSERT INTO owner VALUES (1,'nunoramos');
 INSERT INTO owner VALUES (2,'nunoramos');
 
-INSERT INTO review VALUES (NULL,1,'nunoramos','Melhor restaurante do porto e não sei se do mundo, melhores rojoes de sempre',9,'13, Tuesday, December 01:54');
-INSERT INTO review VALUES (NULL,2,'nunoramos','Quem quiser provar a melhor francesinha do Porto basta ir a este restaurante, que tambem tem uma otima localizacao',8,'16, Friday, December 01:54');
+INSERT INTO review VALUES (NULL,1,'nunoramos','Melhor restaurante do porto e não sei se do mundo, melhores rojoes de sempre',4,'13, Tuesday, December 01:54');
+INSERT INTO review VALUES (NULL,2,'nunoramos','Quem quiser provar a melhor francesinha do Porto basta ir a este restaurante, que tambem tem uma otima localizacao',4,'16, Friday, December 01:54');
 
 INSERT INTO reply VALUES  (NULL,1,'beatriz11','Não podia dizer melhor, concordo plenamente!!','13, Tuesday, December 02:54');
 

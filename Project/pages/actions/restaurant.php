@@ -39,4 +39,10 @@ foreach ($owners as $owner){
 
 $_SESSION['owners'] = $newOwners;
 
+foreach ($reviews as $review){
+    $total+=$review['grade'];
+}
+
+$_SESSION['restaurant']['average'] = $total/sizeof($reviews);
+
 header('Location: ../restaurant.php');
