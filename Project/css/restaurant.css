@@ -1,157 +1,216 @@
-#restaurantName{
-    padding: 10px 10px 10px 10px;
-    display: inline-block;
+/*.pageContent {
+  margin-left: 30%;
+  background-color: white;
+}*/
+
+.pageContent {
+  background-color: rgba(255,255,255, 0.5);
 }
 
-#editButton{
-    display: inline-block;
+.design {
+  margin-left: 30%;
+  background-color: white;
+  opacity: 0.80;
 }
 
-#restaurantType{
-    display:inline-block;
-    padding: 10px 10px 10px 10px;
-    border-right: solid;
-    border-width: 2px;
-    line-height: 5px;
+#restaurantTag {
+  display: inline-flex;
 }
 
-#restaurantLocation{
-    display: inline-block;
-    padding: 10px 10px 10px 10px;
+#imgLgRestaurant {
+  display: inline-flex;
 }
 
-#reviewTitle{
-    padding: 10px 10px 10px 10px;
-    margin: 10px 10px 10px 10px;
-    border-bottom: solid;
-    border-bottom-color: #e0e0e0;
-    border-bottom-width: 2px;
+#aux {
+  display: block;
 }
 
-.divReview{
-    padding: 10px 10px 10px 10px;
-    margin: 10px 10px 10px 10px;
+label {
+  font-size: medium;
 }
 
-#reviewNotLogued{
-    padding: 10px 10px 10px 10px;
-    margin: 10px 10px 10px 10px;
+#info {
+  /*display: inline;*/
+  display: block;
 }
 
-#leaveReviewHeader{
-    padding: 10px 10px 10px 10px;
-    margin: 10px 10px 10px 10px;
-    border-top: solid;
-    border-top-color: #e0e0e0;
-    border-top-width: 2px;
+#restaurantName {
+  display: inline-block;
+  font-size: 300%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
-#leaveReview{
-    padding: 10px 10px 10px 10px;
-    margin: 10px 10px 10px 10px;
+#editButton {
+  display: inline-block;
 }
 
-#restaurantImage{
-    padding: 10px 10px 10px 10px;
-    margin: 10px 10px 10px 10px;
-    width: 20%;
-    height: 20%
+#restaurantType,#restaurantPhone {
+  display: inline-block;
+  padding: 10px 10px 10px 10px;
+  border-right: solid;
+  border-width: 2px;
+  line-height: 5px;
 }
 
-#editRestaurantName{
-    display: block;
-    margin-top: 2%;
-    margin-bottom: 2%;
+#restaurantLocation,#restaurantPrice {
+  display: inline-block;
+  padding: 10px 10px 10px 10px;
 }
 
-#editRestaurantType{
-    display:block;
+#star {
+  font-size: 180%;
+  margin-top: 1.5%;
 }
 
-#editRestaurantLocation{
-    display: block;
-    margin-top: 2%;
-    margin-bottom: 2%;
+#mapLocation {
+  margin-left: 20%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-right: auto;
 }
 
-#editRestaurantImage{
-    margin-bottom: 2%;
-    width: 20%;
-    height: 20%
+img#mapIcon {
+  opacity: 1;
+  vertical-align: top;
+  margin-right: 2%;
 }
 
-#editSubmitButton{
-    margin-bottom: 5%;
+#reviewTitle {
+  padding: 10px 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
+  border-bottom: solid;
+  border-bottom-color: #e0e0e0;
+  border-bottom-width: 2px;
 }
 
-#editForm{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.divReview {
+  padding: 10px 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
 }
 
-.reviewContainer{
-    display: flex;
-    flex-direction: row;
+#reviewNotLogued {
+  padding: 10px 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
 }
 
-.userImage{
-    padding: 1em 1em 1em 1em;
-    border-radius: 50%;
-    width: 4em;
-    height: 4em;
+#leaveReviewHeader {
+  padding: 10px 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
+  border-top: solid;
+  border-top-color: #e0e0e0;
+  border-top-width: 2px;
 }
 
-.reviewReplyStyle{
-    display: flex;
-    flex-direction: row;
-    padding: 1em 1em 1em 1em;
+#leaveReview {
+  padding: 10px 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
 }
 
-.showRepliesLink{
-    margin-top: 1em;
-    margin-left: 1em;
-    text-decoration: underline;
+#restaurantImage {
+  padding: 10px 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
+  width: 20%;
+  height: 20%
 }
 
-.showRepliesLink:hover{
-    cursor: pointer; cursor: hand;
+#editRestaurantName {
+  display: block;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
-.hideRepliesLink{
-    margin-top: 0.5em;
-    margin-left: 1em;
-    text-decoration: underline;
+#editRestaurantType {
+  display: block;
 }
 
-.hideRepliesLink:hover{
-    cursor: pointer; cursor: hand;
+#editRestaurantLocation {
+  display: block;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
-#addReplyForm{
-    margin-top: 1em;
-    margin-left: 1em;
+#editRestaurantImage {
+  margin-bottom: 2%;
+  width: 20%;
+  height: 20%
 }
 
-#restaurantEditMainDiv{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#editSubmitButton {
+  margin-bottom: 5%;
 }
 
-#deleteForm{
-    align-items: center;
+#editForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.deleteReview{
-    border: none;
-    background-color: inherit;
+.reviewContainer {
+  display: flex;
+  flex-direction: row;
 }
 
-.deleteReview:hover{
-    cursor: pointer; cursor: hand;
+.userImage {
+  padding: 1em 1em 1em 1em;
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
 }
 
-.formToDeleteReply{
-    margin-left: 2em;
+.reviewReplyStyle {
+  display: flex;
+  flex-direction: row;
+  padding: 1em 1em 1em 1em;
+}
+
+.showRepliesLink {
+  margin-top: 1em;
+  margin-left: 1em;
+  text-decoration: underline;
+}
+
+.showRepliesLink:hover {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.hideRepliesLink {
+  margin-top: 0.5em;
+  margin-left: 1em;
+  text-decoration: underline;
+}
+
+.hideRepliesLink:hover {
+  cursor: pointer;
+  cursor: hand;
+}
+
+#addReplyForm {
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+#restaurantEditMainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#deleteForm {
+  align-items: center;
+}
+
+.deleteReview {
+  border: none;
+  background-color: inherit;
+}
+
+.deleteReview:hover {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.formToDeleteReply {
+  margin-left: 2em;
 }

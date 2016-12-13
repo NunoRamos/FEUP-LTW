@@ -21,7 +21,7 @@ $_SESSION['token'] = generateRandomToken();
     <img id="logo" src="../images/logo.png" alt="logo">
     <form id="searchBox" action="actions/restaurantSearch.php" method="get">
         <input type="hidden" name="token" value=<?php echo $_SESSION['token']; ?>>
-        <select class="box" name="searchBy">
+        <select id="searchBY" class="box" name="searchBy">
             <option value="name">Name</option>
             <option value="location">Location</option>
             <option value="price">Max Price</option>

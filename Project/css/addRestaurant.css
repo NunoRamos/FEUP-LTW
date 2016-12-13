@@ -1,19 +1,23 @@
-body{
+body {
   margin: 0 auto;
   background-color: white;
   text-align: center;
 }
 
-.pageContent,#addRestaurantForm{
+.pageContent {
+  background-color: rgba(255,255,255, 0.5);
+}
+
+.pageContent,#addRestaurantForm {
   vertical-align: middle;
 }
 
-div#addRestaurantForm{
+div#addRestaurantForm {
   background-color: white;
   opacity: 0.85;
 }
 
-#addRestaurantForm{
+#addRestaurantForm {
   color: grey;
   display: inline-block;
   text-align: justify;
@@ -23,34 +27,34 @@ div#addRestaurantForm{
   margin-top: 8%;
 }
 
-#nameR{
+#nameR {
   margin-top: 0.5em;
   width: 98.5%;
 }
 
-#locationR{
+#locationR {
   margin-top: 0.5em;
   width: 98.5%;
 }
 
-#phone{
+#phone {
   display: block;
   margin-top: 0.5em;
   width: 98.5%;
 }
 
-#price{
+#price {
   display: inline-block;
   width: 80%;
   margin-bottom: 2%;
 }
 
-#typeSelect{
+#typeSelect {
   display: inline-block;
   margin-top: 8%;
 }
 
-#buttonAddRestaurant{
+#buttonAddRestaurant {
   display: block;
   /*margin-top: 10%;*/
   float: right;
