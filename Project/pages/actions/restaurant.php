@@ -24,6 +24,8 @@ for($i = 0; $i < count($reviews);++$i){
     for($j = 0; $j < count($replies);++$j){
         $nameOfTheUserThatReply = getUser($replies[$j]['id_user']);
         $replies[$j]['fullName'] = $nameOfTheUserThatReply[0]['name'];
+        $userImage = getUserImage($replies[$j]['id_user']);
+        $replies[$j]['user_photo'] = $userImage[0]['path'];
     }
 
     $reviews[$i]['replies'] = $replies;
@@ -43,6 +45,6 @@ foreach ($reviews as $review){
     $total+=$review['grade'];
 }
 
-$_SESSION['restaurant']['average'] = $total/sizeof($reviews);
+$_SESSION['restaurant']['average'] = round($total/sizeof($reviews)) ;
 
 header('Location: ../restaurant.php');
