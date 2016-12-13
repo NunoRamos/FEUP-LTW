@@ -19,7 +19,7 @@ $_SESSION['token'] = generateRandomToken();
 <!--  -->
 <div class="pageContent">
     <img id="logo" src="../images/logo.png" alt="logo">
-    <form id="searchBox" action="actions/restaurantSearch.php" method="post">
+    <form id="searchBox" action="actions/restaurantSearch.php" method="get">
         <input type="hidden" name="token" value=<?php echo $_SESSION['token']; ?>>
         <select class="box" name="searchBy">
             <option value="name">Name</option>
@@ -31,37 +31,62 @@ $_SESSION['token'] = generateRandomToken();
     </form>
     <div id="iconsTypes">
 
-        <a href="../pages/actions/restaurantSearch.php?search=Cafe">
-            <img id="iconPequenoAlmoco"  title="Coffee" src="../images/icons/pequenoAlmoco.png" alt="Pequeno Almoço" height="100px">
-        </a>
+        <?php
+        $link = 'actions/restaurantSearch.php?search=Café&searchBy=type&token='.$_SESSION['token'];
+        echo '<a href='.$link.' >';
+        echo '<img id="iconPequenoAlmoco"  title="Café" src="../images/icons/pequenoAlmoco.png" alt="Pequeno Almoço" height="100px">';
+        echo '</a>';
+        ?>
 
-        <a href="../pages/actions/restaurantSearch.php?search=Italiano">
-            <img id="iconAlmoco" title="Italian" src="../images/icons/almoco.png" alt="Almoço" height="100px">
-        </a>
+        <?php
+        $link = 'actions/restaurantSearch.php?search=Italian&searchBy=type&token='.$_SESSION['token'];
+        echo '<a href='.$link.' >';
+        echo '<img id="iconAlmoco" title="Italian" src="../images/icons/almoco.png" alt="Almoço" height="100px">';
+        echo '</a>';
+        ?>
 
-        <a href="../pages/actions/restaurantSearch.php?search=Churrasqueira">
-            <img id="iconJantar" title="Barbacue" src="../images/icons/jantar.png" alt="Jantar" height="100px">
-        </a>
+        <?php
+        $link = 'actions/restaurantSearch.php?search=Barbecue&searchBy=type&token='.$_SESSION['token'];
+        echo '<a href='.$link.' >';
+        echo '<img id="iconJantar" title="Barbacue" src="../images/icons/jantar.png" alt="Jantar" height="100px">';
+        echo '</a>';
+        ?>
 
-        <a href="../pages/actions/restaurantSearch.php?search=Francesinha">
-            <img id="iconLoaf" title="Francesinha" src="../images/icons/loaf.png" alt="Francesinha" height="100px">
-        </a>
+        <?php
+        $link = 'actions/restaurantSearch.php?search=Francesinha&searchBy=type&token='.$_SESSION['token'];
+        echo '<a href='.$link.' >';
+        echo '<img id="iconLoaf" title="Francesinha" src="../images/icons/loaf.png" alt="Francesinha" height="100px">';
+        echo '</a>';
+        ?>
 
-        <a href="../pages/actions/restaurantSearch.php?search=Pub">
-            <img id="iconBeberUmCopo" title="Pub" src="../images/icons/beberUmCopo.png" alt="Beber Um Copo" height="100px">
-        </a>
+        <?php
+        $link = 'actions/restaurantSearch.php?search=Pub&searchBy=type&token='.$_SESSION['token'];
+        echo '<a href='.$link.' >';
+        echo '<img id="iconBeberUmCopo" title="Pub" src="../images/icons/beberUmCopo.png" alt="Beber Um Copo" height="100px">';
+        echo '</a>';
+        ?>
 
-        <a href="../pages/actions/restaurantSearch.php?search=Pastelaria">
-            <img id="iconCafesEPastelarias" title="Coffee and Cakes" src="../images/icons/cafesEPastelarias.png" alt="Cafés E Pastelarias" height="100px">
-        </a>
+        <?php
+        $link = 'actions/restaurantSearch.php?search=Lunch&searchBy=type&token='.$_SESSION['token'];
+        echo '<a href='.$link.' >';
+        echo '<img id="iconCafesEPastelarias" title="Coffee and Cakes" src="../images/icons/cafesEPastelarias.png" alt="Cafés E Pastelarias" height="100px">';
+        echo '</a>';
+        ?>
 
-        <a href="../pages/actions/restaurantSearch.php?search=Takeway">
-            <img id="iconTakeAway" title="Takeaway" src="../images/icons/takeAway.png" alt="Take Away" height="100px">
-        </a>
+        <?php
+        $link = 'actions/restaurantSearch.php?search=TakeAway&searchBy=type&token='.$_SESSION['token'];
+        echo '<a href='.$link.' >';
+        echo '<img id="iconTakeAway" title="Takeaway" src="../images/icons/takeAway.png" alt="Take Away" height="100px">';
+        echo '</a>';
+        ?>
 
-        <a href="../pages/actions/restaurantSearch.php?search=Gourmet">
-            <img id="iconRefeicoesDeLuxo" title="Gourmet"src="../images/icons/refeicoesDeLuxo.png" alt="Refeições De Luxo" height="100px">
-        </a>
+        <?php
+        $link = 'actions/restaurantSearch.php?search=Gourmet&searchBy=type&token='.$_SESSION['token'];
+        echo '<a href='.$link.' >';
+        echo '<img id="iconRefeicoesDeLuxo" title="Gourmet"src="../images/icons/refeicoesDeLuxo.png" alt="Refeições De Luxo" height="100px">';
+        echo '</a>';
+        ?>
+
     </div>
 </div>
 </div>

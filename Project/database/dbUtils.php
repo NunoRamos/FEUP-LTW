@@ -414,3 +414,19 @@ function getRestaurantByMaxPrice($price){
 
     return $result;
 }
+
+/** Gets the restaurants of a given type
+ * @param $type
+ * @return array
+ */
+function getRestaurantByType($type){
+    global $db;
+
+    $expression = '%'.$type.'%';
+
+    $stmt = $db->prepare("SELECT * FROM restaurant WHERE type LIKE ?");
+    $stmt->execute(array($expression));
+    $result = $stmt->fetchAll();
+
+    return $result;
+}
