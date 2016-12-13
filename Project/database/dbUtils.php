@@ -105,11 +105,11 @@ function putReview($id_restaurant,$id_user, $text, $grade){
  * @param $location
  * @param $type
  */
-function putRestaurant($name,$location,$type){
+function putRestaurant($name,$location,$type,$phone,$price){
     global $db;
 
-    $stmt = $db->prepare("INSERT INTO restaurant VALUES(NULL,?,?,?)");
-    $stmt->execute(array($name,$location,$type));
+    $stmt = $db->prepare("INSERT INTO restaurant VALUES(NULL,?,?,?,?,?)");
+    $stmt->execute(array($name,$location,$type,$phone,$price));
 }
 
 /** Gets a restaurant by name
@@ -176,6 +176,31 @@ function updateRestaurantType($id_restaurant,$new_type){
     $stmt = $db->prepare("UPDATE restaurant SET type=? WHERE id=?");
     return $stmt->execute(array($new_type,$id_restaurant));
 }
+
+/** Updates the restaurant phone
+ * @param $id_restaurant
+ * @param $new_phone
+ * @return bool
+ */
+function updateRestaurantPhone($id_restaurant,$new_phone){
+    global $db;
+
+    $stmt = $db->prepare("UPDATE restaurant SET phone_number=? WHERE id=?");
+    return $stmt->execute(array($new_phone,$id_restaurant));
+}
+
+/** Updates the restaurant price
+ * @param $id_restaurant
+ * @param $new_price
+ * @return bool
+ */
+function updateRestaurantPrice($id_restaurant,$new_price){
+    global $db;
+
+    $stmt = $db->prepare("UPDATE restaurant SET price=? WHERE id=?");
+    return $stmt->execute(array($new_price,$id_restaurant));
+}
+
 
 /** Updates the restaurante location
  * @param $id_restaurant
@@ -342,4 +367,66 @@ function updateUserImage($id_user, $path){
     $stmt = $db->prepare("UPDATE userImages SET path = ? WHERE img_username = ?");
     return $stmt->execute(array($path, $id_user));
 
+}
+
+/** Gets names that look alike param name
+ * @param $name
+ * @return array
+ */
+function getRestaurantByName2($name){
+    global $db;
+
+    $expression = '%'.$name.'%';
+
+    $stmt = $db->prepare("SELECT * FROM restaurant WHERE name LIKE ?");
+    $stmt->execute(array($expression));
+    $result = $stmt->fetchAll();
+
+    return $result;
+}
+
+/** Gets location that look alike param location
+ * @param $location
+ * @return array
+ */
+function getRestaurantByLocation($location){
+    global $db;
+
+    $expression = '%'.$location.'%';
+
+    $stmt = $db->prepare("SELECT * FROM restaurant WHERE location LIKE ?");
+    $stmt->execute(array($expression));
+    $result = $stmt->fetchAll();
+
+    return $result;
+}
+
+/** Getting all restaurants with a price smallar than param price
+ * @param $price
+ * @return array
+ */
+function getRestaurantByMaxPrice($price){
+    global $db;
+
+    $stmt = $db->prepare("SELECT * FROM restaurant WHERE price <= ?");
+    $stmt->execute(array($price));
+    $result = $stmt->fetchAll();
+
+    return $result;
+}
+
+/** Gets the restaurants of a given type
+ * @param $type
+ * @return array
+ */
+function getRestaurantByType($type){
+    global $db;
+
+    $expression = '%'.$type.'%';
+
+    $stmt = $db->prepare("SELECT * FROM restaurant WHERE type LIKE ?");
+    $stmt->execute(array($expression));
+    $result = $stmt->fetchAll();
+
+    return $result;
 }

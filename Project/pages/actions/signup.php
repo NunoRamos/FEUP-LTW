@@ -3,6 +3,11 @@ include_once('../../database/dbUtils.php');
 
 session_start();
 
+$token = $_GET['token'];
+if($_SESSION['token'] != $token){
+    header('Location: ../templates/niceTry.html');
+}
+
 $_SESSION['invalid_user'] = 0;
 
 $username = htmlspecialchars($_POST["username"]);

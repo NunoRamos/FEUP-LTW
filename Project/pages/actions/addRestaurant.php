@@ -3,20 +3,20 @@ session_start();
 
 include_once('../../database/dbUtils.php');
 
-
-
 if(!isset($_SESSION['username'])){
     header('Location: ../mainPage.php');
 }
 
-$token = $_POST['token'];
+$token = $_GET['token'];
 if($_SESSION['token'] != $token){
-    header('Location: ../niceTry.php');
+    header('Location: ../templates/niceTry.html');
 }
 
 $name = htmlspecialchars($_GET['name']);
 $location = htmlspecialchars($_GET['location']);
 $type = htmlspecialchars($_GET['type']);
+$phone = htmlspecialchars($_GET['phone']);
+$price = htmlspecialchars($_GET['price']);
 $username = $_SESSION['username'];
 
 $doesTheRestaurantExist = getRestaurantByName($name);
@@ -26,7 +26,7 @@ if(sizeof($doesTheRestaurantExist) != 0){
     header('Location: ../addRestaurant.php');
 }
 else {
-    putRestaurant($name,$location,$type);
+    putRestaurant($name,$location,$type,$phone,$price);
     $restaurantId = getRestaurantByName($name);
     addOwner($restaurantId[0]['id'],$username);
     $_SESSION['invalid_restaurant'] = 0;

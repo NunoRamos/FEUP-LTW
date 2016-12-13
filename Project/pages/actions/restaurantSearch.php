@@ -3,16 +3,17 @@ include_once('../../database/dbUtils.php');
 
 session_start();
 
-$token = $_POST['token'];
+$token = $_GET['token'];
 if($_SESSION['token'] != $token){
-    header('Location: ../niceTry.php');
+    header('Location: ../templates/niceTry.html');
 }
 
 $_SESSION['noResultsFound']=0;
 
-$search = htmlspecialchars($_POST["search"]);
+$search = htmlspecialchars($_GET["search"]);
+$searchBy = htmlspecialchars($_GET["searchBy"]);
 
-$result_names = getRestaurantsNames();
+/*
 $number_of_rows = sizeof($result_names);
 $array= array();
 
@@ -37,14 +38,29 @@ for($i = 0; $i < $number_of_rows;$i++) {
 
 $idSearches= array_unique($array);
 $searches = array();
+*/
+if($searchBy == "name") {
+    $results = getRestaurantByName2($search);
+}
+else if($searchBy == "location"){
+    $results = getRestaurantByLocation($search);
+}
+else if($searchBy == "price"){
+    $results = getRestaurantByMaxPrice($search);
+}
+else if($searchBy == "type"){
+    $results = getRestaurantByType($search);
+}
 
-$number_of_rows = sizeof($result_types);
+$number_of_rows = sizeof($results);
 
 for($i = 0; $i < $number_of_rows;$i++) {
-    $id = $idSearches[$i];
+   /* $id = $idSearches[$i];
     $names = getRestaurant($id);
     $searches[$i]['id'] = $id;
-    $searches[$i]['name'] = $names[0]['name'];
+    $searches[$i]['name'] = $names[0]['name'];*/
+    $searches[$i]['id'] = $results[$i]['id'];
+    $searches[$i]['name'] = $results[$i]['name'];
 }
 
 if(sizeof($searches) !=0){

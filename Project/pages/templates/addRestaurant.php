@@ -25,7 +25,7 @@ $_SESSION['token'] = generateRandomToken();
     }
     ?>
       <form action="actions/addRestaurant.php" method="get">
-        <input type="hidden" name="token" value=<?php echo $_SESSION['token']; ?>>
+        <input type="hidden" name="token" value=<?php echo $_SESSION['token'];?>>
         <label>
           Name:
           <br>

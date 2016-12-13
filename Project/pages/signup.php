@@ -2,6 +2,10 @@
 session_start();
 
 $_SESSION['page'] = 'signup.php';
+
+include_once('utils/utils.php');
+
+$_SESSION['token'] = generateRandomToken();
 ?>
 <!DOCTYPE html>
 <html>
@@ -44,6 +48,7 @@ $_SESSION['page'] = 'signup.php';
     </div>
     <div id="userNameSU">
       <form action="actions/signup.php" method="post" onsubmit="return validateForm()">
+        <input type="hidden" name="token" value=<?php echo $_SESSION['token'];?>>
         <label>
           Username
           <br>
