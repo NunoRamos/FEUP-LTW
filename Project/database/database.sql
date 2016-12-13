@@ -54,7 +54,7 @@ INSERT INTO restaurantImages VALUES (NULL, 1, 'default-restaurant-icon.jpg');
 
 INSERT INTO restaurant VALUES (NULL,'Melhor Restaurante','Rua dos Clerigos,Porto','Gourmet',911123468,14);
 INSERT INTO restaurant VALUES (NULL,'Melhor francesinha do Mundo','Rua de todos os santo,Porto','Francesinha',931844576,20);
-INSERT INTO restaurant VALUES (NULL,'Churasqueira da Pinta','Rua forum da maia,Maia,Porto','Churasqueira',223656745,10);
+INSERT INTO restaurant VALUES (NULL,'Churasqueira da Pinta','Rua forum da maia,Maia,Porto','Barbecue',223656745,10);
 
 INSERT INTO owner VALUES (1,'nunoramos');
 INSERT INTO owner VALUES (2,'nunoramos');

@@ -3,15 +3,15 @@ include_once('../../database/dbUtils.php');
 
 session_start();
 
-$token = $_POST['token'];
+$token = $_GET['token'];
 if($_SESSION['token'] != $token){
     header('Location: ../templates/niceTry.html');
 }
 
 $_SESSION['noResultsFound']=0;
 
-$search = htmlspecialchars($_POST["search"]);
-$searchBy = htmlspecialchars($_POST["searchBy"]);
+$search = htmlspecialchars($_GET["search"]);
+$searchBy = htmlspecialchars($_GET["searchBy"]);
 
 /*
 $number_of_rows = sizeof($result_names);
@@ -47,6 +47,9 @@ else if($searchBy == "location"){
 }
 else if($searchBy == "price"){
     $results = getRestaurantByMaxPrice($search);
+}
+else if($searchBy == "type"){
+    $results = getRestaurantByType($search);
 }
 
 $number_of_rows = sizeof($results);
