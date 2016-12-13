@@ -1,16 +1,5 @@
-/*.pageContent {
-  margin-left: 30%;
-  background-color: white;
-}*/
-
 .pageContent {
   background-color: rgba(255,255,255, 0.5);
-}
-
-.design {
-  margin-left: 30%;
-  background-color: white;
-  opacity: 0.80;
 }
 
 #restaurantTag {
@@ -82,11 +71,13 @@ img#mapIcon {
   border-bottom: solid;
   border-bottom-color: #e0e0e0;
   border-bottom-width: 2px;
+  font-size: 120%;
 }
 
 .divReview {
   padding: 10px 10px 10px 10px;
   margin: 10px 10px 10px 10px;
+  bor
 }
 
 #reviewNotLogued {
@@ -149,6 +140,8 @@ img#mapIcon {
 .reviewContainer {
   display: flex;
   flex-direction: row;
+  margin-left: 10%;
+  margin-right: 10px;
 }
 
 .userImage {
@@ -162,6 +155,9 @@ img#mapIcon {
   display: flex;
   flex-direction: row;
   padding: 1em 1em 1em 1em;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  margin-right: auto;
 }
 
 .showRepliesLink {
@@ -213,4 +209,8 @@ img#mapIcon {
 
 .formToDeleteReply {
   margin-left: 2em;
+}
+
+#userNameReply {
+  font-weight: 900;
 }

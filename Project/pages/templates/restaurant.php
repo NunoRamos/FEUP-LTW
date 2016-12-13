@@ -7,6 +7,7 @@ $_SESSION['token'] = generateRandomToken();
 <link rel="stylesheet" href="../css/button.css" type="text/css">
 <link rel="stylesheet" href="../css/box.css" type="text/css">
 <link rel="stylesheet" href="../css/imageRestaurant.css" type="text/css">
+<link rel="stylesheet" href="../css/design.css" type="text/css">
 
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="/js/restaurant.js"></script>
@@ -57,21 +58,23 @@ $_SESSION['token'] = generateRandomToken();
 </div>
 
 <div id="reviewsDiv">
-    <h3 id="reviewTitle">Reviews</h3>
+  <div id="reviewTitle">
+    <label id="Label">Reviews</label>
+  </div>
     <?php
     foreach ($_SESSION['reviews'] as $review) {
-  echo '<div class="reviewContainer">';
+  echo '<div class="reviewContainer box">';
         $imagePath = '../images/user/'.$review['userImage'];
-        echo '<img class="userImage" src='.$imagePath.' alt="User image">';
+        echo '<img class="userImage" src='.$imagePath.' alt="User image" height="20%" width="20%">';
         echo '<div class="divReview">';
-        echo '<div>'.$review['fullName'].' gives '.$review['grade'].'/10 at '.$review['date'].'</div>';
+        echo '<div><div id="userNameReply">'.$review['fullName'].'</div> gives '.$review['grade'].'/10 at '.$review['date'].'</div>';
         echo '<div>'.$review['text'].'</div>';
         $replies = $review['replies'];
         echo '<div class="showRepliesLink">Show Replies/Add Reply</div>';
         echo '<div hidden>';
         if(sizeof($replies)){
             foreach ($review['replies'] as $reply) {
-                echo '<div class="reviewReplyStyle">';
+                echo '<div class="reviewReplyStyle box">';
                 echo '<div>';
                 echo '<div>' . $reply['fullName'] . ' reply at '.$reply['date'].'</div>';
                 echo '<div>' . $reply['text'] . '</div>';
