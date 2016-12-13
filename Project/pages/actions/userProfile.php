@@ -4,7 +4,7 @@ session_start();
 include_once('../../database/dbUtils.php');
 
 if(!isset($_SESSION['username'])){
-    header('Location: ../mainPage.php');
+    header('Location: ../templates/niceTry.html');
 }
 
 $username = $_SESSION['username'];

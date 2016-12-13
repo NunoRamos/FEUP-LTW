@@ -21,6 +21,10 @@ $_SESSION['token'] = generateRandomToken();
 
         <input id="editRestaurantLocation" type="text" name="newLocation" value="<?php echo $_SESSION['restaurant']['location']; ?>">
 
+        <input id="editRestaurantLocation" type="text" name="newPhone" value="<?php echo $_SESSION['restaurant']['phone_number']; ?>">
+
+        <input id="editRestaurantLocation" type="text" name="newPrice" value="<?php echo $_SESSION['restaurant']['price']; ?>">
+
         <img id="editRestaurantImage" src="../images/restaurants/default-restaurant-icon.jpg" alt="Restaurant Image">
 
         <input id="editSubmitButton" class="buttonStyle" type="submit" value="Edit restaurant">

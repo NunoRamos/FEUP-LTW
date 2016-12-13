@@ -105,11 +105,11 @@ function putReview($id_restaurant,$id_user, $text, $grade){
  * @param $location
  * @param $type
  */
-function putRestaurant($name,$location,$type){
+function putRestaurant($name,$location,$type,$phone,$price){
     global $db;
 
-    $stmt = $db->prepare("INSERT INTO restaurant VALUES(NULL,?,?,?)");
-    $stmt->execute(array($name,$location,$type));
+    $stmt = $db->prepare("INSERT INTO restaurant VALUES(NULL,?,?,?,?,?)");
+    $stmt->execute(array($name,$location,$type,$phone,$price));
 }
 
 /** Gets a restaurant by name
@@ -176,6 +176,31 @@ function updateRestaurantType($id_restaurant,$new_type){
     $stmt = $db->prepare("UPDATE restaurant SET type=? WHERE id=?");
     return $stmt->execute(array($new_type,$id_restaurant));
 }
+
+/** Updates the restaurant phone
+ * @param $id_restaurant
+ * @param $new_phone
+ * @return bool
+ */
+function updateRestaurantPhone($id_restaurant,$new_phone){
+    global $db;
+
+    $stmt = $db->prepare("UPDATE restaurant SET phone_number=? WHERE id=?");
+    return $stmt->execute(array($new_phone,$id_restaurant));
+}
+
+/** Updates the restaurant price
+ * @param $id_restaurant
+ * @param $new_price
+ * @return bool
+ */
+function updateRestaurantPrice($id_restaurant,$new_price){
+    global $db;
+
+    $stmt = $db->prepare("UPDATE restaurant SET price=? WHERE id=?");
+    return $stmt->execute(array($new_price,$id_restaurant));
+}
+
 
 /** Updates the restaurante location
  * @param $id_restaurant

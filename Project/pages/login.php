@@ -3,6 +3,11 @@ session_start();
 if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
   header('Location: index.php');
 }
+
+include_once('utils/utils.php');
+
+$_SESSION['token'] = generateRandomToken();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,6 +45,7 @@ if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
 }
       ?>
       <form action="actions/login.php" method="post" class="formUser">
+        <input type="hidden" name="token" value=<?php echo $_SESSION['token'];?>>
         <label>
           <br>
           Username:

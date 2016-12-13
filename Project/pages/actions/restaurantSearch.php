@@ -5,7 +5,7 @@ session_start();
 
 $token = $_POST['token'];
 if($_SESSION['token'] != $token){
-    header('Location: ../niceTry.php');
+    header('Location: ../templates/niceTry.html');
 }
 
 $_SESSION['noResultsFound']=0;
