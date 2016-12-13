@@ -114,18 +114,20 @@ img#mapIcon {
 
 #editRestaurantName {
   display: block;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin: 2em 4em 0.5em 4em;
+  text-align: center;
 }
 
 #editRestaurantType {
   display: block;
+  margin: 2em 4em 0.5em 4em;
+  text-align: center;
 }
 
 #editRestaurantLocation {
   display: block;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin: 2em 4em 0.5em 4em;
+  text-align: center;
 }
 
 #editRestaurantImage {
@@ -133,16 +135,23 @@ img#mapIcon {
   margin-bottom: 2%;
   height: 15em;
   width: 15em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 #editSubmitButton {
-  margin-bottom: 5%;
+  margin-bottom: 2em;
+  margin-top: 1em;
 }
 
 #editForm {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /*background-color: #fafafa;*/
+  background-color: rgba(255,255,255, 0.7);
+  margin:2em;
+  border-radius: 10%;
 }
 
 .reviewContainer {
@@ -204,6 +213,17 @@ img#mapIcon {
 
 #deleteForm {
   align-items: center;
+  /*background-color: #fafafa;*/
+  background-color: rgba(255,255,255, 0.7);
+  padding: 2em;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#deleteButton{
+  margin-top: 1em;
 }
 
 .deleteReview {
@@ -302,4 +322,42 @@ div.dateDivR{
 #restaurantInfo{
   display: flex;
   flex-direction: column;
+}
+
+#restaurantEditMainDiv{
+  /*background-color: #f0f0f0;*/
+  background-color: rgba(255,255,255, 0.5);
+  /*background-image: url("../images/edit_background.png");*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom:5em;
+}
+
+#editHeader{
+  margin-top: 1em;
+}
+
+#changeImageDiv{
+  /*background-color: #fafafa;*/
+  background-color: rgba(255,255,255, 0.7);
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#restaurantImageUpload{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#restaurantImageUploadText{
+  padding-left: 2em;
+}
+
+.test{
+ /* background-color: rgba(255,255,255, 0.5);*/
+  background-image: url("../images/edit_background.png")
 }
