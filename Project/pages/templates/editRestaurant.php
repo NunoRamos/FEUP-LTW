@@ -28,7 +28,7 @@ $_SESSION['token'] = generateRandomToken();
         <input id="editSubmitButton" class="buttonStyle" type="submit" value="Edit restaurant">
 
     </form>
-    <img id="editRestaurantImage" src=<?php echo $_SESSION['restaurant']['restaurantPhotoPath']; ?>r alt="Restaurant Image">
+    <img id="editRestaurantImage" src=<?php echo $_SESSION['restaurant']['restaurantPhotoPath']; ?> alt="Restaurant Image">
 
     <form action="actions/upload.php" method="post" enctype="multipart/form-data">
         Select image to upload:
