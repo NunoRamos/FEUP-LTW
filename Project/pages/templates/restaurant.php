@@ -12,20 +12,32 @@ $_SESSION['token'] = generateRandomToken();
 <script src="/js/restaurant.js"></script>
 
 <div class="pageContent">
+  <div class="design">
   <div id="restaurantInfo">
     <div id="imgLgRestaurant">
       <img id="restaurantImage" src="../images/icons/noImgRestaurant.png" alt="Restaurant Image">
-      <label id="restaurantName"><?php echo $_SESSION['restaurant']['name']; ?></label>
-      <br>
-      <label id="info">
-          <div id="restaurantType"> <?php echo $_SESSION['restaurant']['type']; ?> </div>
-          <div id="restaurantLocation"> <?php echo $_SESSION['restaurant']['location']; ?> </div>
-      </label>
+      <div id="aux">
+        <label id="restaurantName">
+          <?php
+          echo $_SESSION['restaurant']['name'];
+          ?>
+        </label>
+        <br>
+        <div id="info">
+          <label>
+            <div id="restaurantType"> <?php echo $_SESSION['restaurant']['type']; ?> </div>
+            <div id="restaurantLocation"> <?php echo $_SESSION['restaurant']['location']; ?> </div>
+            <div id="restaurantPhone"> <?php echo $_SESSION['restaurant']['phone_number']; ?> </div>
+            <div id="restaurantPrice"> <?php echo $_SESSION['restaurant']['price']; ?>€</div>
+          </label>
+          <div id="star">
+            <?php echo $_SESSION['restaurant']['average']; ?>
+            <img id="iconStar" src="../images/icons/star.png" alt="star" width="5.1%" height="5.1%">
+          </div>
+        </div>
+      </div>
     </div>
-
-    <!-- <label id="restaurantName"><?php echo $_SESSION['restaurant']['name']; ?></label> -->
     <br>
-<!-- Edit restaurant -->
     <?php
     if((in_array($_SESSION['username'],$_SESSION['owners']) || $_SESSION['username'] == "administrator") && $_SESSION['page'] != 'editRestaurant.php') {
   echo '<div id="editButton">';
@@ -35,17 +47,16 @@ $_SESSION['token'] = generateRandomToken();
         echo '</div>';
 }
     ?>
-    <!--  -->
-    <label>
-        <div id="restaurantType"> <?php echo $_SESSION['restaurant']['type']; ?> </div>
-        <div id="restaurantLocation"> <?php echo $_SESSION['restaurant']['location']; ?> </div>
-    </label>
-    <iframe width="400" height="200" frameborder="0" style="border:0"
+
+    <div id="mapLocation">
+      <img id="mapIcon" src="../images/icons/map.png" alt="icon map" height="100px">
+      <iframe width="500" height="250" frameborder="0" style="border:0"
             src="https://www.google.com/maps/embed/v1/place?q=<?php echo $_SESSION['restaurant']['location'];?>&key=AIzaSyB1g45KMgxhy_MQhXdiZtF7Kxm-hhNNbes" allowfullscreen>
-    </iframe>
+          </iframe>
+    </div>
 </div>
 
-<div>
+<div id="reviewsDiv">
     <h3 id="reviewTitle">Reviews</h3>
     <?php
     foreach ($_SESSION['reviews'] as $review) {
@@ -125,5 +136,6 @@ echo '<div id="reviewNotLogued">';
 }
     ?>
 </div>
-<?php
 </div>
+</div>
+<?php

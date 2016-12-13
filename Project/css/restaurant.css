@@ -1,6 +1,16 @@
-.pageContent {
+/*.pageContent {
   margin-left: 30%;
   background-color: white;
+}*/
+
+.pageContent {
+  background-color: rgba(255,255,255, 0.5);
+}
+
+.design {
+  margin-left: 30%;
+  background-color: white;
+  opacity: 0.80;
 }
 
 #restaurantTag {
@@ -11,18 +21,31 @@
   display: inline-flex;
 }
 
+#aux {
+  display: block;
+}
+
+label {
+  font-size: medium;
+}
+
+#info {
+  /*display: inline;*/
+  display: block;
+}
+
 #restaurantName {
-  /*padding: 10px 10px 10px 10px;*/
   display: inline-block;
   font-size: 300%;
   margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 #editButton {
   display: inline-block;
 }
 
-#restaurantType {
+#restaurantType,#restaurantPhone {
   display: inline-block;
   padding: 10px 10px 10px 10px;
   border-right: solid;
@@ -30,9 +53,27 @@
   line-height: 5px;
 }
 
-#restaurantLocation {
+#restaurantLocation,#restaurantPrice {
   display: inline-block;
   padding: 10px 10px 10px 10px;
+}
+
+#star {
+  font-size: 180%;
+  margin-top: 1.5%;
+}
+
+#mapLocation {
+  margin-left: 20%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-right: auto;
+}
+
+img#mapIcon {
+  opacity: 1;
+  vertical-align: top;
+  margin-right: 2%;
 }
 
 #reviewTitle {
