@@ -14,7 +14,13 @@ include_once('utils/utils.php');
     <div id="pageContent">
 
         <div id="userNameSU">
-            <img id="logoImage" src="<?php echo $_SESSION['profile_img'] ;?>" alt="logo" height="200px">
+            <?php
+            if($_SESSION['profile_img'] == "../images/user/default-user.png"){
+                echo '<img id="logoImage" src="../images/user/default-user.png" alt="logo" height="200px">';
+            }
+            else
+                echo '<img id="logoImage" src=../images/user/'. $_SESSION['profile_img'].' alt="logo" height="200px">';
+            ?>
             <div id="nameGenderCity">
                 <?php
                 echo '<h3 id="nameAndGender">';
