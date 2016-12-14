@@ -51,7 +51,8 @@ CREATE TABLE restaurantImages (
 	path VARCHAR
 );
 
-INSERT INTO restaurantImages VALUES (NULL, 1, 'default-restaurant-icon.jpg');
+
+/*INSERT INTO restaurantImages VALUES (NULL, 1, 'default-restaurant-icon.jpg');
 INSERT INTO restaurantImages VALUES (NULL, 2, 'default-restaurant-icon.jpg');
 INSERT INTO restaurantImages VALUES (NULL, 3, 'default-restaurant-icon.jpg');
 
@@ -65,7 +66,7 @@ INSERT INTO owner VALUES (2,'nunoramos');
 INSERT INTO review VALUES (NULL,1,'nunoramos','Melhor restaurante do porto e não sei se do mundo, melhores rojoes de sempre',4,'13, Tuesday, December 01:54');
 INSERT INTO review VALUES (NULL,2,'nunoramos','Quem quiser provar a melhor francesinha do Porto basta ir a este restaurante, que tambem tem uma otima localizacao',4,'16, Friday, December 01:54');
 
-INSERT INTO reply VALUES  (NULL,1,'beatriz11','Não podia dizer melhor, concordo plenamente!!','13, Tuesday, December 02:54');
+INSERT INTO reply VALUES  (NULL,1,'beatriz11','Não podia dizer melhor, concordo plenamente!!','13, Tuesday, December 02:54');*/
 
 /*INSERT INTO user VALUES ('username1','vivaaoporto','Nuno Ramos','nuno@gmail.com','Male');
 INSERT INTO user VALUES ('username2','portoooo','Ines peixe','peixe@gmail.com','Female');*/
