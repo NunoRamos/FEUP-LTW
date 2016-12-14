@@ -31,7 +31,7 @@ if(isset($_FILES['image'])){
             move_uploaded_file($file_tmp, "../../images/user/" . $file_name);
 
             updateUserImage($_SESSION['username'], $file_name);
-            $_SESSION['userPhotoPath'] = '../images/user/' . $file_name;
+            $_SESSION['userPhotoPath'] = $file_name;
 
 
             header("Location: ../actions/userProfile.php");
