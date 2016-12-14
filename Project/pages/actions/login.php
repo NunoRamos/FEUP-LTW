@@ -3,7 +3,7 @@ include_once('../../database/dbUtils.php');
 
 session_start();
 
-$token = $_GET['token'];
+$token = $_POST['token'];
 if($_SESSION['token'] != $token){
     header('Location: ../templates/niceTry.html');
 }
