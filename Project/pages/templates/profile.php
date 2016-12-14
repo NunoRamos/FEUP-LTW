@@ -10,41 +10,38 @@ include_once('utils/utils.php');
 <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i" rel="stylesheet">
 
 
-<div id="pageContent">
+<div id="test">
+    <div id="pageContent">
 
-
-
-    <div id="userNameSU">
+        <div id="userNameSU">
             <img id="logoImage" src="<?php echo $_SESSION['profile_img'] ;?>" alt="logo" height="200px">
-            <br>
-            <h3 class="profile"><?php
-            echo $_SESSION['profile_userInfo']['name'];
-            echo ', ';
-            echo $_SESSION['profile_userInfo']['gender'];
-            echo"<br>";
-            echo "</h3><h3 class=\"profile\">";
-            echo $_SESSION['profile_userInfo']['city'];
-                ?></h3>
-            <br><h3 class="profile">
-            Number of Reviews
-
-            <?php
-            echo $_SESSION['number_of_reviews'][0];
-            ?>
-        </h3>
-            <br>
-        <h3 class="profile">Restaurants owned</h3>
-
-            <?php
+            <div id="nameGenderCity">
+                <?php
+                echo '<h3 id="nameAndGender">';
+                echo $_SESSION['profile_userInfo']['name'];
+                echo ', ';
+                echo $_SESSION['profile_userInfo']['gender'];
+                echo '</h3>';
+                echo '<h3 id="userCity">';
+                echo $_SESSION['profile_userInfo']['city'];
+                echo '</h3>';
+                ?>
+            </div>
+            <h3 id="numberOfReviews">Number of Reviews:  <?php echo $_SESSION['number_of_reviews'][0]; ?></h3>
+            <h3 id="restaurantsOwnedTitle">Restaurants owned</h3>
+            <div id="allUserRestaurants">
+                <?php
                 foreach($_SESSION['profile_restaurantsInfo'] as $restaurant){
-                    echo "<h4 class=\"profile\">";
+                    echo "<div class=oneMoreUserRestaurant>";
                     $link = "actions/restaurant.php?id=".$restaurant[0]['id'];
                     echo '<a href='.$link.'>'.$restaurant[0]['name'].' in '.$restaurant[0]['location'].'</a>';
-                echo "</h4>";
+                    echo "</div>";
                 }
-            ?>
+                ?>
+            </div>
+
+        </div>
 
     </div>
-
 </div>
 

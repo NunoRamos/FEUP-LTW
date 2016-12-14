@@ -9,32 +9,39 @@
     width: 15em;
     height: 15em;
     align-content: center;
+    margin-top: 2em;
 }
 
-/*Centrar Imagem*/
+/*Centrar Imagem*//*
 .pageContent,
 #userNameSU {
     vertical-align: middle;
     display: block;
-}
-
+}*/
+/*
 div#userNameSU {
     background-color: white;
     opacity: 0.92;
     background-color: rgba(255,255,255, 0.7);
     margin-bottom: 5em;
-}
+}*/
 
 #userNameSU {
-    color: black;
+    /*color: black;
     display: inline-block;
-    text-align: justify;
+    text-align: justify;*/
     border: 2.5px dotted lightgrey;
-    width: 21%;
+   /* width: 21%;
     padding: 2.5%;
+    margin-top: 3.5em;*/
     margin-top: 3.5em;
+    margin-bottom: 10em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255,255,255, 0.7);
 }
-
+/*
 .profile {
     margin-top: 0.5em;
     width: 98.5%;
@@ -88,12 +95,52 @@ div#userNameSU {
 
 span#singUpError {
     color: red;
-}
+}*/
 
 #pageContent{
-    background-image: url("../images/profile-background.jpg");
+   /* background-image: url("../images/profile-background.jpg");*/
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgba(255,255,255, 0.5);
+}
+
+#test{
+    background-image: url("../images/edit_user.png");
+}
+
+#nameGenderCity{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nameAndGender{
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+#userCity{
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+#numberOfReviews{
+    margin-bottom: 1em;
+}
+
+#restaurantsOwnedTitle{
+    margin-bottom: 1em;
+}
+
+#allUserRestaurants{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.oneMoreUserRestaurant{
+    margin-bottom: 0.5em;
+    font-weight: 900%;
 }
