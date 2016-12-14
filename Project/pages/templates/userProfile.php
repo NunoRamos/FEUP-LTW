@@ -52,7 +52,9 @@ $_SESSION['token'] = generateRandomToken();
 
         <div id="photoContainer">
             <?php
-            echo '<img id="editUserImage" src='.$_SESSION['userPhotoPath'].' alt="Restaurant Image">';
+            if($_SESSION['userPhotoPath'] == "../images/user/default-user.png")
+                echo '<img id="editUserImage" src='.$_SESSION['userPhotoPath'].' alt="User Image">';
+            else echo '<img id="editUserImage" src=../images/user/'.$_SESSION['userPhotoPath'].' alt="User Image">';
             ?>
             <form id="formToUploadUserImage" action="actions/upload.php" method="post" enctype="multipart/form-data">
                 <div id="uploadButtonAndText">
