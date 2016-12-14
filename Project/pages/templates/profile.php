@@ -6,7 +6,6 @@ include_once('utils/utils.php');
 
 <link rel="stylesheet" href="../css/profile.css" type="text/css">
 <link rel="stylesheet" href="../css/lettering.css" type="text/css">
-<link rel="stylesheet" href="../css/imageProfile.css" type="text/css">
 <!--link rel="stylesheet" href="../css/imageMainPage.css" type="text/css"-->
 <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i" rel="stylesheet">
 

@@ -1,8 +1,8 @@
-body {
+/*body {
     margin: 0 auto;
     text-align: center;
     margin-top: 3%;
-}
+}*/
 
 #logoImage {
     border-radius: 50%;
@@ -21,10 +21,12 @@ body {
 div#userNameSU {
     background-color: white;
     opacity: 0.92;
+    background-color: rgba(255,255,255, 0.7);
+    margin-bottom: 5em;
 }
 
 #userNameSU {
-    color: grey;
+    color: black;
     display: inline-block;
     text-align: justify;
     border: 2.5px dotted lightgrey;
@@ -86,4 +88,12 @@ div#userNameSU {
 
 span#singUpError {
     color: red;
+}
+
+#pageContent{
+    background-image: url("../images/profile-background.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
