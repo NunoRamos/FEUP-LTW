@@ -13,7 +13,7 @@ $_SESSION['token'] = generateRandomToken();
   <title>Sign Up</title>
   <meta charset="utf-8">
   <link rel="icon" type="image/png"  href="../images/logo.png" />
-  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="/js/sign_up.js"></script>
   <link rel="stylesheet" href="../css/reset.css" type="text/css">
   <link rel="stylesheet" href="../css/header.css" type="text/css">
