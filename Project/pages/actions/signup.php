@@ -23,7 +23,7 @@ if($username != null && $password != null){
     $number_of_rows = sizeof($result);
 
     if($number_of_rows == 0){
-        $password = password_hash($password,PASSWORD_DEFAULT);
+        $password = hash('sha256', $password); //password_hash($password,PASSWORD_DEFAULT);
         putUser($username,$password,$name,$email,$gender, $city);
         createUserImage($username,"../images/user/default-user.png");
 

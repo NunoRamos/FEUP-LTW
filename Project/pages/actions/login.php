@@ -14,7 +14,9 @@ $password = htmlspecialchars($_POST["password"]);
 $result = getUser($username);
 $number_of_rows = sizeof($result);
 
-if($number_of_rows != 0 && $result[0]["username"] == $username && password_verify($password, $result[0]["password"])){
+$password = hash('sha256', $password);
+
+if($number_of_rows != 0 && $result[0]["username"] == $username && $password == $result[0]["password"]){//password_verify($password, $result[0]["password"])){
     $_SESSION['username'] = $username;
     $_SESSION['password'] = $password;
     $_SESSION['fullName'] = $result[0]['name'];
