@@ -447,3 +447,38 @@ function getNumberOfRevies($id_user){
 }
 
 
+
+/** Updates restaurants images
+ * @param $id_restaurant
+ * @param $path
+ * @return bool
+ *
+ */
+function updateRestaurantImage($id_restaurant, $path){
+    global $db;
+
+    $stmt = $db->prepare("UPDATE restaurantImages SET path = ? WHERE id_restaurant= ?");
+    return $stmt->execute(array($path, $id_restaurant));
+
+}
+
+/** Gets restaurant images
+ * @param $id_restaurant
+ * @return array
+ */
+function getRestaurantImages($id_restaurant){
+    global $db;
+
+    $stmt = $db->prepare("SELECT * FROM restaurantImages WHERE id_restaurant=?");
+    $stmt->execute(array($id_restaurant));
+    $result = $stmt->fetchAll();
+
+    return $result;
+}
+
+function createRestaurantImage($id_restaurant,$path){
+    global $db;
+
+    $stmt = $db->prepare("INSERT INTO restaurantImages VALUES (NULL, ?, ?)");
+    return $stmt->execute(array($id_restaurant, $path));
+}

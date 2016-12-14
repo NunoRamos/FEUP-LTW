@@ -50,4 +50,7 @@ else
     $_SESSION['restaurant']['average'] = round($total/sizeof($reviews));
 
 
+$results = getRestaurantImages($id);
+$_SESSION['restaurant']['restaurantPhotoPath'] = '../images/restaurants/'.$results[0]['path'];
+
 header('Location: ../restaurant.php');

@@ -1,16 +1,5 @@
-/*.pageContent {
-  margin-left: 30%;
-  background-color: white;
-}*/
-
 .pageContent {
   background-color: rgba(255,255,255, 0.5);
-}
-
-.design {
-  margin-left: 30%;
-  background-color: white;
-  opacity: 0.80;
 }
 
 #restaurantTag {
@@ -22,7 +11,8 @@
 }
 
 #aux {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
@@ -37,12 +27,12 @@ label {
 #restaurantName {
   display: inline-block;
   font-size: 300%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 3%;
 }
 
 #editButton {
   display: inline-block;
+  margin-top: 5em;
 }
 
 #restaurantType,#restaurantPhone {
@@ -61,13 +51,17 @@ label {
 #star {
   font-size: 180%;
   margin-top: 1.5%;
+  margin-left: 1.5%;
+  margin-bottom: 1.5%;
 }
 
 #mapLocation {
-  margin-left: 20%;
+  margin-left: 10%;
   margin-top: 2%;
   margin-bottom: 2%;
   margin-right: auto;
+  display: flex;
+  flex-direction: row;
 }
 
 img#mapIcon {
@@ -82,6 +76,7 @@ img#mapIcon {
   border-bottom: solid;
   border-bottom-color: #e0e0e0;
   border-bottom-width: 2px;
+  font-size: 120%;
 }
 
 .divReview {
@@ -97,9 +92,12 @@ img#mapIcon {
 #leaveReviewHeader {
   padding: 10px 10px 10px 10px;
   margin: 10px 10px 10px 10px;
-  border-top: solid;
-  border-top-color: #e0e0e0;
+  /*border-top: solid;*/
+  border-bottom: solid;
+  /*border-top-color: #e0e0e0;*/
+  border-bottom-color: #e0e0e0;
   border-top-width: 2px;
+  font-size: 120%;
 }
 
 #leaveReview {
@@ -110,45 +108,58 @@ img#mapIcon {
 #restaurantImage {
   padding: 10px 10px 10px 10px;
   margin: 10px 10px 10px 10px;
-  width: 20%;
-  height: 20%
+  width: 10%;
+  height: 10%
 }
 
 #editRestaurantName {
   display: block;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin: 2em 4em 0.5em 4em;
+  text-align: center;
 }
 
 #editRestaurantType {
   display: block;
+  margin: 2em 4em 0.5em 4em;
+  text-align: center;
 }
 
 #editRestaurantLocation {
   display: block;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin: 2em 4em 0.5em 4em;
+  text-align: center;
 }
 
 #editRestaurantImage {
+  border-radius: 50%;
   margin-bottom: 2%;
-  width: 20%;
-  height: 20%
+  height: 15em;
+  width: 15em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 #editSubmitButton {
-  margin-bottom: 5%;
+  margin-bottom: 2em;
+  margin-top: 1em;
 }
 
 #editForm {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /*background-color: #fafafa;*/
+  background-color: rgba(255,255,255, 0.7);
+  margin:2em;
+  border-radius: 10%;
 }
 
 .reviewContainer {
+  background-color: white;
   display: flex;
   flex-direction: row;
+  margin-left: 10%;
+  margin-right: 10px;
 }
 
 .userImage {
@@ -162,6 +173,9 @@ img#mapIcon {
   display: flex;
   flex-direction: row;
   padding: 1em 1em 1em 1em;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  margin-right: auto;
 }
 
 .showRepliesLink {
@@ -199,6 +213,17 @@ img#mapIcon {
 
 #deleteForm {
   align-items: center;
+  /*background-color: #fafafa;*/
+  background-color: rgba(255,255,255, 0.7);
+  padding: 2em;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#deleteButton{
+  margin-top: 1em;
 }
 
 .deleteReview {
@@ -215,10 +240,125 @@ img#mapIcon {
   margin-left: 2em;
 }
 
-.userImageReply{
+.userImageReply {
   padding-right: 1em;
   padding-left: 1em;
   border-radius: 50%;
   width: 2em;
   height: 2em;
+}
+
+.userNameReply {
+  margin-right: 2%;
+  font-weight: 900;
+  display: inline;
+}
+
+div.userCommetReview {
+  display: inline;
+  margin-top: 5%;
+  /*margin-bottom: 3%;*/
+}
+
+span + img {
+  margin-left: 3%;
+}
+
+div.userCommetReview + div {
+  margin-bottom: 2.5%;
+  margin-top: 2.5%;
+}
+
+.starRD {
+  display: inline;
+}
+
+div.dateDiv {
+  font-size: small;
+  margin-top: 3%;
+}
+
+.reviewText {
+  margin-left: 2.5%;
+}
+
+.reviewTextR {
+  margin-left: 15%;
+}
+
+div.dateDivR{
+  font-size: x-small;
+}
+
+#inputTextBox{
+  margin-right: 3%;
+}
+
+#lg{
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+#lgStar{
+  margin-left: 2.5%;
+}
+
+#lastLineSR{
+  display: inline;
+}
+
+/*#sendReview{
+  position: absolute;
+  float: right;
+}*/
+
+.restaurantImage2{
+  width: 35em;
+  height: 20em;
+  margin-left: 10%;
+  margin-top: 2%;
+}
+
+#restaurantInfo{
+  display: flex;
+  flex-direction: column;
+}
+
+#restaurantEditMainDiv{
+  /*background-color: #f0f0f0;*/
+  background-color: rgba(255,255,255, 0.5);
+  /*background-image: url("../images/edit_background.png");*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom:5em;
+}
+
+#editHeader{
+  margin-top: 1em;
+}
+
+#changeImageDiv{
+  /*background-color: #fafafa;*/
+  background-color: rgba(255,255,255, 0.7);
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#restaurantImageUpload{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#restaurantImageUploadText{
+  padding-left: 2em;
+}
+
+.test{
+ /* background-color: rgba(255,255,255, 0.5);*/
+  background-image: url("../images/edit_background.png");
+  background-size: contain;
 }
