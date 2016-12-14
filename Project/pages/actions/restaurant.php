@@ -44,7 +44,10 @@ $_SESSION['owners'] = $newOwners;
 foreach ($reviews as $review){
     $total+=$review['grade'];
 }
+if(sizeof($reviews) ==0)
+    $_SESSION['restaurant']['average']=0;
+else
+    $_SESSION['restaurant']['average'] = round($total/sizeof($reviews));
 
-$_SESSION['restaurant']['average'] = round($total/sizeof($reviews)) ;
 
 header('Location: ../restaurant.php');

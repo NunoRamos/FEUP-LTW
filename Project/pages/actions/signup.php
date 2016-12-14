@@ -3,7 +3,7 @@ include_once('../../database/dbUtils.php');
 
 session_start();
 
-$token = $_GET['token'];
+$token = $_POST['token'];
 if($_SESSION['token'] != $token){
     header('Location: ../templates/niceTry.html');
 }
@@ -15,6 +15,7 @@ $password = htmlspecialchars($_POST["password"]);
 $name = htmlspecialchars($_POST["name"]);
 $email = htmlspecialchars($_POST["email"]);
 $gender = htmlspecialchars($_POST["gender"]);
+$city = htmlspecialchars($_POST['city']);
 
 if($username != null && $password != null){
 
@@ -23,7 +24,7 @@ if($username != null && $password != null){
 
     if($number_of_rows == 0){
         $password = password_hash($password,PASSWORD_DEFAULT);
-        putUser($username,$password,$name,$email,$gender);
+        putUser($username,$password,$name,$email,$gender, $city);
         createUserImage($username,"../images/user/default-user.png");
 
         $_SESSION['username']=$username;

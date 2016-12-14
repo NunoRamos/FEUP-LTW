@@ -86,6 +86,13 @@ $_SESSION['token'] = generateRandomToken();
           <input  id="email" class="box" type="e-mail" name="email" required><br>
           <br>
         </label>
+          <label>
+              <br>
+              City
+              <br>
+              <input id="city" class="box" type="city" name="city" required><br>
+              <br>
+          </label>
         <label>
           <br>
           Gender

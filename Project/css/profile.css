@@ -1,0 +1,89 @@
+body {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 3%;
+}
+
+#logoImage {
+    border-radius: 50%;
+    width: 15em;
+    height: 15em;
+    align-content: center;
+}
+
+/*Centrar Imagem*/
+.pageContent,
+#userNameSU {
+    vertical-align: middle;
+    display: block;
+}
+
+div#userNameSU {
+    background-color: white;
+    opacity: 0.92;
+}
+
+#userNameSU {
+    color: grey;
+    display: inline-block;
+    text-align: justify;
+    border: 2.5px dotted lightgrey;
+    width: 21%;
+    padding: 2.5%;
+    margin-top: 3.5em;
+}
+
+.profile {
+    margin-top: 0.5em;
+    width: 98.5%;
+}
+
+#username {
+    margin-top: 0.5em;
+    width: 98.5%;
+}
+
+#password {
+    margin-top: 0.5em;
+    width: 98.5%;
+}
+
+#confirmPassword {
+    margin-top: 0.5em;
+    width: 98.5%;
+}
+
+#name {
+    margin-top: 0.5em;
+    width: 98.5%;
+}
+
+#email {
+    margin-top: 0.5em;
+    width: 98.5%;
+}
+
+#city {
+    margin-top: 0.5em;
+    width: 98.5%;
+}
+
+
+#gender{
+    margin-top: 0.5em;
+    padding-left: 1em;
+}
+
+#buttonCreateAccount {
+    display: inline-block;
+    float: right;
+}
+
+#mainPageSU {
+    margin-top: 3.5em;
+    padding-bottom: 1%;
+}
+
+span#singUpError {
+    color: red;
+}

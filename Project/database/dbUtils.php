@@ -23,11 +23,11 @@ function getUser($username){
  * @param $email
  * @param $gender
  */
-function putUser($username,$password,$name,$email,$gender){
+function putUser($username,$password,$name,$email,$gender, $city){
     global $db;
 
-    $stmt = $db->prepare("INSERT INTO user VALUES(?,?,?,?,?)");
-    $stmt->execute(array($username,$password,$name,$email,$gender));
+    $stmt = $db->prepare("INSERT INTO user VALUES(?,?,?,?,?,?)");
+    $stmt->execute(array($username,$password,$name,$email,$gender, $city));
 }
 
 /** Gets the restaurants names
@@ -431,3 +431,19 @@ function getRestaurantByType($type){
 
     return $result;
 }
+
+/** Gets the number of reviews of an user
+ * @param $type
+ * @return array
+ */
+function getNumberOfRevies($id_user){
+    global $db;
+
+    $stmt = $db->prepare("SELECT COUNT(*) FROM review WHERE id_user = ?");
+    $stmt->execute(array($id_user));
+    $result = $stmt->fetchAll();
+
+    return $result[0];
+}
+
+

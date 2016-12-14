@@ -67,7 +67,10 @@ $_SESSION['token'] = generateRandomToken();
         else {
             $imagePath = '../images/user/'.$review['userImage'];
         }
-        echo '<img class="userImage" src='.$imagePath.' alt="User image">';
+        echo '<a href="actions/profile.php?username='.$review['id_user'].'">
+            <img class="userImage" src='.$imagePath.' alt="User image">
+        </a>
+        ';
         echo '<div class="divReview">';
         echo '<div>'.$review['fullName'].' gives '.$review['grade'].'/10 at '.$review['date'].'</div>';
         echo '<div>'.$review['text'].'</div>';

@@ -35,7 +35,8 @@ CREATE TABLE user (
   password VARCHAR,
   name VARCHAR,
   email VARCHAR,
-  gender VARCHAR
+  gender VARCHAR,
+  city VARCHAR
 );
 
 CREATE TABLE userImages (
