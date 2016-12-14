@@ -10,7 +10,7 @@ $_SESSION['token'] = generateRandomToken();
     <link rel="stylesheet" href="../css/design.css" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="/js/restaurant.js"></script>
+    <script src="../js/restaurant.js"></script>
 
     <div class="pageContent">
         <div class="design">
